@@ -239,21 +239,28 @@
 # else:
 #     print("Not Alphabet")
 
-# 31 odd or even
+# # 31 odd or even
 
-num = int(input())
-if num % 2 == 0:
-    print("Even")
-else:
-    print("odd")
+# num = int(input())
+# if num % 2 == 0:
+#     print("Even")
+# else:
+#     print("odd")
     
-# 32 Prime number check
-num = int(input())
-if num > 1:
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            print("NOT PRIME")
-            break
-        else:
-            print("PRIME")
-        
+# # 32 Prime number check
+# num = int(input())
+# if num > 1:
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             print("NOT PRIME")
+#             break
+#         else:
+#             print("PRIME")
+
+# 33 fibonacci series
+n = int(input())
+a, b = 0, 1
+for _ in range(n):
+    print(a)
+    a, b = b, a+b
+    
