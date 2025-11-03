@@ -264,11 +264,21 @@
 #     print(a)
 #     a, b = b, a+b
     
-# 34 Factorial of a number
-num = 9
-fact = 1
-for i in range(1, num + 1):
-    fact *= i   
-print(fact)
+# # 34 Factorial of a number
+# num = 9
+# fact = 1
+# for i in range(1, num + 1):
+#     fact *= i   
+# print(fact)
 
+# 35 Sum of digits
+num = 1234  # Test input
+s = 0
+n = abs(num)
+while n > 0:
+    s += n % 10
+    n //= 10
+print(f"Sum of digits in {num}: {s}")
+print()
+    
 
