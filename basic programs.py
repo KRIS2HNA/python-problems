@@ -257,10 +257,18 @@
 #         else:
 #             print("PRIME")
 
-# 33 fibonacci series
-n = int(input())
-a, b = 0, 1
-for _ in range(n):
-    print(a)
-    a, b = b, a+b
+# # 33 fibonacci series
+# n = int(input())
+# a, b = 0, 1
+# for _ in range(n):
+#     print(a)
+#     a, b = b, a+b
     
+# 34 Factorial of a number
+num = 9
+fact = 1
+for i in range(1, num + 1):
+    fact *= i   
+print(fact)
+
+
