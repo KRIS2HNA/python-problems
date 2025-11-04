@@ -293,3 +293,13 @@ while n > 0:
         rev = -rev
         print(f"Reverse of {num}: {rev}")
     print()
+
+# 37 Check Armstrong number
+num = 158
+order = len(str(num))
+s = sum(int(d) ** order for d in str(num))
+if s == num:
+    print(f"{num} is an Armstrong number")
+else:
+    print(f"{num} is not an Armstrong number")
+print()
