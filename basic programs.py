@@ -309,3 +309,16 @@ num = 9
 for i in range(1, 11):
     print(f"{num} * {i} = {num * i}")
 print()
+
+# 39 Count vowels and consonants
+s = "Krishna vamsi"
+vowels = 0
+consonants = 0
+for ch in s.lower():
+    if ch.isalpha():
+        if ch in 'aeiou':
+            vowels += 1
+        else:   
+            consonants += 1
+print(f"Vowels: {vowels}, Consonants: {consonants}")
+print()
