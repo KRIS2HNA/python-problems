@@ -322,3 +322,21 @@ for ch in s.lower():
             consonants += 1
 print(f"Vowels: {vowels}, Consonants: {consonants}")
 print()
+
+a = float(input("Enter first number: "))
+b = float(input("Enter second number: "))
+
+print("Select operation: +, -, *, /")
+op = input("Enter operator: ")
+
+if op == '+':
+    print("Result:", a + b)
+elif op == '-':
+    print("Result:", a - b)
+elif op == '*':
+    print("Result:", a * b)
+elif op == '/':
+    print("Result:", a / b)
+else:
+    print("Invalid operator")
+58
