@@ -387,3 +387,11 @@ elif units <= 200:
 else:
     bill = 100 * 1.5 + 100 * 2.5 + (units - 200) * 4
 print(f"Electricity bill: {bill}")
+
+# 44 Find day of the week
+day = int(input("Enter day number (1-7): "))
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+if 1 <= day <= 7:
+    print(f"Day: {days[day - 1]}")      
+else:
+    print("Invalid day number")
