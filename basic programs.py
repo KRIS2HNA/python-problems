@@ -281,117 +281,128 @@
 # print(f"Sum of digits in {num}: {s}")
 # print()
     
-# 36 Reverse a number
+# # 36 Reverse a number
 
-num = 1234
-rev = 0
-n = abs(num)
-while n > 0:
-    rev  = rev * 10 + n % 10
-    n //= 10
-    if num < 0:
-        rev = -rev
-        print(f"Reverse of {num}: {rev}")
-    print()
+# num = 1234
+# rev = 0
+# n = abs(num)
+# while n > 0:
+#     rev  = rev * 10 + n % 10
+#     n //= 10
+#     if num < 0:
+#         rev = -rev
+#         print(f"Reverse of {num}: {rev}")
+#     print()
 
-# 37 Check Armstrong number
-num = 158
-order = len(str(num))
-s = sum(int(d) ** order for d in str(num))
-if s == num:
-    print(f"{num} is an Armstrong number")
-else:
-    print(f"{num} is not an Armstrong number")
-print()
+# # 37 Check Armstrong number
+# num = 158
+# order = len(str(num))
+# s = sum(int(d) ** order for d in str(num))
+# if s == num:
+#     print(f"{num} is an Armstrong number")
+# else:
+#     print(f"{num} is not an Armstrong number")
+# print()
 
-# 38 Print multiplication table
-num = 9
-for i in range(1, 11):
-    print(f"{num} * {i} = {num * i}")
-print()
+# # 38 Print multiplication table
+# num = 9
+# for i in range(1, 11):
+#     print(f"{num} * {i} = {num * i}")
+# print()
 
-# 39 Count vowels and consonants
-s = "Krishna vamsi"
-vowels = 0
-consonants = 0
-for ch in s.lower():
-    if ch.isalpha():
-        if ch in 'aeiou':
-            vowels += 1
-        else:   
-            consonants += 1
-print(f"Vowels: {vowels}, Consonants: {consonants}")
-print()
+# # 39 Count vowels and consonants
+# s = "Krishna vamsi"
+# vowels = 0
+# consonants = 0
+# for ch in s.lower():
+#     if ch.isalpha():
+#         if ch in 'aeiou':
+#             vowels += 1
+#         else:   
+#             consonants += 1
+# print(f"Vowels: {vowels}, Consonants: {consonants}")
+# print()
 
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
+# a = float(input("Enter first number: "))
+# b = float(input("Enter second number: "))
 
-print("Select operation: +, -, *, /")
-op = input("Enter operator: ")
+# print("Select operation: +, -, *, /")
+# op = input("Enter operator: ")
 
-if op == '+':
-    print("Result:", a + b)
-elif op == '-':
-    print("Result:", a - b)
-elif op == '*':
-    print("Result:", a * b)
-elif op == '/':
-    print("Result:", a / b)
-else:
-    print("Invalid operator")
+# if op == '+':
+#     print("Result:", a + b)
+# elif op == '-':
+#     print("Result:", a - b)
+# elif op == '*':
+#     print("Result:", a * b)
+# elif op == '/':
+#     print("Result:", a / b)
+# else:
+#     print("Invalid operator")
     
     
-# 40 Simple calculator  
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))            
-operation = input("Enter operation (+, -, *, /): ")
-if operation == '+':
-    print("Result:", num1 + num2)
-elif operation == '-':
-    print("Result:", num1 - num2)
-elif operation == '*':
-    print("Result:", num1 * num2)
-elif operation == '/':
-    if num2 != 0:
-        print("Result:", num1 / num2)
-    else:
-        print("Error: Division by zero")
-else:
-    print("Invalid operation")
+# # 40 Simple calculator  
+# num1 = float(input("Enter first number: "))
+# num2 = float(input("Enter second number: "))            
+# operation = input("Enter operation (+, -, *, /): ")
+# if operation == '+':
+#     print("Result:", num1 + num2)
+# elif operation == '-':
+#     print("Result:", num1 - num2)
+# elif operation == '*':
+#     print("Result:", num1 * num2)
+# elif operation == '/':
+#     if num2 != 0:
+#         print("Result:", num1 / num2)
+#     else:
+#         print("Error: Division by zero")
+# else:
+#     print("Invalid operation")
     
-# 41 Find largest of three numbers
-a = float(input("Enter first number: "))
-b = float(input("Enter second number: "))
-c = float(input("Enter third number: "))
-if a >= b and a >= c:
-    print(f"Largest number is: {a}")
-elif b >= a and b >= c:
-    print(f"Largest number is: {b}")
-else:
-    print(f"Largest number is: {c}")
+# # 41 Find largest of three numbers
+# a = float(input("Enter first number: "))
+# b = float(input("Enter second number: "))
+# c = float(input("Enter third number: "))
+# if a >= b and a >= c:
+#     print(f"Largest number is: {a}")
+# elif b >= a and b >= c:
+#     print(f"Largest number is: {b}")
+# else:
+#     print(f"Largest number is: {c}")
 
-# 42 Check palindrome string
-s = input("Enter a string: ")   
-if s == s[::-1]:
-    print(f'"{s}" is a palindrome')
-else:
-    print(f'"{s}" is not a palindrome')
+# # 42 Check palindrome string
+# s = input("Enter a string: ")   
+# if s == s[::-1]:
+#     print(f'"{s}" is a palindrome')
+# else:
+#     print(f'"{s}" is not a palindrome')
     
 
-# 43 Calculate electricity bill
-units = int(input("Enter number of units consumed: "))
-if units <= 100:    
-    bill = units * 1.5
-elif units <= 200:    
-    bill = 100 * 1.5 + (units - 100) * 2.5  
-else:
-    bill = 100 * 1.5 + 100 * 2.5 + (units - 200) * 4
-print(f"Electricity bill: {bill}")
+# # 43 Calculate electricity bill
+# units = int(input("Enter number of units consumed: "))
+# if units <= 100:    
+#     bill = units * 1.5
+# elif units <= 200:    
+#     bill = 100 * 1.5 + (units - 100) * 2.5  
+# else:
+#     bill = 100 * 1.5 + 100 * 2.5 + (units - 200) * 4
+# print(f"Electricity bill: {bill}")
 
-# 44 Find day of the week
-day = int(input("Enter day number (1-7): "))
-days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
-if 1 <= day <= 7:
-    print(f"Day: {days[day - 1]}")      
+# # 44 Find day of the week
+# day = int(input("Enter day number (1-7): "))
+# days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+# if 1 <= day <= 7:
+#     print(f"Day: {days[day - 1]}")      
+# else:
+#     print("Invalid day number")
+
+# 45 Check uppercase or lowercase
+ch = input("Enter a character: ")  
+if ch.isupper():
+    print(f'"{ch}" is an uppercase letter')
+elif ch.islower():
+    print(f'"{ch}" is a lowercase letter')
 else:
-    print("Invalid day number")
+    print(f'"{ch}" is not an alphabet letter')
+
+
