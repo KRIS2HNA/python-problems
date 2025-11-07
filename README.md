@@ -3,6 +3,37 @@
 
 Keep this repository as your daily practice hub. Use the sections below as a living guide for consistent, focused progress in Python and general programming skills.
 
+## Quick Start
+
+1. **Setup Python Environment**:
+   ```powershell
+   # Check Python version
+   python --version
+   
+   # Create virtual environment
+   python -m venv venv
+   
+   # Activate virtual environment
+   .\venv\Scripts\activate
+   ```
+
+2. **Run Python Programs**:
+   ```powershell
+   # Basic run
+   python filename.py
+   
+   # Run with input
+   python -i filename.py
+   
+   # Run with debugger
+   python -m pdb filename.py
+   ```
+
+3. **VS Code Integration**:
+   - `F5`: Run with debugging
+   - `Ctrl + F5`: Run without debugging
+   - `Ctrl + Shift + P`: Command palette for more options
+
 ## Goal
 
 Build a short, repeatable daily practice habit that improves problem solving, fluency with Python, and small project delivery.
@@ -63,6 +94,56 @@ Example entry
 - Name practice files clearly: `practice/2025-11-01_my-kata.py` or `practice/2025-11-01.md` for notes.
 - Keep runnable examples small and documented with a short header comment explaining purpose and usage.
 
+## File Organization
+
+```
+python-problems/
+│
+├── practice/                    # Daily practice files
+│   ├── YYYY-MM-DD_topic.py     # Python scripts
+│   ├── YYYY-MM-DD_notes.md     # Study notes
+│   └── progress.md             # Progress tracking
+│
+├── templates/                   # Template files
+│   ├── daily_log.md           # Daily log template
+│   └── script_header.py       # Script header template
+│
+├── solutions/                   # Completed solutions
+│   ├── basic/                 # Basic problems
+│   ├── intermediate/          # Intermediate problems
+│   └── advanced/             # Advanced problems
+│
+└── README.md                   # This file
+```
+
+## Code Documentation Template
+
+```python
+"""
+Problem: [Problem Name]
+Difficulty: [Easy/Medium/Hard]
+Category: [Arrays/Strings/etc.]
+
+Description:
+    Brief description of the problem
+
+Example:
+    Input: example_input
+    Output: example_output
+    Explanation: Why this output?
+
+Solution Approach:
+    1. Step one of the approach
+    2. Step two of the approach
+    
+Time Complexity: O(?)
+Space Complexity: O(?)
+
+Author: [Your Name]
+Date: YYYY-MM-DD
+"""
+```
+
 ## Resources
 
 - Python docs: https://docs.python.org/3/
@@ -70,6 +151,41 @@ Example entry
 - Project Euler: https://projecteuler.net/
 - Real Python: https://realpython.com/
 - "Automate the Boring Stuff with Python" by Al Sweigart
+
+## Debugging Tips
+
+1. **Print Debugging**:
+   ```python
+   print(f"Variable x = {x}")  # Format string
+   print("Debug:", variable)   # Simple debug print
+   ```
+
+2. **Using VS Code Debugger**:
+   - Set breakpoints by clicking left of line number
+   - Use F5 to start debugging
+   - Use Step Over (F10) and Step Into (F11)
+   - Watch variables in debug window
+
+3. **Python Debugger (pdb)**:
+   ```python
+   import pdb; pdb.set_trace()  # Add this line where you want to break
+   # Commands: n (next), s (step), c (continue), p variable
+   ```
+
+## Common Python Commands
+
+```powershell
+# Environment Management
+python -m venv venv              # Create virtual environment
+.\venv\Scripts\activate          # Activate (Windows)
+pip install package_name         # Install package
+pip freeze > requirements.txt    # Save dependencies
+
+# Running Programs
+python script.py                 # Run script
+python -i script.py             # Interactive mode
+python -m pytest tests/         # Run tests
+```
 
 ## Tips for Consistency
 
