@@ -396,14 +396,24 @@
 # else:
 #     print("Invalid day number")
 
-# 45 Check uppercase or lowercase
-ch = input("Enter a character: ")  
-if ch.isupper():
-    print(f'"{ch}" is an uppercase letter')
-elif ch.islower():
-    print(f'"{ch}" is a lowercase letter')
-else:
-    print(f'"{ch}" is not an alphabet letter')
+# # 45 Check uppercase or lowercase
+# ch = input("Enter a character: ")  
+# if ch.isupper():
+#     print(f'"{ch}" is an uppercase letter')
+# elif ch.islower():
+#     print(f'"{ch}" is a lowercase letter')
+# else:
+#     print(f'"{ch}" is not an alphabet letter')
 
-# arrange  
+ 
+# leetcode 1611
+
+class Solution:
+    def minimumOneBitOperations(self, n: int) -> int:
+        if n == 0:
+            return 0
+        msb = 1
+        while (msb << 1) <= n:
+            msb <<= 1
+        return (1 << (msb.bit_length())) - 1 - self.minimumOneBitOperations(n ^ msb)
 
