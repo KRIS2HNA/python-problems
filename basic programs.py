@@ -408,12 +408,22 @@
  
 # leetcode 1611
 
-class Solution:
-    def minimumOneBitOperations(self, n: int) -> int:
-        if n == 0:
-            return 0
-        msb = 1
-        while (msb << 1) <= n:
-            msb <<= 1
-        return (1 << (msb.bit_length())) - 1 - self.minimumOneBitOperations(n ^ msb)
+# class Solution:
+#     def minimumOneBitOperations(self, n: int) -> int:
+#         if n == 0:
+#             return 0
+#         msb = 1
+#         while (msb << 1) <= n:
+#             msb <<= 1
+#         return (1 << (msb.bit_length())) - 1 - self.minimumOneBitOperations(n ^ msb)
 
+# leetcode 1
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        num_map = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in num_map:
+                return [num_map[complement], i]
+            num_map[num] = i
+        return []
