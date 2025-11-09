@@ -483,3 +483,30 @@ class Solution:
             max_len = max(max_len, right - left + 1)
 
         return max_len
+# 4 leetcode
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        merged = []
+        i, j = 0, 0
+
+        while i < len(nums1) and j < len(nums2):
+            if nums1[i] < nums2[j]:
+                merged.append(nums1[i])
+                i += 1
+            else:
+                merged.append(nums2[j])
+                j += 1
+
+        while i < len(nums1):
+            merged.append(nums1[i])
+            i += 1
+
+        while j < len(nums2):
+            merged.append(nums2[j])
+            j += 1
+
+        n = len(merged)
+        if n % 2 == 1:
+            return merged[n // 2]
+        else:
+            return (merged[n // 2 - 1] + merged[n // 2]) / 2    
