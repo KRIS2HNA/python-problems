@@ -456,57 +456,74 @@
 #         return dummy_head.next
 
 
-# 2169 leetcode
+# # 2169 leetcode
+# class Solution:
+#     def countOperations(self, num1: int, num2: int) -> int:
+#         ans = 0
+#         while num1 and num2:
+#             if num1 < num2:
+#                 num1, num2 = num2, num1
+#             # we can do num1 // num2 subtractions in one go
+#             ans += num1 // num2
+#             num1 %= num2
+#         return ans
+
+# # 3
+# class Solution:
+#     def lengthOfLongestSubstring(self, s: str) -> int:
+#         seen = {}
+#         left = 0
+#         max_len = 0
+
+#         for right in range(len(s)):
+#             # If duplicate found and within current window
+#             if s[right] in seen and seen[s[right]] >= left:
+#                 left = seen[s[right]] + 1
+#             seen[s[right]] = right
+#             max_len = max(max_len, right - left + 1)
+
+#         return max_len
+# # 4 leetcode
+# class Solution:
+#     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+#         merged = []
+#         i, j = 0, 0
+
+#         while i < len(nums1) and j < len(nums2):
+#             if nums1[i] < nums2[j]:
+#                 merged.append(nums1[i])
+#                 i += 1
+#             else:
+#                 merged.append(nums2[j])
+#                 j += 1
+
+#         while i < len(nums1):
+#             merged.append(nums1[i])
+#             i += 1
+
+#         while j < len(nums2):
+#             merged.append(nums2[j])
+#             j += 1
+
+#         n = len(merged)
+#         if n % 2 == 1:
+#             return merged[n // 2]
+#         else:
+#             return (merged[n // 2 - 1] + merged[n // 2]) / 2    
+
+# leetcode 3452
 class Solution:
-    def countOperations(self, num1: int, num2: int) -> int:
+    def minOperations(self, nums: list[int]) -> int:
         ans = 0
-        while num1 and num2:
-            if num1 < num2:
-                num1, num2 = num2, num1
-            # we can do num1 // num2 subtractions in one go
-            ans += num1 // num2
-            num1 %= num2
+        stack = [0]  # sentinel 0 so that even if nums starts >0 it counts correctly
+
+        for num in nums:
+            # Pop while the stack top is > current number
+            while stack and stack[-1] > num:
+                stack.pop()
+            # If stack empty or top < num, then for this new number we need an operation
+            if not stack or stack[-1] < num:
+                ans += 1
+                stack.append(num)
+            # if stack[-1] == num: do nothing (already counted)
         return ans
-
-# 3
-class Solution:
-    def lengthOfLongestSubstring(self, s: str) -> int:
-        seen = {}
-        left = 0
-        max_len = 0
-
-        for right in range(len(s)):
-            # If duplicate found and within current window
-            if s[right] in seen and seen[s[right]] >= left:
-                left = seen[s[right]] + 1
-            seen[s[right]] = right
-            max_len = max(max_len, right - left + 1)
-
-        return max_len
-# 4 leetcode
-class Solution:
-    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        merged = []
-        i, j = 0, 0
-
-        while i < len(nums1) and j < len(nums2):
-            if nums1[i] < nums2[j]:
-                merged.append(nums1[i])
-                i += 1
-            else:
-                merged.append(nums2[j])
-                j += 1
-
-        while i < len(nums1):
-            merged.append(nums1[i])
-            i += 1
-
-        while j < len(nums2):
-            merged.append(nums2[j])
-            j += 1
-
-        n = len(merged)
-        if n % 2 == 1:
-            return merged[n // 2]
-        else:
-            return (merged[n // 2 - 1] + merged[n // 2]) / 2    
