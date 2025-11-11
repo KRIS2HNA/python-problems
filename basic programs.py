@@ -601,3 +601,31 @@ class Solution:
             return 0
             
         return rev
+    
+# leetcode 8
+class Solution:
+    def myAtoi(self, s: str) -> int:
+        s = s.lstrip()
+        if not s:
+            return 0
+
+        sign = 1
+        start_index = 0
+        if s[0] in ('-', '+'):
+            sign = -1 if s[0] == '-' else 1
+            start_index = 1
+
+        result = 0
+        for i in range(start_index, len(s)):
+            if not s[i].isdigit():
+                break
+            result = result * 10 + int(s[i])
+
+        result *= sign
+        INT_MIN, INT_MAX = -2**31, 2**31 - 1
+        if result < INT_MIN:
+            return INT_MIN
+        if result > INT_MAX:
+            return INT_MAX
+
+        return result
