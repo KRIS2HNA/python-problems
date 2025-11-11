@@ -511,59 +511,75 @@
 #         else:
 #             return (merged[n // 2 - 1] + merged[n // 2]) / 2    
 
-# leetcode 3452
-class Solution:
-    def minOperations(self, nums: list[int]) -> int:
-        ans = 0
-        stack = [0]  # sentinel 0 so that even if nums starts >0 it counts correctly
+# # leetcode 3452
+# class Solution:
+#     def minOperations(self, nums: list[int]) -> int:
+#         ans = 0
+#         stack = [0]  # sentinel 0 so that even if nums starts >0 it counts correctly
 
-        for num in nums:
-            # Pop while the stack top is > current number
-            while stack and stack[-1] > num:
-                stack.pop()
-            # If stack empty or top < num, then for this new number we need an operation
-            if not stack or stack[-1] < num:
-                ans += 1
-                stack.append(num)
-            # if stack[-1] == num: do nothing (already counted)
-        return ans
-# lettcode 5
-class Solution:
-    def longestPalindrome(self, s: str) -> str:
-        def expand_around_center(left: int, right: int) -> str:
-            while left >= 0 and right < len(s) and s[left] == s[right]:
-                left -= 1
-                right += 1
-            return s[left + 1:right]
+#         for num in nums:
+#             # Pop while the stack top is > current number
+#             while stack and stack[-1] > num:
+#                 stack.pop()
+#             # If stack empty or top < num, then for this new number we need an operation
+#             if not stack or stack[-1] < num:
+#                 ans += 1
+#                 stack.append(num)
+#             # if stack[-1] == num: do nothing (already counted)
+#         return ans
+# # lettcode 5
+# class Solution:
+#     def longestPalindrome(self, s: str) -> str:
+#         def expand_around_center(left: int, right: int) -> str:
+#             while left >= 0 and right < len(s) and s[left] == s[right]:
+#                 left -= 1
+#                 right += 1
+#             return s[left + 1:right]
 
-        longest = ""
-        for i in range(len(s)):
-            # Odd length palindromes
-            odd_palindrome = expand_around_center(i, i)
-            if len(odd_palindrome) > len(longest):
-                longest = odd_palindrome
+#         longest = ""
+#         for i in range(len(s)):
+#             # Odd length palindromes
+#             odd_palindrome = expand_around_center(i, i)
+#             if len(odd_palindrome) > len(longest):
+#                 longest = odd_palindrome
 
-            # Even length palindromes
-            even_palindrome = expand_around_center(i, i + 1)
-            if len(even_palindrome) > len(longest):
-                longest = even_palindrome
+#             # Even length palindromes
+#             even_palindrome = expand_around_center(i, i + 1)
+#             if len(even_palindrome) > len(longest):
+#                 longest = even_palindrome
 
-        return longest
+#         return longest
     
-# leetcode 6
+# # leetcode 6
+# class Solution:
+#     def convert(self, s: str, numRows: int) -> str:
+#         if numRows == 1 or numRows >= len(s):
+#             return s
+
+#         rows = [''] * numRows
+#         current_row = 0
+#         going_down = False
+
+#         for char in s:
+#             rows[current_row] += char
+#             if current_row == 0 or current_row == numRows - 1:
+#                 going_down = not going_down
+#             current_row += 1 if going_down else -1
+
+#         return ''.join(rows)
+
+# 474 leetcode
 class Solution:
-    def convert(self, s: str, numRows: int) -> str:
-        if numRows == 1 or numRows >= len(s):
-            return s
+    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+        dp = [[0] * (n + 1) for _ in range(m + 1)]
+        
+        for s in strs:
+            zeros = s.count('0')
+            ones = s.count('1')
+            
+            for i in range(m, zeros - 1, -1):
+                for j in range(n, ones - 1, -1):
+                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)
+                    
+        return dp[m][n]
 
-        rows = [''] * numRows
-        current_row = 0
-        going_down = False
-
-        for char in s:
-            rows[current_row] += char
-            if current_row == 0 or current_row == numRows - 1:
-                going_down = not going_down
-            current_row += 1 if going_down else -1
-
-        return ''.join(rows)
