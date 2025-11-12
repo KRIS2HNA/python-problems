@@ -568,64 +568,123 @@
 
 #         return ''.join(rows)
 
-# 474 leetcode
-class Solution:
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+# # 474 leetcode
+# class Solution:
+#     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+#         dp = [[0] * (n + 1) for _ in range(m + 1)]
         
-        for s in strs:
-            zeros = s.count('0')
-            ones = s.count('1')
+#         for s in strs:
+#             zeros = s.count('0')
+#             ones = s.count('1')
             
-            for i in range(m, zeros - 1, -1):
-                for j in range(n, ones - 1, -1):
-                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)
+#             for i in range(m, zeros - 1, -1):
+#                 for j in range(n, ones - 1, -1):
+#                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)
                     
-        return dp[m][n]
+#         return dp[m][n]
 
-# leetcode 7
-class Solution:
-    def reverse(self, x: int) -> int:
-        sign = -1 if x < 0 else 1
-        x_abs = abs(x)
-        rev = 0
+# # leetcode 7
+# class Solution:
+#     def reverse(self, x: int) -> int:
+#         sign = -1 if x < 0 else 1
+#         x_abs = abs(x)
+#         rev = 0
         
-        while x_abs != 0:
-            digit = x_abs % 10
-            rev = rev * 10 + digit
-            x_abs //= 10
+#         while x_abs != 0:
+#             digit = x_abs % 10
+#             rev = rev * 10 + digit
+#             x_abs //= 10
             
-        rev *= sign
+#         rev *= sign
         
-        if rev < -2**31 or rev > 2**31 - 1:
-            return 0
+#         if rev < -2**31 or rev > 2**31 - 1:
+#             return 0
             
-        return rev
+#         return rev
     
-# leetcode 8
+# # leetcode 8
+# class Solution:
+#     def myAtoi(self, s: str) -> int:
+#         s = s.lstrip()
+#         if not s:
+#             return 0
+
+#         sign = 1
+#         start_index = 0
+#         if s[0] in ('-', '+'):
+#             sign = -1 if s[0] == '-' else 1
+#             start_index = 1
+
+#         result = 0
+#         for i in range(start_index, len(s)):
+#             if not s[i].isdigit():
+#                 break
+#             result = result * 10 + int(s[i])
+
+#         result *= sign
+#         INT_MIN, INT_MAX = -2**31, 2**31 - 1
+#         if result < INT_MIN:
+#             return INT_MIN
+#         if result > INT_MAX:
+#             return INT_MAX
+
+#         return result
+    
+# 2654 leetcode
+import math
+from typing import List
+
 class Solution:
-    def myAtoi(self, s: str) -> int:
-        s = s.lstrip()
-        if not s:
-            return 0
-
-        sign = 1
-        start_index = 0
-        if s[0] in ('-', '+'):
-            sign = -1 if s[0] == '-' else 1
-            start_index = 1
-
-        result = 0
-        for i in range(start_index, len(s)):
-            if not s[i].isdigit():
+    def minOperations(self, nums: List[int]) -> int:
+        n = len(nums)
+        # 1) If any element is already 1
+        ones = nums.count(1)
+        if ones > 0:
+            return n - ones
+        
+        # 2) If gcd of entire array > 1 -> impossible
+        total_g = nums[0]
+        for x in nums[1:]:
+            total_g = math.gcd(total_g, x)
+        if total_g > 1:
+            return -1
+        
+        # 3) Find shortest subarray with gcd == 1
+        min_len_minus_one = float('inf')  # will store j - i (i.e. L - 1)
+        for i in range(n):
+            g = nums[i]
+            if g == 1:
+                min_len_minus_one = 0
                 break
-            result = result * 10 + int(s[i])
+            for j in range(i + 1, n):
+                g = math.gcd(g, nums[j])
+                if g == 1:
+                    min_len_minus_one = min(min_len_minus_one, j - i)
+                    break
+        
+        # total operations = (min_len_minus_one) to create one `1` + (n - 1) to spread it
+        return (min_len_minus_one if min_len_minus_one != float('inf') else 0) + (n - 1)
 
-        result *= sign
-        INT_MIN, INT_MAX = -2**31, 2**31 - 1
-        if result < INT_MIN:
-            return INT_MIN
-        if result > INT_MAX:
-            return INT_MAX
 
-        return result
+# leetcode 9
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        original = x
+        rev = 0
+        while x > 0:
+            rev = rev * 10 + x % 10
+            x //= 10
+        return rev == original
+    
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+        original = x
+        rev = 0
+        while x > 0:
+            rev = rev * 10 + x % 10
+            x //= 10
+        return rev == original
