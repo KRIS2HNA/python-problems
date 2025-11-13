@@ -630,61 +630,75 @@
 
 #         return result
     
-# 2654 leetcode
-import math
-from typing import List
+# # 2654 leetcode
+# import math
+# from typing import List
 
-class Solution:
-    def minOperations(self, nums: List[int]) -> int:
-        n = len(nums)
-        # 1) If any element is already 1
-        ones = nums.count(1)
-        if ones > 0:
-            return n - ones
+# class Solution:
+#     def minOperations(self, nums: List[int]) -> int:
+#         n = len(nums)
+#         # 1) If any element is already 1
+#         ones = nums.count(1)
+#         if ones > 0:
+#             return n - ones
         
-        # 2) If gcd of entire array > 1 -> impossible
-        total_g = nums[0]
-        for x in nums[1:]:
-            total_g = math.gcd(total_g, x)
-        if total_g > 1:
-            return -1
+#         # 2) If gcd of entire array > 1 -> impossible
+#         total_g = nums[0]
+#         for x in nums[1:]:
+#             total_g = math.gcd(total_g, x)
+#         if total_g > 1:
+#             return -1
         
-        # 3) Find shortest subarray with gcd == 1
-        min_len_minus_one = float('inf')  # will store j - i (i.e. L - 1)
-        for i in range(n):
-            g = nums[i]
-            if g == 1:
-                min_len_minus_one = 0
-                break
-            for j in range(i + 1, n):
-                g = math.gcd(g, nums[j])
-                if g == 1:
-                    min_len_minus_one = min(min_len_minus_one, j - i)
-                    break
+#         # 3) Find shortest subarray with gcd == 1
+#         min_len_minus_one = float('inf')  # will store j - i (i.e. L - 1)
+#         for i in range(n):
+#             g = nums[i]
+#             if g == 1:
+#                 min_len_minus_one = 0
+#                 break
+#             for j in range(i + 1, n):
+#                 g = math.gcd(g, nums[j])
+#                 if g == 1:
+#                     min_len_minus_one = min(min_len_minus_one, j - i)
+#                     break
         
-        # total operations = (min_len_minus_one) to create one `1` + (n - 1) to spread it
-        return (min_len_minus_one if min_len_minus_one != float('inf') else 0) + (n - 1)
+#         # total operations = (min_len_minus_one) to create one `1` + (n - 1) to spread it
+#         return (min_len_minus_one if min_len_minus_one != float('inf') else 0) + (n - 1)
 
 
-# leetcode 9
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False
-        original = x
-        rev = 0
-        while x > 0:
-            rev = rev * 10 + x % 10
-            x //= 10
-        return rev == original
+# # leetcode 9
+# class Solution:
+#     def isPalindrome(self, x: int) -> bool:
+#         if x < 0:
+#             return False
+#         original = x
+#         rev = 0
+#         while x > 0:
+#             rev = rev * 10 + x % 10
+#             x //= 10
+#         return rev == original
     
+# class Solution:
+#     def isPalindrome(self, x: int) -> bool:
+#         if x < 0:
+#             return False
+#         original = x
+#         rev = 0
+#         while x > 0:
+#             rev = rev * 10 + x % 10
+#             x //= 10
+#         return rev == original
+
 class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False
-        original = x
-        rev = 0
-        while x > 0:
-            rev = rev * 10 + x % 10
-            x //= 10
-        return rev == original
+    def maxOperations(self, s: str) -> int:
+        ans = 0
+        ones = 0
+        n = len(s)
+        for i, c in enumerate(s):
+            if c == '1':
+                ones += 1
+            else:  # c == '0'
+                if i > 0 and s[i-1] == '1':
+                    ans += ones
+        return ans
+
