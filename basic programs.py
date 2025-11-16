@@ -781,3 +781,20 @@ class Solution:
                 count += 1
         return count
     
+    
+# 1513 leetcode
+class Solution:
+    def numseb(self, s: str) -> int:
+        MOD = 10 ** 9 + 7
+        res = 0
+        cur = 0
+        
+        for ch in s:
+            if ch == '1':
+                cur += 1
+            else:
+                res += cur * (cur + 1) // 2
+                cur = 0
+        if cur: res += cur * (cur + 1) // 2
+        return res
+    
