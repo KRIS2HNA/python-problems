@@ -798,26 +798,40 @@
 #         if cur: res += cur * (cur + 1) // 2
 #         return res
     
-# reverse a string without using slicing
-def reverse_string(s:str) -> str:
-    rev = ''
-    for ch in s:
-        rev = ch + rev
-    return rev
+# # reverse a string without using slicing
+# def reverse_string(s:str) -> str:
+#     rev = ''
+#     for ch in s:
+#         rev = ch + rev
+#     return rev
 
-input_str = "Hello world"
+# input_str = "Hello world"
 
-reverse_string = reverse_string(input_str)   
+# reverse_string = reverse_string(input_str)   
 
-# print prime numbers 
-def primr_numbers(n:int) -> list[int]:
-    primes = []
-    for num in range(2, n + 1):
-        for i in range(2, int(num ** 0.5)+ 1):
-            if num % i == 0:
-                break
-        else:
-            primes.append(num)
-    return primes
-prime_list = primr_numbers(100)
-print(prime_list)
+# # print prime numbers 
+# def primr_numbers(n:int) -> list[int]:
+#     primes = []
+#     for num in range(2, n + 1):
+#         for i in range(2, int(num ** 0.5)+ 1):
+#             if num % i == 0:
+#                 break
+#         else:
+#             primes.append(num)
+#     return primes
+# prime_list = primr_numbers(100)
+# print(prime_list)
+
+# palindrome check
+num = 121
+rev = 0
+n = abs(num)
+while n > 0:
+    rev = rev * 10 + n % 10
+    n //= 10
+if rev == abs(num):
+    print(f"{num} is a palindrome")
+else:
+    print(f"{num} is not a palindrome")
+
+
