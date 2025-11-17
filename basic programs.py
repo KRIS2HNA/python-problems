@@ -689,112 +689,124 @@
 #             x //= 10
 #         return rev == original
 
-class Solution:
-    def maxOperations(self, s: str) -> int:
-        ans = 0
-        ones = 0
-        n = len(s)
-        for i, c in enumerate(s):
-            if c == '1':
-                ones += 1
-            else:  # c == '0'
-                if i > 0 and s[i-1] == '1':
-                    ans += ones
-        return ans
+# class Solution:
+#     def maxOperations(self, s: str) -> int:
+#         ans = 0
+#         ones = 0
+#         n = len(s)
+#         for i, c in enumerate(s):
+#             if c == '1':
+#                 ones += 1
+#             else:  # c == '0'
+#                 if i > 0 and s[i-1] == '1':
+#                     ans += ones
+#         return ans
 
-# leetcode 11
-class Solution:
-    def maxArea(self, height: List[int]) -> int:
-        left, right = 0, len(height) - 1
-        max_area = 0
+# # leetcode 11
+# class Solution:
+#     def maxArea(self, height: List[int]) -> int:
+#         left, right = 0, len(height) - 1
+#         max_area = 0
 
-        while left < right:
-            width = right - left
-            current_area = min(height[left], height[right]) * width
-            max_area = max(max_area, current_area)
+#         while left < right:
+#             width = right - left
+#             current_area = min(height[left], height[right]) * width
+#             max_area = max(max_area, current_area)
 
-            if height[left] < height[right]:
-                left += 1
-            else:
-                right -= 1
+#             if height[left] < height[right]:
+#                 left += 1
+#             else:
+#                 right -= 1
 
-        return max_area 
+#         return max_area 
     
     
-# leetcode 12
-class Solution:
-    def intToRoman(self, num: int) -> str:
-        val = [
-            1000, 900, 500, 400,
-            100, 90, 50, 40,
-            10, 9, 5, 4,
-            1
-        ]
-        syms = [
-            "M", "CM", "D", "CD",
-            "C", "XC", "L", "XL",
-            "X", "IX", "V", "IV",
-            "I"
-        ]
-        roman_num = ''
-        i = 0
-        while num > 0:
-            for _ in range(num // val[i]):
-                roman_num += syms[i]
-                num -= val[i]
-            i += 1
-        return roman_num
+# # leetcode 12
+# class Solution:
+#     def intToRoman(self, num: int) -> str:
+#         val = [
+#             1000, 900, 500, 400,
+#             100, 90, 50, 40,
+#             10, 9, 5, 4,
+#             1
+#         ]
+#         syms = [
+#             "M", "CM", "D", "CD",
+#             "C", "XC", "L", "XL",
+#             "X", "IX", "V", "IV",
+#             "I"
+#         ]
+#         roman_num = ''
+#         i = 0
+#         while num > 0:
+#             for _ in range(num // val[i]):
+#                 roman_num += syms[i]
+#                 num -= val[i]
+#             i += 1
+#         return roman_num
     
-# leetcode 13
-class Solution:
-    def romanToInt(self, s: str) -> int:
-        roman_map = {
-            'I': 1,
-            'V': 5,
-            'X': 10,
-            'L': 50,
-            'C': 100,
-            'D': 500,
-            'M': 1000
-        }
-        total = 0
-        prev_value = 0
+# # leetcode 13
+# class Solution:
+#     def romanToInt(self, s: str) -> int:
+#         roman_map = {
+#             'I': 1,
+#             'V': 5,
+#             'X': 10,
+#             'L': 50,
+#             'C': 100,
+#             'D': 500,
+#             'M': 1000
+#         }
+#         total = 0
+#         prev_value = 0
 
-        for char in reversed(s):
-            value = roman_map[char]
-            if value < prev_value:
-                total -= value
-            else:
-                total += value
-            prev_value = value
+#         for char in reversed(s):
+#             value = roman_map[char]
+#             if value < prev_value:
+#                 total -= value
+#             else:
+#                 total += value
+#             prev_value = value
 
-        return total
+#         return total
     
     
-# 3234 leetcode
-class Solution:
-    def countGoodSubstrings(self, s: str) -> int:
-        count = 0
-        for i in range(len(s) - 2):
-            substring = s[i:i+3]
-            if len(set(substring)) == 3:
-                count += 1
-        return count
+# # 3234 leetcode
+# class Solution:
+#     def countGoodSubstrings(self, s: str) -> int:
+#         count = 0
+#         for i in range(len(s) - 2):
+#             substring = s[i:i+3]
+#             if len(set(substring)) == 3:
+#                 count += 1
+#         return count
     
     
-# 1513 leetcode
-class Solution:
-    def numseb(self, s: str) -> int:
-        MOD = 10 ** 9 + 7
-        res = 0
-        cur = 0
+# # 1513 leetcode
+# class Solution:
+#     def numseb(self, s: str) -> int:
+#         MOD = 10 ** 9 + 7
+#         res = 0
+#         cur = 0
         
-        for ch in s:
-            if ch == '1':
-                cur += 1
-            else:
-                res += cur * (cur + 1) // 2
-                cur = 0
-        if cur: res += cur * (cur + 1) // 2
-        return res
+#         for ch in s:
+#             if ch == '1':
+#                 cur += 1
+#             else:
+#                 res += cur * (cur + 1) // 2
+#                 cur = 0
+#         if cur: res += cur * (cur + 1) // 2
+#         return res
     
+# reverse a string without using slicing
+def reverse_string(s:str) -> str:
+    rev = ''
+    for ch in s:
+        rev = ch + rev
+    return rev
+
+input_str = "Hello world"
+
+reverse_string = reverse_string(input_str)   
+
+
