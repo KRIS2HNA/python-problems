@@ -822,16 +822,24 @@
 # prime_list = primr_numbers(100)
 # print(prime_list)
 
-# palindrome check
-num = 121
-rev = 0
-n = abs(num)
-while n > 0:
-    rev = rev * 10 + n % 10
-    n //= 10
-if rev == abs(num):
-    print(f"{num} is a palindrome")
-else:
-    print(f"{num} is not a palindrome")
+# # palindrome check
+# num = 121
+# rev = 0
+# n = abs(num)
+# while n > 0:
+#     rev = rev * 10 + n % 10
+#     n //= 10
+# if rev == abs(num):
+#     print(f"{num} is a palindrome")
+# else:
+#     print(f"{num} is not a palindrome")
 
+# fibonacci series
+
+n = 10
+a, b = 0, 1
+for _ in range(n):
+    print(a, end = " ")
+    a, b = b, a + b
+    
 
