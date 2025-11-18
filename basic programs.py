@@ -834,12 +834,45 @@
 # else:
 #     print(f"{num} is not a palindrome")
 
-# fibonacci series
+# # fibonacci series
 
-n = 10
-a, b = 0, 1
-for _ in range(n):
-    print(a, end = " ")
-    a, b = b, a + b
+# n = 10
+# a, b = 0, 1
+# for _ in range(n):
+#     print(a, end = " ")
+#     a, b = b, a + b
+    
+# # armstorng number check
+# # an armstorng 
+# num = 153
+# order = len(str(num))
+# s = sum(int(d) ** order for d in str(num))
+# if s == num:
+#     print(f"{num} is an armstrong number")
+# else:
+#     print(f"{num} is not an armstrong number")
+
+# calculater
+print("Simple Calculater")
+print("Selct opertion: +, -, *, /")
+
+choice = input("Enter opertions: ")
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))    
+
+if choice == '+':
+    print(f"{num1} + {num2} = {num1 + num2}")
+elif choice == '-':
+    print(f"{num1} - {num2} = {num1 - num2}")
+elif choice == '*':
+    print(f"{num1} * {num2} = {num1 * num2}")
+elif choice == '/':
+    if num2 != 0:
+        print(f"{num1} / {num2} = {num1 / num2}")
+    else:
+        print("Error: Division by Zero")
+else:
+    print("Invalid operation")
     
 
