@@ -852,27 +852,36 @@
 # else:
 #     print(f"{num} is not an armstrong number")
 
-# calculater
-print("Simple Calculater")
-print("Selct opertion: +, -, *, /")
+# # calculater
+# print("Simple Calculater")
+# print("Selct opertion: +, -, *, /")
 
-choice = input("Enter opertions: ")
+# choice = input("Enter opertions: ")
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))    
+# num1 = float(input("Enter first number: "))
+# num2 = float(input("Enter second number: "))    
 
-if choice == '+':
-    print(f"{num1} + {num2} = {num1 + num2}")
-elif choice == '-':
-    print(f"{num1} - {num2} = {num1 - num2}")
-elif choice == '*':
-    print(f"{num1} * {num2} = {num1 * num2}")
-elif choice == '/':
-    if num2 != 0:
-        print(f"{num1} / {num2} = {num1 / num2}")
-    else:
-        print("Error: Division by Zero")
-else:
-    print("Invalid operation")
+# if choice == '+':
+#     print(f"{num1} + {num2} = {num1 + num2}")
+# elif choice == '-':
+#     print(f"{num1} - {num2} = {num1 - num2}")
+# elif choice == '*':
+#     print(f"{num1} * {num2} = {num1 * num2}")
+# elif choice == '/':
+#     if num2 != 0:
+#         print(f"{num1} / {num2} = {num1 / num2}")
+#     else:
+#         print("Error: Division by Zero")
+# else:
+#     print("Invalid operation")
     
+# leetcode 717
+class Solution:
+    def isOneBitCharacter(self, bits: List[int]) -> bool:
+        n = len(bits)
+        i = 0
 
+        while i < n - 1:
+            if bits[i] == 0: i += 1
+            else: i += 2
+        return i == n - 1
