@@ -927,9 +927,20 @@
 #         print("*", * i)
 #     print()
     
-for i in range(1, 6):
-    print("*" * (6 - i))
+# for i in range(1, 6):
+#     print("*" * (6 - i))
+  
+  
+n = 5 
+for i in range(n):
+    for j in range(i, n):
+        print("*", end = " ")
+    print()
     
+
+
+    
+      
     
     
     
