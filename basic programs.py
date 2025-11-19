@@ -875,13 +875,63 @@
 # else:
 #     print("Invalid operation")
     
-# leetcode 717
-class Solution:
-    def isOneBitCharacter(self, bits: List[int]) -> bool:
-        n = len(bits)
-        i = 0
+# # leetcode 717
+# class Solution:
+#     def isOneBitCharacter(self, bits: List[int]) -> bool:
+#         n = len(bits)
+#         i = 0
 
-        while i < n - 1:
-            if bits[i] == 0: i += 1
-            else: i += 2
-        return i == n - 1
+#         while i < n - 1:
+#             if bits[i] == 0: i += 1
+#             else: i += 2
+#         return i == n - 1
+    
+# # add list of numbers
+# def add_numbers(nums: list[int]) -> int:
+#     total = 0
+#     for num in nums:
+#         total += num
+#     return total
+
+# numbers = [1,2,3,4,5,6,7]
+# result = add_numbers(numbers)
+# print(f"sum of {numbers} is {result}")
+
+# #PRINTING PATTERN
+# for i in range(1, 6):
+#     print("*" * i)
+
+# i =0 *
+# i =1 **
+# i =2 * 
+#
+#
+
+# for i in range(1, 5):
+#     for j in range(1, i + 1):
+#         print(j , end = '')
+#     print()
+
+# # square pattern
+# n = 9
+# for i in range(n):
+#     for j in range(n):
+#         print("*", end = ' ') 
+#     print()
+    
+# # left triangle pattern
+
+# n = 5
+# for i in range(n):
+#     for  j in range(n):
+#         print("*", * i)
+#     print()
+    
+for i in range(1, 6):
+    print("*" * (6 - i))
+    
+    
+    
+    
+
+
