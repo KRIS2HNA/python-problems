@@ -194,6 +194,39 @@ python -m pytest tests/         # Run tests
 - Review mistakes and record the correct approach in your daily log.
 - Pair practice with small, enjoyable projects to keep momentum.
 
+## How to run example programs in this repo
+
+This repository contains multiple example scripts and practice files. Use the instructions below to run them quickly.
+
+- Run a single script from the repository root (Windows PowerShell):
+   ```powershell
+   python "d:\Python\basic_programs_with_test_inputs.py"
+   ```
+
+- If a script requires interactive input, run it and provide values when prompted:
+   ```powershell
+   python "d:\Python\basic programs.py"
+   # then type values and press Enter when the script prompts
+   ```
+
+- Use the preset test file (no input required) to see outputs for all programs:
+   ```powershell
+   python "d:\Python\basic_programs_with_test_inputs.py"
+   ```
+
+- Run single test or example using VS Code:
+   - Open the file, press `F5` to debug or `Ctrl+F5` to run without debugging.
+
+- Create a daily practice scaffold file using the template (example):
+   ```powershell
+   mkdir -p practice
+   copy .\templates\daily_log.md practice\2025-11-23_notes.md
+   ```
+
+Notes:
+- Use quotes around paths with spaces (e.g., `basic programs.py`).
+- Activate your virtual environment (`.\venv\Scripts\activate`) before installing packages.
+
 ## License
 
 This README is for personal use. Copy or adapt freely.
