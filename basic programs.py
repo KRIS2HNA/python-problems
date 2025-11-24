@@ -1090,3 +1090,9 @@ class Solution:
             pre = (pre << 1) | x
             res.append(pre % 5 == 0)
         return res
+    
+# # Part A: Loops
+# # 1
+# for i in range(1, 11):    
+#     print(i)
+    
