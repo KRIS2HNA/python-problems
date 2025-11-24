@@ -1025,55 +1025,68 @@ import heapq
 # for i in range(n):
 #     print(" " * (n - i - 1) + "*" * (2 * i + 1))
 
-n = 7
-for i in range(n):
-    print(" ", end = " ")
-    for j in range(2 * i + 1):
-        if j == 0 or j == 2 * i or i == n - 1:
-            print("*", end = "")
-        else:
-            print(" ", end = "")
-    print()
+# n = 7
+# for i in range(n):
+#     print(" ", end = " ")
+#     for j in range(2 * i + 1):
+#         if j == 0 or j == 2 * i or i == n - 1:
+#             print("*", end = "")
+#         else:
+#             print(" ", end = "")
+#     print()
 
-# leetcode 11
-class Solution:
-    def maxArea(self, height: List[int]) -> int:
-        left, right = 0, len(height) - 1
-        max_area = 0
+# # leetcode 11
+# class Solution:
+#     def maxArea(self, height: List[int]) -> int:
+#         left, right = 0, len(height) - 1
+#         max_area = 0
 
-        while left < right:
-            width = right - left
-            current_area = min(height[left], height[right]) * width
-            max_area = max(max_area, current_area)
+#         while left < right:
+#             width = right - left
+#             current_area = min(height[left], height[right]) * width
+#             max_area = max(max_area, current_area)
 
-            if height[left] < height[right]:
-                left += 1
-            else:
-                right -= 1
+#             if height[left] < height[right]:
+#                 left += 1
+#             else:
+#                 right -= 1
 
-        return max_area
+#         return max_area
     
     
-# leetcode 12
+# # leetcode 12
+# class Solution:
+#     def intToRoman(self, num: int) -> str:
+#         val = [
+#             1000, 900, 500, 400,
+#             100, 90, 50, 40,
+#             10, 9, 5, 4,
+#             1
+#         ]
+#         syms = [
+#             "M", "CM", "D", "CD",
+#             "C", "XC", "L", "XL",
+#             "X", "IX", "V", "IV",
+#             "I"
+#         ]
+#         roman_num = ''
+#         i = 0
+#         while num > 0:
+#             for _ in range(num // val[i]):
+#                 roman_num += syms[i]
+#                 num -= val[i]
+#             i += 1
+#         return roman_num
+
+
+# leetcode 1016
 class Solution:
-    def intToRoman(self, num: int) -> str:
-        val = [
-            1000, 900, 500, 400,
-            100, 90, 50, 40,
-            10, 9, 5, 4,
-            1
-        ]
-        syms = [
-            "M", "CM", "D", "CD",
-            "C", "XC", "L", "XL",
-            "X", "IX", "V", "IV",
-            "I"
-        ]
-        roman_num = ''
-        i = 0
-        while num > 0:
-            for _ in range(num // val[i]):
-                roman_num += syms[i]
-                num -= val[i]
-            i += 1
-        return roman_num
+    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
+        n = len(nums)
+        res = []
+        pre = 0
+
+        for x in nums:
+            pre = (pre << 1) | x
+            res.append(pre % 5 == 0)
+        return res
