@@ -1102,3 +1102,11 @@ class Solution:
 # for i in range(1, n + 1):
 #     print(i)
 
+#leetcode 1096
+class Solution:
+    def smallestRepunitDivByK(self, k: int) -> int:
+        n = 0
+        for i in range(1, k + 1):
+            n = (n * 10 + 1) % k
+            if n % k == 0: return i
+        return -1
