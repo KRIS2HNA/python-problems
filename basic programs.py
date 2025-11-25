@@ -1079,34 +1079,38 @@ import heapq
 #         return roman_num
 
 
-# leetcode 1016
-class Solution:
-    def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
-        n = len(nums)
-        res = []
-        pre = 0
+# # leetcode 1016
+# class Solution:
+#     def prefixesDivBy5(self, nums: List[int]) -> List[bool]:
+#         n = len(nums)
+#         res = []
+#         pre = 0
 
-        for x in nums:
-            pre = (pre << 1) | x
-            res.append(pre % 5 == 0)
-        return res
+#         for x in nums:
+#             pre = (pre << 1) | x
+#             res.append(pre % 5 == 0)
+#         return res
     
-# # Part A: Loops
-# # 1
-# for i in range(1, 11):    
-#     print(i)
+# # # Part A: Loops
+# # # 1
+# # for i in range(1, 11):    
+# #     print(i)
 
     
-# # 2
-# n = int(input())
-# for i in range(1, n + 1):
-#     print(i)
+# # # 2
+# # n = int(input())
+# # for i in range(1, n + 1):
+# #     print(i)
 
-#leetcode 1096
-class Solution:
-    def smallestRepunitDivByK(self, k: int) -> int:
-        n = 0
-        for i in range(1, k + 1):
-            n = (n * 10 + 1) % k
-            if n % k == 0: return i
-        return -1
+# #leetcode 1096
+# class Solution:
+#     def smallestRepunitDivByK(self, k: int) -> int:
+#         n = 0
+#         for i in range(1, k + 1):
+#             n = (n * 10 + 1) % k
+#             if n % k == 0: return i
+#         return -1
+
+# # 3
+for i in range(10, 0,-1):
+    print(i)
