@@ -1121,6 +1121,63 @@ import heapq
 #     print(i)
     
 # # 5
-for i in range(1, 21):
-    if i % 2 == 0:
-        print(i)
+# for i in range(1, 21):
+#     if i % 2 == 0:
+#         print(i)
+        
+# what is loops:
+# loops are used to repeat a block of code multiple time until a certain condition is met.
+
+# Types of loops in python:
+# 1. for  loop:
+# definition:  A for loop is used to iterate a swquence (like a  list, tuple, dictionary, set, or string) or other iterable objects:
+# syntax:
+# for  item in variables:
+#   # code block to be executed
+# example: 
+# fruits = ['apple', 'banana', 'cherry']
+# for fruit in fruits:
+#     print(fruit)
+    
+# 2. while loop:
+# defination: A while  loop repeatedly executes a block of code as long as a specified condition is true.
+# syntax: 
+# while condion:
+#   # code block to be executed:
+# example:
+fruits = ['apple', 'banana', 'cherry']
+i = 0
+while i < len(fruits):
+    print(fruits[i])
+    i += 1
+    
+# explain the example:
+# In this example, we have a list of fruits. We initialize a variable i to 0, 
+# which will be used as an index to access elements in the list. The while loop checks 
+# if i is less than the length of the fruits list. If the condition is true, 
+# it prints the fruit at index i and then increments i by 1.
+# This process continues until i is no longer less than the length of the list, 
+# at which point the loop terminates.
+
+# 3. Nested loops:
+# defination: A nested loop is a loop inside another loop. The inner loop is excuted completely 
+# for each iteration of the outer loop.
+# syntax:
+# for item1 in variables:
+#   for item2 in variables:
+#      code block to be excuted
+# example: 
+for i in range(1, 4):
+    for j in range(1, 4):
+        print(f"i: {i}, j: {j}")
+    
+
+# explain the example:
+# In this example, we have two nested for loops. The outer loop iterates over the
+# values of i from 1 to 3, and for each value of i, the inner loop iterates over
+# the values of j from 1 to 3. The print statement inside the inner loop    
+# displays the current values of i and j for each iteration. This results in a total
+# of 9 print statements, as the inner loop runs 3 times for each of the
+# 3 iterations of the outer loop.
+
+
