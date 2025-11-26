@@ -1145,11 +1145,11 @@ import heapq
 # while condion:
 #   # code block to be executed:
 # example:
-fruits = ['apple', 'banana', 'cherry']
-i = 0
-while i < len(fruits):
-    print(fruits[i])
-    i += 1
+# fruits = ['apple', 'banana', 'cherry']
+# i = 0
+# while i < len(fruits):
+#     print(fruits[i])
+#     i += 1
     
 # explain the example:
 # In this example, we have a list of fruits. We initialize a variable i to 0, 
@@ -1167,9 +1167,9 @@ while i < len(fruits):
 #   for item2 in variables:
 #      code block to be excuted
 # example: 
-for i in range(1, 4):
-    for j in range(1, 4):
-        print(f"i: {i}, j: {j}")
+# for i in range(1, 4):
+#     for j in range(1, 4):
+#         print(f"i: {i}, j: {j}")
     
 
 # explain the example:
@@ -1179,5 +1179,36 @@ for i in range(1, 4):
 # displays the current values of i and j for each iteration. This results in a total
 # of 9 print statements, as the inner loop runs 3 times for each of the
 # 3 iterations of the outer loop.
+
+## loops problems:
+''' 1. Print numbers from 1 to 10 using a loop
+2. Print even numbers from 1 to 50
+3. Print the multiplication table of any number
+4. Print the sum of first N natural numbers
+5. Count digits in a number using a loop
+6. Reverse a number using a loop
+7. Print characters of a string one by one
+8. Count vowels in a string
+9. Find factorial of a number
+10. Print Fibonacci series of N numbers '''
+
+# 01
+for i in range(1, 11):
+    print(i)
+    
+# 02
+list_even = []
+for i in range(1, 51):
+    if i % 2 == 0:
+        list_even.append(i)
+print(list_even)
+
+# 03
+n = 9
+for i in range(1, 11):
+    print(f"{n} * {i} = { n * i }")
+
+print(*[f"{n} * {i} = { n * i } " for i in range(1, 11)], sep='\n')
+
 
 
