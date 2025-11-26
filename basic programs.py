@@ -1192,23 +1192,83 @@ import heapq
 9. Find factorial of a number
 10. Print Fibonacci series of N numbers '''
 
-# 01
-for i in range(1, 11):
-    print(i)
+# # 01
+# for i in range(1, 11):
+#     print(i)
     
-# 02
-list_even = []
-for i in range(1, 51):
-    if i % 2 == 0:
-        list_even.append(i)
-print(list_even)
+# # 02
+# list_even = []
+# for i in range(1, 51):
+#     if i % 2 == 0:
+#         list_even.append(i)
+# print(list_even)
 
-# 03
-n = 9
-for i in range(1, 11):
-    print(f"{n} * {i} = { n * i }")
+# # 03
+# # n = 9
+# # for i in range(1, 11):
+# #     print(f"{n} * {i} = { n * i }")
+# n = 9
+# print(*[f"{n} * {i} = { n * i } " for i in range(1, 11)], sep='\n')
 
-print(*[f"{n} * {i} = { n * i } " for i in range(1, 11)], sep='\n')
+# # 04
+# n = int(input("Enter the number: "))
+# sum_n = 0
+# for i in range(1, n +1):
+#     sum_n += i
+# print(f"sum of first {n} natural numbers is {sum_n}")
+
+# # 05
+# num = int(input("Enter a number: "))
+# count = 0
+# n = abs(num)
+# while n > 0:
+#     count += 1
+#     n //= 10
+# print(f"number of digits in {num} is {count}")
+
+# # 06
+# num = int(input("Enter the number: "))
+# rev = 0
+# n = abs(num)
+# while n > 0:
+#     rev = rev * 10 + n % 10
+#     n //= 10
+# if num < 0:
+#     rev = -rev
+# print(f"Reverse of {num} is {rev}")
+
+# # 07
+# s = input("Enter the string: ")
+# for ch in s:
+#     print(ch)
+    
+# # 08
+# s = input("Enter the string: ")
+# vowels, constants = 0, 0
+# vowels_check = 'aeiou'
+# for ch in s.lower():
+#     if ch.isalpha():
+#         if ch in vowels_check:
+#             vowels += 1
+#         else:
+#             constants += 1
+# print(f"vowels: {vowels}, constants: {constants}")
+
+# # 09
+# num = int(input("Enter the number: "))
+# fact = 1
+# for i in range(1, num + 1):
+#     fact *= i
+# print(f"factorial of {num} is {fact}")
+
+
+# 10
+m = int(input("Enter the number of terms: "))
+a, b = 0, 1
+for _ in range(m):
+    print(a, end = " ")
+    a, b = b, a + b 
+print(f" Fibonacci series of {m} terms printed.")
 
 
 
