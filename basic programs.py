@@ -1262,13 +1262,13 @@ import heapq
 # print(f"factorial of {num} is {fact}")
 
 
-# 10
-m = int(input("Enter the number of terms: "))
-a, b = 0, 1
-for _ in range(m):
-    print(a, end = " ")
-    a, b = b, a + b 
-print(f" Fibonacci series of {m} terms printed.")
+# # 10
+# m = int(input("Enter the number of terms: "))
+# a, b = 0, 1
+# for _ in range(m):
+#     print(a, end = " ")
+#     a, b = b, a + b 
+# print(f" Fibonacci series of {m} terms printed.")
 
 
 
