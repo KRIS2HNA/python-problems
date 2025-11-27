@@ -1294,13 +1294,28 @@ import heapq
 
 '''
 
-# 11
+# # 11
+# num = int(input("Enter the number: "))
+# max_digit = 0
+# n = abs(num)
+# while n > 0:
+#     digit = n % 10
+#     if digit > max_digit:
+#         max_digit = digit
+#     n //= 10
+# print(f"Largest digit in {num} is {max_digit}")
+
+# 12
 num = int(input("Enter the number: "))
-max_digit = 0
-n = abs(num)
-while n > 0:
-    digit = n % 10
-    if digit > max_digit:
-        max_digit = digit
-    n //= 10
-print(f"Largest digit in {num} is {max_digit}")
+is_prime = True
+if num <= 1:
+    is_prime = False
+else:
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            is_prime = False
+            break
+if is_prime:
+    print(f"{num} is a prime number")
+else:
+    print(f"{num} is not a prime number")
