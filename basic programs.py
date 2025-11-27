@@ -1270,5 +1270,37 @@ import heapq
 #     a, b = b, a + b 
 # print(f" Fibonacci series of {m} terms printed.")
 
+'''
+11. Find the largest digit in a number
+12. Check if a number is prime using a loop
+13. Print all prime numbers between 1–100
+14. Print pattern:
+*
+**
+***
+****
 
+15. Print reverse pattern:
+****
+***
+**
+*
 
+16. Sum of digits of a number
+17. Count how many times a character appears in a string
+18. Check if a string is palindrome using loops
+19. Find GCD of two numbers using loops
+20. Print all numbers divisible by 3 and 5 between 1–200
+
+'''
+
+# 11
+num = int(input("Enter the number: "))
+max_digit = 0
+n = abs(num)
+while n > 0:
+    digit = n % 10
+    if digit > max_digit:
+        max_digit = digit
+    n //= 10
+print(f"Largest digit in {num} is {max_digit}")
