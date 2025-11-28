@@ -1356,7 +1356,19 @@ while n > 0:
 print(f"Sum of digits is {sum}")
 
 
-
+# 17
+s = input("Enter the string: ")
+ch = input("Enter the character to count: ")
+count = 0
+while True:
+    index = s.find(ch)
+    if index == -1:
+        break
+    count += 1
+    s = s[index + 1:]
+    
+print(f"Character '{ch}' appears {count} times in the string.")
+        
 
 
             
