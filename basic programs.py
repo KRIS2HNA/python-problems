@@ -1345,5 +1345,18 @@ for i in range(1, n):
 n = 5
 for i in range(n, 0, -1):
     print("*" * i)  
+    
+# 16
+n = int(input("Enter the number: "))
+sum = 0
+while n > 0:
+    digit = n % 10
+    sum += digit
+    n //= 10
+print(f"Sum of digits is {sum}")
+
+
+
+
 
             
