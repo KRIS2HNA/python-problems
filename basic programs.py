@@ -1131,7 +1131,11 @@ import heapq
 # Types of loops in python:
 # 1. for  loop:
 # definition:  A for loop is used to iterate a swquence (like a  list, tuple, dictionary, set, or string) or other iterable objects:
+#for(start, end, step):
+    # code block to be executed
+    
 # syntax:
+
 # for  item in variables:
 #   # code block to be executed
 # example: 
@@ -1305,17 +1309,41 @@ import heapq
 #     n //= 10
 # print(f"Largest digit in {num} is {max_digit}")
 
-# 12
-num = int(input("Enter the number: "))
-is_prime = True
-if num <= 1:
-    is_prime = False
-else:
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            is_prime = False
-            break
-if is_prime:
-    print(f"{num} is a prime number")
-else:
-    print(f"{num} is not a prime number")
+# # 12
+# num = int(input("Enter the number: "))
+# is_prime = True
+# if num <= 1:
+#     is_prime = False
+# else:
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             is_prime = False
+#             break
+# if is_prime:
+#     print(f"{num} is a prime number")
+# else:
+#     print(f"{num} is not a prime number")
+
+
+# # 13 print prime numbers between 1 to n
+# n = int(input("Enter the number: "))
+# primes = []
+# for num in range(2, n + 1):
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             break
+#     else:
+#         primes.append(num)
+# print(f"prime numbers between 1 to {n} are: {primes}")
+
+# 14
+n = 5
+for i in range(1, n):
+    print("*" * i)
+    
+# 15
+n = 5
+for i in range(n, 0, -1):
+    print("*" * i)  
+
+            
