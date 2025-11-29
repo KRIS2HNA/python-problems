@@ -1336,39 +1336,52 @@ import heapq
 #         primes.append(num)
 # print(f"prime numbers between 1 to {n} are: {primes}")
 
-# 14
-n = 5
-for i in range(1, n):
-    print("*" * i)
+# # 14
+# n = 5
+# for i in range(1, n):
+#     print("*" * i)
     
-# 15
-n = 5
-for i in range(n, 0, -1):
-    print("*" * i)  
+# # 15
+# n = 5
+# for i in range(n, 0, -1):
+#     print("*" * i)  
     
-# 16
-n = int(input("Enter the number: "))
-sum = 0
-while n > 0:
-    digit = n % 10
-    sum += digit
-    n //= 10
-print(f"Sum of digits is {sum}")
+# # 16
+# n = int(input("Enter the number: "))
+# sum = 0
+# while n > 0:
+#     digit = n % 10
+#     sum += digit
+#     n //= 10
+# print(f"Sum of digits is {sum}")
 
 
-# 17
+# # 17
+# s = input("Enter the string: ")
+# ch = input("Enter the character to count: ")
+# count = 0
+# while True:
+#     index = s.find(ch)
+#     if index == -1:
+#         break
+#     count += 1
+#     s = s[index + 1:]
+    
+# print(f"Character '{ch}' appears {count} times in the string.")
+
+# 18
 s = input("Enter the string: ")
-ch = input("Enter the character to count: ")
-count = 0
-while True:
-    index = s.find(ch)
-    if index == -1:
+is_palindrome = True
+length = len(s)
+for i in range(length // 2):
+    if s[i] != s[length - i - 1]:
+        is_palindrome = False
         break
-    count += 1
-    s = s[index + 1:]
-    
-print(f"Character '{ch}' appears {count} times in the string.")
-        
+if is_palindrome:
+    print(f'"{s}" is a palindrome')
+else:
+    print(f'"{s}" is not a palindrome')
+            
 
 
             
