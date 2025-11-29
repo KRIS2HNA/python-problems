@@ -1393,4 +1393,11 @@ gcd = a
 print(f"GCD of {num1} and {num2} is {gcd}")
 
 
-            
+# 20
+divisible_numbers = []
+for i in range(1, 201): 
+    if i % 3 == 0 and i % 5 == 0:
+        divisible_numbers.append(i)
+print(f"Numbers divisible by 3 and 5 between 1 to 200 are: {divisible_numbers}")
+
+     
