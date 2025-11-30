@@ -1436,6 +1436,3 @@ for num in nums:
         unique_nums.append(num) 
 print(f"List after removing duplicates: {unique_nums}")
 
-# 22
-nums = [1, 2, 2, 3, 4, 4, 5]
-frequency = {}          
