@@ -1401,3 +1401,38 @@ for i in range(1, 201):
 print(f"Numbers divisible by 3 and 5 between 1 to 200 are: {divisible_numbers}")
 
      
+'''
+21. Remove duplicates from a list using loops only (do not use set()).
+22. Find the frequency of each element in a list using loops.
+23. Find the second largest number in a list using loops (no built-in functions like max()).
+24. Print the following pattern using loops:
+1
+12
+123
+1234
+
+25. Write a program to check if a number is an Armstrong number using loops.
+26. Print all Armstrong numbers between 1 and 1000 using loops.
+27. Count the number of words in a sentence without using split().
+28. Create a menu-driven program (ATM-like) using loops to perform:
+
+Check Balance
+
+Deposit
+
+Withdraw
+
+Exit
+
+29. Create an infinite loop that stops only when the user types “exit”.
+30. Write a program to find the longest word in a sentence using loops (no split()).
+'''
+
+# 21
+nums = [1, 2, 2, 3, 4, 4, 5]
+unique_nums = []
+for num in nums:
+    if num not in unique_nums:
+        unique_nums.append(num) 
+print(f"List after removing duplicates: {unique_nums}")
+
