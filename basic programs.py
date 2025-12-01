@@ -1445,3 +1445,14 @@ for num in n:
     else:
         frequency[num] = 1
 print(f"Frequency of each element: {frequency}")
+
+# 23
+nums = [10, 20, 4, 45, 99]
+first = second = float('-inf')
+for num in nums:    
+    if num > first:
+        second = first
+        first = num
+    elif num > second and num != first:
+        second = num
+print(f"Second largest number is {second}")
