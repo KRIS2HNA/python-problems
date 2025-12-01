@@ -1436,3 +1436,12 @@ for num in nums:
         unique_nums.append(num) 
 print(f"List after removing duplicates: {unique_nums}")
 
+# 22
+n = [1, 2, 2, 3, 4, 4, 5]
+frequency = {}
+for num in n:
+    if num in frequency:
+        frequency[num] += 1
+    else:
+        frequency[num] = 1
+print(f"Frequency of each element: {frequency}")
