@@ -198,36 +198,161 @@ python -m pytest tests/         # Run tests
 
 This repository contains multiple example scripts and practice files. Use the instructions below to run them quickly.
 
-- Run a single script from the repository root (Windows PowerShell):
-   ```powershell
-   python "d:\Python\basic_programs_with_test_inputs.py"
-   ```
+### Quick Run Examples
 
-- If a script requires interactive input, run it and provide values when prompted:
-   ```powershell
-   python "d:\Python\basic programs.py"
-   # then type values and press Enter when the script prompts
-   ```
+**Run all 32 basic programs with test inputs (no interaction required)**:
+```powershell
+python "d:\Python\basic_programs_with_test_inputs.py"
+```
 
-- Use the preset test file (no input required) to see outputs for all programs:
-   ```powershell
-   python "d:\Python\basic_programs_with_test_inputs.py"
-   ```
+**Run interactive version (provide inputs when prompted)**:
+```powershell
+python "d:\Python\basic programs.py"
+```
 
-- Run single test or example using VS Code:
-   - Open the file, press `F5` to debug or `Ctrl+F5` to run without debugging.
+**Run in VS Code**:
+- Open the file and press `F5` (debug) or `Ctrl+F5` (run)
 
-- Create a daily practice scaffold file using the template (example):
-   ```powershell
-   mkdir -p practice
-   copy .\templates\daily_log.md practice\2025-11-23_notes.md
-   ```
+**Create a daily practice file from template**:
+```powershell
+mkdir -p practice
+copy .\templates\daily_log.md practice\2025-11-23_notes.md
+```
 
-Notes:
-- Use quotes around paths with spaces (e.g., `basic programs.py`).
-- Activate your virtual environment (`.\venv\Scripts\activate`) before installing packages.
+### Important Notes
+
+- Use quotes around paths with spaces: `python "basic programs.py"`
+- Activate virtual environment first: `.\venv\Scripts\activate`
+- All programs include detailed comments explaining each concept
+
+## Example Walkthrough
+
+Here's a quick walkthrough of the basic programs included in this repo:
+
+**Part A: Loop Statements** (Programs 1-15)
+1. Sum of even numbers 2-100: Demonstrates range with step parameter
+2. Numbers divisible by 7 but not 5: Multiple conditions with logical operators
+3. Factorial: Accumulator pattern with loops
+4. Fibonacci: Sequence generation with multiple assignment
+5. Count digits: Integer division technique
+6. Sum of digits: Digit extraction using modulo
+7. Reverse number: Building numbers digit by digit
+8. Prime numbers 2-100: Optimization with square root
+9. Multiplication table: Nested loops
+10. Count vowels/consonants: String iteration and conditions
+
+**Part B: Conditional Statements** (Programs 16-32)
+- Positive/negative/zero checks
+- Even/odd detection
+- Leap year validation
+- Maximum of three numbers
+- Character type classification
+- Grade calculation
+- Triangle validity
+- Palindrome detection
+- Electricity bill calculation
+- And more...
+
+Each program builds on fundamental Python concepts. Start with Part A to master loops, then move to Part B for conditional logic.
+
+## Project Structure Guide
+
+Organize your practice work as follows:
+
+```
+python-problems/
+├── basic programs.py              # Original programs with input prompts
+├── basic_programs_with_test_inputs.py  # Pre-filled test version
+├── basic_programs_interactive.py  # Interactive demonstration
+├── README.md                      # This file
+└── practice/
+    ├── 2025-11-02_basic_programs_notes.md  # Study notes
+    ├── 2025-11-23_daily_log.md    # Daily practice log
+    └── progress.md                # Weekly progress tracker
+```
+
+## Troubleshooting
+
+### "Python is not recognized"
+- Ensure Python is installed and added to PATH
+- Check: `python --version`
+- Reinstall Python with "Add Python to PATH" option checked
+
+### "List is not defined" or import errors
+- File has missing imports at the top
+- Required imports for this repo:
+  ```python
+  from typing import List
+  from collections import defaultdict
+  import heapq
+  ```
+
+### Program waits for input but nothing appears
+- The script is waiting for your input
+- Type a value and press Enter
+- Example: for factorial, type `5` and press Enter
+
+### Can't find file
+- Use full paths: `python "d:\Python\basic programs.py"`
+- Or navigate to folder first: `cd d:\Python` then `python "basic programs.py"`
+
+### Virtual environment not activating
+- Ensure you created it: `python -m venv venv`
+- Windows activation: `.\venv\Scripts\activate` (not /bin)
+- On success, prompt shows `(venv)` prefix
 
 ## License
 
 This README is for personal use. Copy or adapt freely.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
