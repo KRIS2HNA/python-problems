@@ -1369,36 +1369,36 @@ import heapq
     
 # print(f"Character '{ch}' appears {count} times in the string.")
 
-# 18
-s = input("Enter the string: ")
-is_palindrome = True
-length = len(s)
-for i in range(length // 2):
-    if s[i] != s[length - i - 1]:
-        is_palindrome = False
-        break
-if is_palindrome:
-    print(f'"{s}" is a palindrome')
-else:
-    print(f'"{s}" is not a palindrome')
+# # 18
+# s = input("Enter the string: ")
+# is_palindrome = True
+# length = len(s)
+# for i in range(length // 2):
+#     if s[i] != s[length - i - 1]:
+#         is_palindrome = False
+#         break
+# if is_palindrome:
+#     print(f'"{s}" is a palindrome')
+# else:
+#     print(f'"{s}" is not a palindrome')
             
 
-# 19
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))  
-a, b = num1, num2
-while b != 0:   
-    a, b = b, a % b
-gcd = a
-print(f"GCD of {num1} and {num2} is {gcd}")
+# # 19
+# num1 = int(input("Enter first number: "))
+# num2 = int(input("Enter second number: "))  
+# a, b = num1, num2
+# while b != 0:   
+#     a, b = b, a % b
+# gcd = a
+# print(f"GCD of {num1} and {num2} is {gcd}")
 
 
-# 20
-divisible_numbers = []
-for i in range(1, 201): 
-    if i % 3 == 0 and i % 5 == 0:
-        divisible_numbers.append(i)
-print(f"Numbers divisible by 3 and 5 between 1 to 200 are: {divisible_numbers}")
+# # 20
+# divisible_numbers = []
+# for i in range(1, 201): 
+#     if i % 3 == 0 and i % 5 == 0:
+#         divisible_numbers.append(i)
+# print(f"Numbers divisible by 3 and 5 between 1 to 200 are: {divisible_numbers}")
 
      
 '''
@@ -1428,42 +1428,54 @@ Exit
 30. Write a program to find the longest word in a sentence using loops (no split()).
 '''
 
-# 21
-nums = [1, 2, 2, 3, 4, 4, 5]
-unique_nums = []
-for num in nums:
-    if num not in unique_nums:
-        unique_nums.append(num) 
-print(f"List after removing duplicates: {unique_nums}")
+# # 21
+# nums = [1, 2, 2, 3, 4, 4, 5]
+# unique_nums = []
+# for num in nums:
+#     if num not in unique_nums:
+#         unique_nums.append(num) 
+# print(f"List after removing duplicates: {unique_nums}")
 
-# 22
-n = [1, 2, 2, 3, 4, 4, 5]
-frequency = {}
-for num in n:
-    if num in frequency:
-        frequency[num] += 1
-    else:
-        frequency[num] = 1
-print(f"Frequency of each element: {frequency}")
+# # 22
+# n = [1, 2, 2, 3, 4, 4, 5]
+# frequency = {}
+# for num in n:
+#     if num in frequency:
+#         frequency[num] += 1
+#     else:
+#         frequency[num] = 1
+# print(f"Frequency of each element: {frequency}")
 
-# 23
-nums = [10, 20, 4, 45, 99]
-first = second = float('-inf')
-for num in nums:    
-    if num > first:
-        second = first
-        first = num
-    elif num > second and num != first:
-        second = num
-print(f"Second largest number is {second}")
+# # 23
+# nums = [10, 20, 4, 45, 99]
+# first = second = float('-inf')
+# for num in nums:    
+#     if num > first:
+#         second = first
+#         first = num
+#     elif num > second and num != first:
+#         second = num
+# print(f"Second largest number is {second}")
 
-# 24
-n = 5
-for i in range(1, n):
-    for j in range(1, i + 1):
-        print(j, end = '')
-    print()
+# # 24
+# n = 5
+# for i in range(1, n):
+#     for j in range(1, i + 1):
+#         print(j, end = '')
+#     print()
     
 
 # 25
 n = int(input("Enter the number: "))
+sum = 0
+temp = n
+order = len(str(n))
+while temp > 0:
+    digit = temp % 10
+    sum += digit ** order
+    temp //= 10
+if sum == n:
+    print(f"{n} is an Armstrong number")
+else:
+    print(f"{n} is not an Armstrong number")
+      
