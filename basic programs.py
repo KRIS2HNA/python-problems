@@ -1479,3 +1479,21 @@ if sum == n:
 else:
     print(f"{n} is not an Armstrong number")
       
+      
+# 26
+armstorng_numbers = []
+for num in range(1, 1001):
+    sum = 0
+    order = len(str(num))
+    temp = num
+    
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
+        
+if sum == num:
+    armstorng_numbers.append(num)
+print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
+
+    
