@@ -1465,48 +1465,78 @@ Exit
 #     print()
     
 
-# 25
-n = int(input("Enter the number: "))
-sum = 0
-temp = n
-order = len(str(n))
-while temp > 0:
-    digit = temp % 10
-    sum += digit ** order
-    temp //= 10
-if sum == n:
-    print(f"{n} is an Armstrong number")
-else:
-    print(f"{n} is not an Armstrong number")
+# # 25
+# n = int(input("Enter the number: "))
+# sum = 0
+# temp = n
+# order = len(str(n))
+# while temp > 0:
+#     digit = temp % 10
+#     sum += digit ** order
+#     temp //= 10
+# if sum == n:
+#     print(f"{n} is an Armstrong number")
+# else:
+#     print(f"{n} is not an Armstrong number")
       
       
-# 26
-armstorng_numbers = []
-for num in range(1, 1001):
-    sum = 0
-    order = len(str(num))
-    temp = num
+# # 26
+# armstorng_numbers = []
+# for num in range(1, 1001):
+#     sum = 0
+#     order = len(str(num))
+#     temp = num
     
-    while temp > 0:
-        digit = temp % 10
-        sum += digit ** order
-        temp //= 10
+#     while temp > 0:
+#         digit = temp % 10
+#         sum += digit ** order
+#         temp //= 10
         
-if sum == num:
-    armstorng_numbers.append(num)
-print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
+# if sum == num:
+#     armstorng_numbers.append(num)
+# print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
 
-# 27
-sentence = input("Enter the sentence: ")
-count = 0
-in_word = False
-for ch in sentence:
-    if ch != ' ' and not in_word:
-        count += 1
-        in_word = True
-    elif ch == ' ':
-        in_word = False
-print(f"Number of words in the sentence: {count}")
+# # 27
+# sentence = input("Enter the sentence: ")
+# count = 0
+# in_word = False
+# for ch in sentence:
+#     if ch != ' ' and not in_word:
+#         count += 1
+#         in_word = True
+#     elif ch == ' ':
+#         in_word = False
+# print(f"Number of words in the sentence: {count}")
 
 
     
+# 28
+balance = 0
+while True:
+    print("\nMenu:")
+    print("1. Check Balance")
+    print("2. Deposit")
+    print("3. Withdraw")
+    print("4. Exit")
+    
+    choice = input("Enter your choice (1-4): ")
+    
+    if choice == '1':
+        print(f"Your current balance is: ${balance}")
+    elif choice == '2':
+        amount = float(input("Enter amount to deposit: "))
+        balance += amount
+        print(f"${amount} deposited successfully.")
+    elif choice == '3':
+        amount = float(input("Enter amount to withdraw: "))
+        if amount > balance:
+            print("Insufficient balance.")
+        else:
+            balance -= amount
+            print(f"${amount} withdrawn successfully.")
+    elif choice == '4':
+        print("Exiting the program. Thank you!")
+        break
+    else:
+        print("Invalid choice. Please try again.")
+
