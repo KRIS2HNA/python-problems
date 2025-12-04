@@ -1548,18 +1548,18 @@ Exit
 #         break
     
     
-# 30
-sentence = input("Enter the sentence: ")
-longest_word = ''
-current_word = ''
-for ch in sentence:
-    if ch != ' ':
-        current_word += ch
-    else:
-        if len(current_word) > len(longest_word):
-            longest_word = current_word
-        current_word = ''
-if len(current_word) > len(longest_word):
-    longest_word = current_word
-print(f"The longest word in the sentence is: '{longest_word}'")
+# # 30
+# sentence = input("Enter the sentence: ")
+# longest_word = ''
+# current_word = ''
+# for ch in sentence:
+#     if ch != ' ':
+#         current_word += ch
+#     else:
+#         if len(current_word) > len(longest_word):
+#             longest_word = current_word
+#         current_word = ''
+# if len(current_word) > len(longest_word):
+#     longest_word = current_word
+# print(f"The longest word in the sentence is: '{longest_word}'")
 
