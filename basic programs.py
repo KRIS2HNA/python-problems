@@ -1540,3 +1540,26 @@ Exit
 #     else:
 #         print("Invalid choice. Please try again.")
 
+# # 29
+# while True:
+#     command = input("Type 'exit' to stop the loop: ")
+#     if command.lower() == 'exit':
+#         print("Exiting the loop. Goodbye!")
+#         break
+    
+    
+# 30
+sentence = input("Enter the sentence: ")
+longest_word = ''
+current_word = ''
+for ch in sentence:
+    if ch != ' ':
+        current_word += ch
+    else:
+        if len(current_word) > len(longest_word):
+            longest_word = current_word
+        current_word = ''
+if len(current_word) > len(longest_word):
+    longest_word = current_word
+print(f"The longest word in the sentence is: '{longest_word}'")
+
