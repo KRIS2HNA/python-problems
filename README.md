@@ -271,6 +271,119 @@ python-problems/
     └── progress.md                # Weekly progress tracker
 ```
 
+## QR Project - Quick Reference & Progress Tracking
+
+A mini-project tracker to monitor your coding progress and maintain accountability.
+
+### What is QR Project?
+
+QR Project is a lightweight system for:
+- Tracking daily coding sessions with timestamps
+- Recording problem-solving insights and "aha moments"
+- Building streaks and maintaining consistency
+- Creating a personal reference guide of solutions
+
+### QR Project Structure
+
+```
+qr_project/
+├── daily/
+│   ├── 2025-12-05.md          # Today's session
+│   ├── 2025-12-04.md          # Yesterday's session
+│   └── ...
+├── insights.md                 # Key learnings and patterns
+├── solutions_index.md          # Quick index of solved problems
+└── streak.txt                  # Current streak counter
+```
+
+### Daily Session Template (for QR Project)
+
+```markdown
+# 2025-12-05 - Daily Coding Session
+
+## Time: 45 minutes
+## Focus: Loops and Conditionals
+
+### Programs Completed
+- [ ] Program 1: Sum of even numbers
+- [ ] Program 3: Factorial
+- [ ] Program 8: Prime numbers
+
+### Problems Encountered
+- Issue: Confusion with range() exclusive end
+- Solution: Remember range(start, stop, step) where stop is exclusive
+
+### Key Insights
+- Modulo operator is powerful for divisibility checks
+- Multiple conditions can be chained with 'and'/'or'
+
+### Next Session Goals
+- Master nested loops
+- Practice pattern printing
+- Implement all 15 Part A programs
+
+### Difficulty Rating: 6/10
+### Energy Level: 7/10
+```
+
+### Getting Started with QR Project
+
+1. Create the directory structure:
+```powershell
+mkdir qr_project/daily
+cd qr_project
+```
+
+2. Create your first daily session:
+```powershell
+# Windows PowerShell
+$date = Get-Date -Format "yyyy-MM-dd"
+New-Item -Path "daily/$date.md" -ItemType File -Force
+```
+
+3. Use the template above to log your session
+
+4. Track your streak in `streak.txt`:
+```
+Current Streak: 5 days
+Longest Streak: 12 days
+Total Sessions: 47
+```
+
+### QR Project Benefits
+
+✓ **Accountability** – Visible daily commitment  
+✓ **Pattern Recognition** – Spot your learning patterns  
+✓ **Reference** – Build your personal knowledge base  
+✓ **Motivation** – Watch your streak grow  
+✓ **Reflection** – Understand what works for you  
+
+### Sample Insights File (`qr_project/insights.md`)
+
+```markdown
+# Programming Insights & Patterns
+
+## Frequently Used Techniques
+- **Accumulator Pattern**: Use for sum, product, count
+- **Two-Pointer**: Useful for array/string problems
+- **Digit Extraction**: Use modulo (%) and division (//)
+
+## Common Mistakes to Avoid
+- Forgetting range() is exclusive on the end
+- Off-by-one errors in loops
+- Confusing += with =
+
+## Best Problem-Solving Approach
+1. Understand the problem completely
+2. Write pseudocode first
+3. Implement step by step
+4. Test with edge cases
+
+## Breakthrough Moments
+- Realized recursive solutions can be optimized with memoization (Day 12)
+- Understood why square root optimization works for primes (Day 8)
+```
+
 ## Troubleshooting
 
 ### "Python is not recognized"
