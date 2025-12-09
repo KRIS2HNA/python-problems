@@ -1684,17 +1684,17 @@ class Solution:
                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
 
 # # leetcode 9
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        if x < 0:
-            return False    
-        original = x
-        rev = 0
-        while x > 0:
+# class Solution:
+#     def isPalindrome(self, x: int) -> bool:
+#         if x < 0:
+#             return False    
+#         original = x
+#         rev = 0
+#         while x > 0:
 
-            rev = rev * 10 + x % 10
-            x //= 10        
-        return rev == original
+#             rev = rev * 10 + x % 10
+#             x //= 10        
+#         return rev == original
 # class Solution:
 #     def isPalindrome(self, x: int) -> bool:
 #         if x < 0:
