@@ -1588,36 +1588,36 @@ Exit
     
     
 # # leetcode 6
-class Solution:
-    def convert(self, s: str, numRows: int) -> str:
-        if numRows == 1 or numRows >= len(s):
-            return s
+# class Solution:
+#     def convert(self, s: str, numRows: int) -> str:
+#         if numRows == 1 or numRows >= len(s):
+#             return s
 
-        rows = [''] * numRows
-        current_row = 0
-        going_down = False
+#         rows = [''] * numRows
+#         current_row = 0
+#         going_down = False
 
-        for char in s:
-            rows[current_row] += char
-            if current_row == 0 or current_row == numRows - 1:
-                going_down = not going_down
-            current_row += 1 if going_down else -1
+#         for char in s:
+#             rows[current_row] += char
+#             if current_row == 0 or current_row == numRows - 1:
+#                 going_down = not going_down
+#             current_row += 1 if going_down else -1
 
-        return ''.join(rows)
+#         return ''.join(rows)
     
-# # leetcode 474
+# # # leetcode 474
 
-class Solution:       
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+# class Solution:       
+#     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+#         dp = [[0] * (n + 1) for _ in range(m + 1)]
         
-        for s in strs:
-            zeros = s.count('0')
-            ones = s.count('1')
+#         for s in strs:
+#             zeros = s.count('0')
+#             ones = s.count('1')
             
-            for i in range(m, zeros - 1, -1):
-                for j in range(n, ones - 1, -1):
-                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
+#             for i in range(m, zeros - 1, -1):
+#                 for j in range(n, ones - 1, -1):
+                    # dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
     
 
 class Solution:       
