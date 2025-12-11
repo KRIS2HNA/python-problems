@@ -1324,7 +1324,8 @@ import heapq
 # else:
 #     print(f"{num} is not a prime number")
 
-
+#3**0.5 + 1 = 2.732...
+#
 # # 13 print prime numbers between 1 to n
 # n = int(input("Enter the number: "))
 # primes = []
@@ -1635,53 +1636,53 @@ Exit
     
 
 
-class Solution:       
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+# class Solution:       
+#     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+#         dp = [[0] * (n + 1) for _ in range(m + 1)]
         
-        for s in strs:
-            zeros = s.count('0')
-            ones = s.count('1')
+#         for s in strs:
+#             zeros = s.count('0')
+#             ones = s.count('1')
             
-            for i in range(m, zeros - 1, -1):
-                for j in range(n, ones - 1, -1):
-                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
+#             for i in range(m, zeros - 1, -1):
+#                 for j in range(n, ones - 1, -1):
+#                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
                     
-class Solution:       
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+# class Solution:       
+#     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+#         dp = [[0] * (n + 1) for _ in range(m + 1)]
         
-        for s in strs:
-            zeros = s.count('0')
-            ones = s.count('1')
+#         for s in strs:
+#             zeros = s.count('0')
+#             ones = s.count('1')
             
-            for i in range(m, zeros - 1, -1):
-                for j in range(n, ones - 1, -1):
-                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
+#             for i in range(m, zeros - 1, -1):
+#                 for j in range(n, ones - 1, -1):
+#                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
                     
-class Solution:       
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+# class Solution:       
+#     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+#         dp = [[0] * (n + 1) for _ in range(m + 1)]
         
-        for s in strs:
-            zeros = s.count('0')
-            ones = s.count('1')
+#         for s in strs:
+#             zeros = s.count('0')
+#             ones = s.count('1')
             
-            for i in range(m, zeros - 1, -1):
-                for j in range(n, ones - 1, -1):
-                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
+#             for i in range(m, zeros - 1, -1):
+#                 for j in range(n, ones - 1, -1):
+#                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
 
-class Solution:       
-    def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
-        dp = [[0] * (n + 1) for _ in range(m + 1)]
+# class Solution:       
+#     def findMaxForm(self, strs: List[str], m: int, n: int) -> int:
+#         dp = [[0] * (n + 1) for _ in range(m + 1)]
         
-        for s in strs:
-            zeros = s.count('0')
-            ones = s.count('1')
+#         for s in strs:
+#             zeros = s.count('0')
+#             ones = s.count('1')
             
-            for i in range(m, zeros - 1, -1):
-                for j in range(n, ones - 1, -1):
-                    dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
+#             for i in range(m, zeros - 1, -1):
+#                 for j in range(n, ones - 1, -1):
+#                     dp[i][j] = max(dp[i][j], dp[i - zeros][j - ones] + 1)   
 
 # # leetcode 9
 # class Solution:
@@ -1705,3 +1706,35 @@ class Solution:
 #             rev = rev * 10 + x % 10
 #             x //= 10
 #         return rev == original
+
+
+# num = int(input("Enter the number:"))
+
+# if num <= 1:
+#     print(f"{num} is not a prime number")
+    
+# else: 
+#     for i in range(2, int(num**0.5) + 1):
+#         if num % i == 0:
+#             print(f"{num} is not a prime number")
+#             break
+#     else:
+#         print(f"{num} is a prime number")
+    
+class Solution:
+    def countCoveredBuildings(self, n: int, buildings: List[List[int]]) -> int:
+        rows = defaultdict(lambda: [n, 0])
+        cols = defaultdict(lambda: [n, 0])
+
+        for c, r in buildings:
+            rows[r][0] = min(rows[r][0], c)
+            rows[r][1] = max(rows[r][1], c)
+
+            cols[c][0] = min(cols[c][0], r)
+            cols[c][1] = max(cols[c][1], r)
+
+        res = 0
+        for c, r in buildings:
+            if rows[r][0] < c < rows[r][-1] and cols[c][0] < r < cols[c][-1]:
+                res += 1
+        return res
