@@ -1721,20 +1721,20 @@ Exit
 #     else:
 #         print(f"{num} is a prime number")
     
-class Solution:
-    def countCoveredBuildings(self, n: int, buildings: List[List[int]]) -> int:
-        rows = defaultdict(lambda: [n, 0])
-        cols = defaultdict(lambda: [n, 0])
+# class Solution:
+#     def countCoveredBuildings(self, n: int, buildings: List[List[int]]) -> int:
+#         rows = defaultdict(lambda: [n, 0])
+#         cols = defaultdict(lambda: [n, 0])
 
-        for c, r in buildings:
-            rows[r][0] = min(rows[r][0], c)
-            rows[r][1] = max(rows[r][1], c)
+#         for c, r in buildings:
+#             rows[r][0] = min(rows[r][0], c)
+#             rows[r][1] = max(rows[r][1], c)
 
-            cols[c][0] = min(cols[c][0], r)
-            cols[c][1] = max(cols[c][1], r)
+#             cols[c][0] = min(cols[c][0], r)
+#             cols[c][1] = max(cols[c][1], r)
 
-        res = 0
-        for c, r in buildings:
-            if rows[r][0] < c < rows[r][-1] and cols[c][0] < r < cols[c][-1]:
-                res += 1
-        return res
+#         res = 0
+#         for c, r in buildings:
+#             if rows[r][0] < c < rows[r][-1] and cols[c][0] < r < cols[c][-1]:
+#                 res += 1
+#         return res
