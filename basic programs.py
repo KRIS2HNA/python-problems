@@ -1761,3 +1761,26 @@ Exit
 #             for _ in range(num // val[i]):
 #                 roman_num += syms[i]
 #                 num -= val[i]   
+
+class Solution:
+    def countMentions(self, numberOfUsers: int, events: List[List[str]]) -> List[int]:
+        events.sort(key = lambda x: x[0], reverse = True)
+        events.sort(key = lambda x: int(x[1]))
+        mentions = [0] * numberOfUsers
+        offline = defaultdict(int)
+
+        for event, time, user in events:
+            if event == 'OFFLINE': offline[int(user)] = int(time) + 60
+            else:
+                if user == 'ALL':
+                    for u in range(numberOfUsers):
+                        mentions[u] += 1
+                elif user == 'HERE':
+                    for u in range(numberOfUsers):
+                        if offline[u] <= int(time): mentions[u] += 1
+                else:
+                    curr = user.split()
+                    for u in curr:
+                        u = int(u[2:])
+                        mentions[u] += 1
+        return mentions
