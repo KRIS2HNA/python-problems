@@ -1830,46 +1830,46 @@ class Solution:
         # return [c for _, c in valid_coupons]
 
 
-from typing import List
+# from typing import List
 
-class Solution:
-    def validateCoupons(
-        self,
-        code: List[str],
-        businessLine: List[str],
-        isActive: List[bool]
-    ) -> List[str]:
+# class Solution:
+#     def validateCoupons(
+#         self,
+#         code: List[str],
+#         businessLine: List[str],
+#         isActive: List[bool]
+#     ) -> List[str]:
 
-        # Business line priority
-        priority = {
-            "electronics": 0,
-            "grocery": 1,
-            "pharmacy": 2,
-            "restaurant": 3
-        }
+#         # Business line priority
+#         priority = {
+#             "electronics": 0,
+#             "grocery": 1,
+#             "pharmacy": 2,
+#             "restaurant": 3
+#         }
 
-        # Function to validate coupon code
-        def is_valid_code(s: str) -> bool:
-            if not s:
-                return False
-            for ch in s:
-                if not (ch.isalnum() or ch == "_"):
-                    return False
-            return True
+#         # Function to validate coupon code
+#         def is_valid_code(s: str) -> bool:
+#             if not s:
+#                 return False
+#             for ch in s:
+#                 if not (ch.isalnum() or ch == "_"):
+#                     return False
+#             return True
 
-        valid_coupons = []
+#         valid_coupons = []
 
-        # Filter valid coupons
-        for i in range(len(code)):
-            if (
-                isActive[i]
-                and businessLine[i] in priority
-                and is_valid_code(code[i])
-            ):
-                valid_coupons.append((businessLine[i], code[i]))
+#         # Filter valid coupons
+#         for i in range(len(code)):
+#             if (
+#                 isActive[i]
+#                 and businessLine[i] in priority
+#                 and is_valid_code(code[i])
+#             ):
+#                 valid_coupons.append((businessLine[i], code[i]))
 
-        # Sort by business line priority, then lexicographically
-        valid_coupons.sort(key=lambda x: (priority[x[0]], x[1]))
+#         # Sort by business line priority, then lexicographically
+#         valid_coupons.sort(key=lambda x: (priority[x[0]], x[1]))
 
-        # Return only coupon codes
-        return [c for _, c in valid_coupons]
+#         # Return only coupon codes
+#         return [c for _, c in valid_coupons]
