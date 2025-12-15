@@ -1787,21 +1787,21 @@ Exit
 
 from typing import List
 
-class Solution:
-    def validateCoupons(
-        self,
-        code: List[str],
-        businessLine: List[str],
-        isActive: List[bool]
-    ) -> List[str]:
+# class Solution:
+#     def validateCoupons(
+#         self,
+#         code: List[str],
+#         businessLine: List[str],
+#         isActive: List[bool]
+#     ) -> List[str]:
 
-        # Business line priority
-        priority = {
-            "electronics": 0,
-            "grocery": 1,
-            "pharmacy": 2,
-            "restaurant": 3
-        }
+#         # Business line priority
+#         priority = {
+#             "electronics": 0,
+#             "grocery": 1,
+#             "pharmacy": 2,
+#             "restaurant": 3
+#         }
 
         # # Function to validate coupon code
         # def is_valid_code(s: str) -> bool:
