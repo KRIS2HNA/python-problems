@@ -1,6 +1,6 @@
-from typing import List
-from collections import defaultdict
-import heapq
+# from typing import List
+# from collections import defaultdict
+# import heapq
 
 # # Part A: Loop Statements
 
@@ -1785,7 +1785,7 @@ Exit
 #                         mentions[u] += 1
 #         return mentions
 
-from typing import List
+# from typing import List
 
 # class Solution:
 #     def validateCoupons(
