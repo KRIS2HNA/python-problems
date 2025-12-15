@@ -1901,3 +1901,20 @@ class Solution:
 #             if r != n and p: res = (res * (p + 1)) % MOD
 #             l = r
 #         return res
+
+
+#
+class Solution:
+    def getDescentPeriods(self, prices: List[int]) -> int:
+        n = len(prices)
+        res  = 0
+        l = 0
+
+        while l < n:
+            r = l + 1
+            while r < n and prices[r] == prices[r - 1] - 1:
+                r += 1
+            res += comb(r - l + 1, 2)
+            l = r
+
+        return res
