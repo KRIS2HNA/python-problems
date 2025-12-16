@@ -1961,15 +1961,15 @@ class Solution:
             for b in range(budget - full + 1):
                 res0[b + full] = max(
                     res0[b + full],
-                    dp1[b] + profit_full
-                )
+        #             dp1[b] + profit_full
+        #         )
 
-            for b in range(budget - half + 1):
-                res1[b + half] = max(
-                    res1[b + half],
-                    dp1[b] + profit_half
-                )
+        #     for b in range(budget - half + 1):
+        #         res1[b + half] = max(
+        #             res1[b + half],
+        #             dp1[b] + profit_half
+        #         )
 
-            return res0, res1
+        #     return res0, res1
 
-        return max(dfs(0)[0])
+        # return max(dfs(0)[0])
