@@ -1918,3 +1918,58 @@ Exit
 #             l = r
 
 #         return res
+from functools import lru_cache
+
+class Solution:
+    def maxProfit(self, n, present, future, hierarchy, budget):
+        g = [[] for _ in range(n)]
+        for u, v in hierarchy:
+            g[u - 1].append(v - 1)
+
+        def merge(dp1, dp2):
+            new = [0] * (budget + 1)
+            for i in range(budget + 1):
+                if dp1[i] == 0 and i != 0:
+                    continue
+                for j in range(budget - i + 1):
+                    if dp2[j] == 0 and j != 0:
+                        continue
+                    new[i + j] = max(new[i + j], dp1[i] + dp2[j])
+            return new
+
+        @lru_cache(None)
+        def dfs(u):
+            # dp when parent NOT bought
+            dp0 = [0] * (budget + 1)
+            # dp when parent bought (discount allowed)
+            dp1 = [0] * (budget + 1)
+
+            for v in g[u]:
+                c0, c1 = dfs(v)
+                dp0 = merge(dp0, c0)
+                dp1 = merge(dp1, c1)
+
+            res0 = dp0[:]   # not buying u
+            res1 = dp0[:]   # buying u
+
+            full = present[u]
+            half = present[u] // 2
+
+            profit_full = future[u] - full
+            profit_half = future[u] - half
+
+            for b in range(budget - full + 1):
+                res0[b + full] = max(
+                    res0[b + full],
+                    dp1[b] + profit_full
+                )
+
+            for b in range(budget - half + 1):
+                res1[b + half] = max(
+                    res1[b + half],
+                    dp1[b] + profit_half
+                )
+
+            return res0, res1
+
+        return max(dfs(0)[0])
