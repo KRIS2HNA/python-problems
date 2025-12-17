@@ -1994,13 +1994,13 @@ Exit
 # print(f"THe factorial of {num} is {factorial}")
 
 # print list of numbers in ascending order
-n = int(input("Enter the number of elements:"))
-numbers = []
-for i in range(n):
-    num = int(input(f"Enter number {i + 1}: "))
-    numbers.append(num)
-numbers.sort()
-print("Numbers in ascending order:")
-for num in numbers:
-    print(num)  
+# n = int(input("Enter the number of elements:"))
+# numbers = []
+# for i in range(n):
+#     num = int(input(f"Enter number {i + 1}: "))
+#     numbers.append(num)
+# numbers.sort()
+# print("Numbers in ascending order:")
+# for num in numbers:
+#     print(num)  
     
