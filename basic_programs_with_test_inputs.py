@@ -13,13 +13,13 @@
 # print()
 
 # 3 - Factorial
-print("3. Factorial of 5:")
-num = 5  # Test input
-fact = 1
-for i in range(1, num + 1):
-    fact *= i
-print(f"Factorial of {num} is {fact}")
-print()
+# print("3. Factorial of 5:")
+# num = 5  # Test input
+# fact = 1
+# for i in range(1, num + 1):
+#     fact *= i
+# print(f"Factorial of {num} is {fact}")
+# print()
 
 # 4 - Fibonacci
 print("4. First 8 Fibonacci numbers:")
