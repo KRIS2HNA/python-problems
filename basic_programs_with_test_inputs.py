@@ -1,9 +1,9 @@
 # Part A: Loop Statements
 
-# 1 - Sum of even numbers from 2 to 100
-print("1. Sum of even numbers from 2 to 100:")
-print(sum(range(2, 101, 2)))
-print()
+# # 1 - Sum of even numbers from 2 to 100
+# print("1. Sum of even numbers from 2 to 100:")
+# print(sum(range(2, 101, 2)))
+# print()
 
 # 2 - Numbers divisible by 7 but not by 5
 print("2. Numbers between 100-200 divisible by 7 but not by 5:")
