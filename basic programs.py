@@ -2004,3 +2004,41 @@ Exit
 # for num in numbers:
 #     print(num)  
     
+# num = int(input("enter the number: "))
+# count = 0
+# n = abs(num)
+# if n == 0:
+#     count = 1
+# while n > 0:
+#     count += 1
+#     n //= 10
+# print(f"number of digits in {num} is {count}")
+
+
+
+# num = int(input("Enter the number: "))
+# is_prime = True
+# if num <= 1:
+#     is_prime = False
+# else:
+#     for i in range(2, int(num ** 0.5)+ 1):
+#         if num % i == 0:
+#             is_prime = False
+#             break
+# if is_prime:
+#     print(f"{num} is a prime number")
+            
+# else:
+#     print(f"{num} is not a prime number")
+
+#print all prime numbers between 1 to 100
+primes = []
+for num in range(2, 100):
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            break
+    else:
+        primes.append(num)
+print(f"prime numbers betwwen 1 to 100 are : {primes}")
+    
+    
