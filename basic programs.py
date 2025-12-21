@@ -2032,13 +2032,24 @@ Exit
 #     print(f"{num} is not a prime number")
 
 #print all prime numbers between 1 to 100
-primes = []
-for num in range(2, 100):
-    for i in range(2, int(num ** 0.5) + 1):
-        if num % i == 0:
-            break
-    else:
-        primes.append(num)
-print(f"prime numbers betwwen 1 to 100 are : {primes}")
+# primes = []
+# for num in range(2, 100):
+#     for i in range(2, int(num ** 0.5) + 1):
+#         if num % i == 0:
+#             break
+#     else:
+#         primes.append(num)
+# print(f"prime numbers betwwen 1 to 100 are : {primes}")
     
+    
+num = int(input("enter the number: "))
+rev = 0
+n = abs(num)
+
+while n > 0:
+    rev = rev * 10 + n % 10
+    n //= 10
+    if num < 0:
+        rev = -rev
+print(f"revers of {num} is {rev}")
     
