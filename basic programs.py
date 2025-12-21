@@ -2042,14 +2042,24 @@ Exit
 # print(f"prime numbers betwwen 1 to 100 are : {primes}")
     
     
-num = int(input("enter the number: "))
-rev = 0
-n = abs(num)
+# num = int(input("enter the number: "))
+# rev = 0
+# n = abs(num)
 
-while n > 0:
-    rev = rev * 10 + n % 10
-    n //= 10
-    if num < 0:
-        rev = -rev
-print(f"revers of {num} is {rev}")
+# while n > 0:
+#     rev = rev * 10 + n % 10
+#     n //= 10
+#     if num < 0:
+#         rev = -rev
+# print(f"revers of {num} is {rev}")
     
+    
+num = [1,0,1,1,1]
+pre = 0
+res = []
+for x in num:
+    pre = (pre << 1) | x
+    res.append(pre)
+print(res)
+# from typing import List
+# class Solution:
