@@ -2054,44 +2054,44 @@ Exit
 # print(f"revers of {num} is {rev}")
     
     
-num = [1,0,1,1,1]
-pre = 0
-res = []
-for x in num:
-    pre = (pre << 1) | x
-    res.append(pre)
-print(res)
-# from typing import List
+# num = [1,0,1,1,1]
+# pre = 0
+# res = []
+# for x in num:
+#     pre = (pre << 1) | x
+#     res.append(pre)
+# print(res)
+# # from typing import List
+# # class Solution:
+
+# # #955 leetcode
+# # def minDeletionSize(self, strs: List[str]) -> int:
+# #     n = len(strs)
+# #     m = len(strs[0])
+# #     count = 0
+
+# #     for j in range(m):
+# #         for i in range(1, n):
+# #             if strs[i][j] < strs[i - 1][j]:
+# #                 count += 1
+# #                 break
+
+# #     return count
+
 # class Solution:
+#     def minDeletionSize(self, strs: List[str]) -> int:
+#         cols = len(strs[0])
+#         rows = len(strs)
+#         dp = [1] * cols
 
-# #955 leetcode
-# def minDeletionSize(self, strs: List[str]) -> int:
-#     n = len(strs)
-#     m = len(strs[0])
-#     count = 0
+#         for c1 in range(cols -2, -1, -1):
+#             for c2 in range(c1 + 1, cols):
+#                 valid = True
+#                 for r in range(rows):
+#                     if strs[r][c1] > strs[r][c2]:
+#                         valid = False
+#                         break
 
-#     for j in range(m):
-#         for i in range(1, n):
-#             if strs[i][j] < strs[i - 1][j]:
-#                 count += 1
-#                 break
+#                 if valid: dp[c1] = max(dp[c1], 1 + dp[c2])
 
-#     return count
-
-class Solution:
-    def minDeletionSize(self, strs: List[str]) -> int:
-        cols = len(strs[0])
-        rows = len(strs)
-        dp = [1] * cols
-
-        for c1 in range(cols -2, -1, -1):
-            for c2 in range(c1 + 1, cols):
-                valid = True
-                for r in range(rows):
-                    if strs[r][c1] > strs[r][c2]:
-                        valid = False
-                        break
-
-                if valid: dp[c1] = max(dp[c1], 1 + dp[c2])
-
-        return cols - max(dp)
+#         return cols - max(dp)
