@@ -2097,23 +2097,40 @@ Exit
 #         return cols - max(dp)
 
 
-print(sum(i for i in range(0, 101)))
+# print(sum(i for i in range(0, 101)))
 
-print(*[i for i in range(0, 101)], sep = ', ')
+# print(*[i for i in range(0, 101)], sep = ', ')
 
-print(*[i*i for i in range(1, 11)], sep = ', ')
+# print(*[i*i for i in range(1, 11)], sep = ', ')
 
-print(*[i for i in range(1, 51) if i % 2 == 0], sep = ' , ')
+# print(*[i for i in range(1, 51) if i % 2 == 0], sep = ' , ')
 
-print(*[i for i in range(1, 51) if i % 2 != 0], sep = ' , ')
+# print(*[i for i in range(1, 51) if i % 2 != 0], sep = ' , ')
 
-print(*[i for i in range(1, 51) if i % 3 == 0 and i % 5 == 0], sep = ' , ')
+# print(*[i for i in range(1, 51) if i % 3 == 0 and i % 5 == 0], sep = ' , ')
 
-print(*[i for i in range(2, 101) if all(i % j != 0 for j in range(2, int(i**0.5) + 1))], sep = ' , ')
+# print(*[i for i in range(2, 101) if all(i % j != 0 for j in range(2, int(i**0.5) + 1))], sep = ' , ')
 
-print(*['*' * i for i in range(1, 6)], sep = '\n')
+# print(*['*' * i for i in range(1, 6)], sep = '\n')
 
-print(*['*' * i for i in range(6, 0 , -1)], sep = ' \n')
+# print(*['*' * i for i in range(6, 0 , -1)], sep = ' \n')
 
-print(*['*' * i for i in range(1,17) if i == 3 or i == 5], sep = '\n')
+# print(*['*' * i for i in range(1,17) if i == 3 or i == 5], sep = '\n')
 
+for i in range(1, 6):
+    print("*" * (6 - i) +" " * ((i-1)*2) + "*" * (6 - i))
+    
+    
+# ********
+# ***  ***
+# **    **
+# *      *
+# *      *
+# **    **
+# ***  ***
+# ********
+
+# for i in range(1, 4):
+#     for j in range(1, 4):
+#         print(f"i: {i}, j: {j}")
+# The outer loop iterates over the
