@@ -2117,8 +2117,8 @@ Exit
 
 # print(*['*' * i for i in range(1,17) if i == 3 or i == 5], sep = '\n')
 
-for i in range(1, 6):
-    print("*" * (6 - i) +" " * ((i-1)*2) + "*" * (6 - i))
+# for i in range(1, 6):
+#     print("*" * (6 - i) +" " * ((i-1)*2) + "*" * (6 - i))
     
     
 # ********
@@ -2134,3 +2134,12 @@ for i in range(1, 6):
 #     for j in range(1, 4):
 #         print(f"i: {i}, j: {j}")
 # The outer loop iterates over the
+
+
+for i in range(1,8):
+    for j in range(1, 8):
+        if i == 1 or i == 7 or j == 1 or j ==7 or i == j or j == 8 - i:
+            print("*", end = "")
+        else:
+            print(" ", end = "")
+    print()
