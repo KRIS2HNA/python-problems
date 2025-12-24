@@ -2268,3 +2268,17 @@ def largest_digit(n):
 largest_digit(12)
 
 
+def smallest_digit(n):
+    n = abs(n)
+    if n==0:
+        print("The smallest digit is 0")
+        return
+    min_digit = 9
+    while n > 0:
+        digit = n % 10
+        if digit < min_digit:
+            min+digit = digit
+        n //= 10
+    print(f"The smallest digit is {min_digit}")
+smallest_digit(12023)
+
