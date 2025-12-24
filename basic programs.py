@@ -2277,8 +2277,8 @@ def smallest_digit(n):
     while n > 0:
         digit = n % 10
         if digit < min_digit:
-            min+digit = digit
+            min_digit = digit
         n //= 10
     print(f"The smallest digit is {min_digit}")
-smallest_digit(12023)
+smallest_digit(1223)
 
