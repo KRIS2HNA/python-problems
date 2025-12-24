@@ -2136,10 +2136,135 @@ Exit
 # The outer loop iterates over the
 
 
-for i in range(1,8):
-    for j in range(1, 8):
-        if i == 1 or i == 7 or j == 1 or j ==7 or i == j or j == 8 - i:
-            print("*", end = "")
-        else:
-            print(" ", end = "")
-    print()
+# for i in range(1,8):
+#     for j in range(1, 8):
+#         if i == 1 or i == 7 or j == 1 or j ==7 or i == j or j == 8 - i:
+#             print("*", end = "")
+#         else:
+#             print(" ", end = "")
+#     print()
+    
+# for i in range(1,6):
+#     print("*" * i)
+# for j in range(1,5):
+#     print("*" * (5-j))
+# for i in range(1,8):
+#     print(" " * (5 - i)*2 + "*" * i )
+# for j in range(1, 7):
+#     print(" " * j * 2 + "*" * (5 - j))
+    
+    
+    
+# for i in range(1,6):
+#     print("*" * i)
+# for j in range(1,6):
+#     print(" " * (5-j)*2 + "*" * j)
+
+    
+# def number(num):
+#     for i in range(1, num +1):
+#         if i == num:
+#             print("*" * (2 * num))
+#         else:
+#             print("*" * i + " " * (2 * (num - i) + 1) + "*" * i)
+            
+#     for i in range(num -1, 0, -1):
+#         print("*" * i + " " * (2 * (num-i) + 1) + "*" * i) 
+
+# number(6)
+
+
+# print(*['*' * i for i in range(6, 0 , -2)], sep = ' \n')
+
+
+# def pattern(n):
+#     for i in range(1, n + 1):
+#         for j in range(1, n +1):
+#             if i == 1 or i == n or j == 1 or j == n:
+#                 print("*", end = " ")
+#             else:
+#                 print(" ", end = " ")
+#         print()
+# pattern(5)
+
+# def pattern(n):
+#     for i in range(1, n +1):
+#         for j in range(1, n +1):
+#             if i == j or j == n - i + 1:
+#                 print("*", end = " " )
+#             else: 
+#                 print(" ", end= " ")
+#         print()
+# pattern(5)
+
+# print v pattern
+# def pattern(n):
+#     for i in range(1, n + 1):
+#         for j in range(1, n * 2):
+#             if j == i or j == (2 * n - i):
+#                 print("*", end = " ")
+#             else:
+#                 print(" ", end = " ")
+#         print()
+# # pattern(4)
+
+# def pattern(n):
+#     for i in range(1, n + 1):
+#         for j in range(1, n * 2):
+#             if j == (n - i + 1) or j == ((n + i)-1) or (i == n//2 + 1 and j > n - i + 1 and j < n + i - 1):
+#                 print("*", end = " ")
+#             else:
+#                 print(" ", end = " ")
+#         print()
+# pattern(6)
+
+
+# def pattern(n):
+#     for i in range(1, n +1):
+#         for j in range(1, n +1):
+#             if j == 1 or (i == 1 and j < n) or (j == n and i != 1 and i != n//2 + 1 and i != n) or (i == n and j < n) or (i == n//2+1 and j < n):
+#                 print("*", end = " ")
+#             else:
+#                 print(" ", end = " ")
+#         print()
+# pattern(5) 
+
+
+# def pattern(n):
+#     for i in range(1, n +1):
+#         for j in range(1, n + 1):
+#             if (j == 1) or (i == 1) or (i == n):
+#                 print("*", end = " ")
+#             else:
+#                 print(" ", end = " ")
+#         print()
+# pattern(6)
+
+
+# def maltiply_table(n):
+#     for j in range(1, 11):
+#         print(f"{n} * {j} = { n * j}",  end = "\n" )        
+# maltiply_table(5)
+
+
+# def factorial(n):
+#     fact = 1
+#     for i in range(1, n +1):
+#         fact *= i
+#     print(f"The factorial of {n} is {fact}")
+# factorial(5)
+
+
+def largest_digit(n):
+    max_digit = 0
+    n = abs(n)
+    while n > 0:
+        digit = n % 10
+        if digit > max_digit:
+            max_digit = digit
+        n //= 10
+    print(f"the largest digit is {max_digit}")
+
+largest_digit(12)
+
+
