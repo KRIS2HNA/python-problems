@@ -2282,3 +2282,89 @@ def smallest_digit(n):
     print(f"The smallest digit is {min_digit}")
 smallest_digit(1223)
 
+def reverse_number(n):
+    rev = 0
+    n = abs(n)
+    while n > 0:
+        digit = n % 10
+        rev = rev * 10 + digit
+        n //= 10
+    print(f"The reverse number is {rev}")
+reverse_number(1234) 
+
+def count_digits(n):
+    count = 0
+    n = abs(n)
+    if n == 0:
+        count = 1
+    while n > 0:
+        count += 1
+        n //= 10
+    print(f"The number of digits is {count}")
+count_digits(123456)
+
+def sum_of_digits(n):
+    sum = 0
+    n = abs(n)
+    while n > 0:
+        digit = n % 10
+        sum += digit
+        n //= 10
+    print(f"sum of digits is {sum}")
+sum_of_digits(123456)
+            
+            
+def product_of_digits(n):
+    product = 1
+    n = abs(n)
+    while n > 1:
+        digit  = n % 10
+        product *= digit
+        n //= 10
+    print(f"The product of digits  is {product}")
+product_of_digits(1234)
+
+def average_of_digits(n):
+    sum = 0
+    n = abs(n)
+    if n == 0:
+        print("The average of digits is 0")
+        return
+    count = 0
+    while n > 0:
+        digit = n % 10
+        sum += digit
+        count += 1
+        n //= 10
+    average = sum // count
+    print(f"The average of digits is {average}")
+    
+average_of_digits(123456)
+
+def average_of_digits(n):
+    sum = 0
+    count = 0
+    n = abs(n)
+    digits = str(n)
+    
+    for ch in digits:
+        digits = int(ch)
+        sum += digits
+        count += 1
+    average = sum // count
+    print(f"The average of digits is {average}")
+    
+average_of_digits(123456)
+
+# list of prime factors of a number
+def prime_factors(n):
+    factors = []
+    for i in range(2, n +1):
+        if n % i == 0:
+            for j in range(2, int(i ** 0.5) + 1):
+                if i % j == 0:
+                    break
+            else:
+                factors.append(i)
+    print(f"The prime factors of {n} are: {factors}")
+prime_factors(28)
