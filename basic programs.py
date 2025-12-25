@@ -2356,15 +2356,15 @@ def average_of_digits(n):
     
 average_of_digits(123456)
 
-# list of prime factors of a number
-def prime_factors(n):
-    factors = []
-    for i in range(2, n +1):
-        if n % i == 0:
-            for j in range(2, int(i ** 0.5) + 1):
-                if i % j == 0:
-                    break
-            else:
-                factors.append(i)
-    print(f"The prime factors of {n} are: {factors}")
-prime_factors(28)
+# # list of prime factors of a number
+# def prime_factors(n):
+#     factors = []
+#     for i in range(2, n +1):
+#         if n % i == 0:
+#             for j in range(2, int(i ** 0.5) + 1):
+#                 if i % j == 0:
+#                     break
+#             else:
+#                 factors.append(i)
+#     print(f"The prime factors of {n} are: {factors}")
+# prime_factors(28)
