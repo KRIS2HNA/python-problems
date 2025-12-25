@@ -2255,91 +2255,91 @@ Exit
 # factorial(5)
 
 
-def largest_digit(n):
-    max_digit = 0
-    n = abs(n)
-    while n > 0:
-        digit = n % 10
-        if digit > max_digit:
-            max_digit = digit
-        n //= 10
-    print(f"the largest digit is {max_digit}")
+# def largest_digit(n):
+#     max_digit = 0
+#     n = abs(n)
+#     while n > 0:
+#         digit = n % 10
+#         if digit > max_digit:
+#             max_digit = digit
+#         n //= 10
+#     print(f"the largest digit is {max_digit}")
 
-largest_digit(12)
+# largest_digit(12)
 
 
-def smallest_digit(n):
-    n = abs(n)
-    if n==0:
-        print("The smallest digit is 0")
-        return
-    min_digit = 9
-    while n > 0:
-        digit = n % 10
-        if digit < min_digit:
-            min_digit = digit
-        n //= 10
-    print(f"The smallest digit is {min_digit}")
-smallest_digit(1223)
+# def smallest_digit(n):
+#     n = abs(n)
+#     if n==0:
+#         print("The smallest digit is 0")
+#         return
+#     min_digit = 9
+#     while n > 0:
+#         digit = n % 10
+#         if digit < min_digit:
+#             min_digit = digit
+#         n //= 10
+#     print(f"The smallest digit is {min_digit}")
+# smallest_digit(1223)
 
-def reverse_number(n):
-    rev = 0
-    n = abs(n)
-    while n > 0:
-        digit = n % 10
-        rev = rev * 10 + digit
-        n //= 10
-    print(f"The reverse number is {rev}")
-reverse_number(1234) 
+# def reverse_number(n):
+#     rev = 0
+#     n = abs(n)
+#     while n > 0:
+#         digit = n % 10
+#         rev = rev * 10 + digit
+#         n //= 10
+#     print(f"The reverse number is {rev}")
+# reverse_number(1234) 
 
-def count_digits(n):
-    count = 0
-    n = abs(n)
-    if n == 0:
-        count = 1
-    while n > 0:
-        count += 1
-        n //= 10
-    print(f"The number of digits is {count}")
-count_digits(123456)
+# def count_digits(n):
+#     count = 0
+#     n = abs(n)
+#     if n == 0:
+#         count = 1
+#     while n > 0:
+#         count += 1
+#         n //= 10
+#     print(f"The number of digits is {count}")
+# count_digits(123456)
 
-def sum_of_digits(n):
-    sum = 0
-    n = abs(n)
-    while n > 0:
-        digit = n % 10
-        sum += digit
-        n //= 10
-    print(f"sum of digits is {sum}")
-sum_of_digits(123456)
+# def sum_of_digits(n):
+#     sum = 0
+#     n = abs(n)
+#     while n > 0:
+#         digit = n % 10
+#         sum += digit
+#         n //= 10
+#     print(f"sum of digits is {sum}")
+# sum_of_digits(123456)
             
             
-def product_of_digits(n):
-    product = 1
-    n = abs(n)
-    while n > 1:
-        digit  = n % 10
-        product *= digit
-        n //= 10
-    print(f"The product of digits  is {product}")
-product_of_digits(1234)
+# def product_of_digits(n):
+#     product = 1
+#     n = abs(n)
+#     while n > 1:
+#         digit  = n % 10
+#         product *= digit
+#         n //= 10
+#     print(f"The product of digits  is {product}")
+# product_of_digits(1234)
 
-def average_of_digits(n):
-    sum = 0
-    n = abs(n)
-    if n == 0:
-        print("The average of digits is 0")
-        return
-    count = 0
-    while n > 0:
-        digit = n % 10
-        sum += digit
-        count += 1
-        n //= 10
-    average = sum // count
-    print(f"The average of digits is {average}")
+# def average_of_digits(n):
+#     sum = 0
+#     n = abs(n)
+#     if n == 0:
+#         print("The average of digits is 0")
+#         return
+#     count = 0
+#     while n > 0:
+#         digit = n % 10
+#         sum += digit
+#         count += 1
+#         n //= 10
+#     average = sum // count
+#     print(f"The average of digits is {average}")
     
-average_of_digits(123456)
+# average_of_digits(123456)
 
 # def average_of_digits(n):
 #     sum = 0
