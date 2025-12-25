@@ -2341,20 +2341,20 @@ def average_of_digits(n):
     
 average_of_digits(123456)
 
-def average_of_digits(n):
-    sum = 0
-    count = 0
-    n = abs(n)
-    digits = str(n)
+# def average_of_digits(n):
+#     sum = 0
+#     count = 0
+#     n = abs(n)
+#     digits = str(n)
     
-    for ch in digits:
-        digits = int(ch)
-        sum += digits
-        count += 1
-    average = sum // count
-    print(f"The average of digits is {average}")
+#     for ch in digits:
+#         digits = int(ch)
+#         sum += digits
+#         count += 1
+#     average = sum // count
+#     print(f"The average of digits is {average}")
     
-average_of_digits(123456)
+# average_of_digits(123456)
 
 # # list of prime factors of a number
 # def prime_factors(n):
