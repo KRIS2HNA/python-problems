@@ -2368,3 +2368,18 @@ Exit
 #                 factors.append(i)
 #     print(f"The prime factors of {n} are: {factors}")
 # prime_factors(28)
+
+
+# fibonacci series up to n terms
+def fibonacci_series(n):
+    a, b = 0, 1
+    series = []
+    for _ in range(n):
+        series.append(a)
+        a, b = b+a, a
+    print(f"The fibonacci series up to {n} terms is: {series}")
+    
+fibonacci_series(12)
+
+
+# 
