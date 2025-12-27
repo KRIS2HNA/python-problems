@@ -2371,15 +2371,84 @@ Exit
 
 
 # fibonacci series up to n terms
-# def fibonacci_series(n):
-#     a, b = 0, 1
-#     series = []
-#     for _ in range(n):
-#         series.append(a)
-#         a, b = b+a, a
-#     print(f"The fibonacci series up to {n} terms is: {series}")
+def fibonacci_series(n):
+    a, b = 0, 1
+    series = []
+    for _ in range(n):
+        series.append(a)
+        a, b = b+a, a
+    print(f"The fibonacci series up to {n} terms is: {series}")
     
-# fibonacci_series(12)
+fibonacci_series(12)
 
 
-# 
+def feb(n):
+    a,b = 0,1
+    series = []
+    for _ in range(n):
+        a, b = b+a, a
+        series.append(a)
+    print("The fibonacci series is:", series)
+feb(10)
+
+
+# code to remove duplicates from a list
+nums = [1,2,3,2,4,5,1,6]
+uniquw_nums = list(set(nums))
+print(f"The list after removiing duplicates is: {uniquw_nums}")
+
+
+# list to store frequency of each element
+nums = [1,2,2,3,4,4,4,5]
+freq = {}
+for num in nums:
+    if num in freq:
+        freq[num] += 1
+    else:
+        freq[num] = 1
+print(f"The frequency of each element is: {freq}")
+
+#maximum and minimum number in a list
+nums = [3,5,1,8,2,7]
+max_num = max(nums)
+min_num = min(nums)
+print(f"the maximum and minimum number in this list are: {max_num}, {min_num}")
+
+# sum of all elements in a list 
+nums = [1,2,3,4,5,7,8]
+total = sum(nums)
+print(f"The sum of all elements in the list is: {total}")
+
+# average of elements in a list
+# nums = []
+# n = int(input("Enter the number of elements: "))
+# for i in range(n):
+#     num = int(input(f"Enter number {i + 1}: "))
+#     nums.append(num)
+# average = sum(nums) / n
+# print(f"The average of elements in the list is: {average}")
+
+# matrix addition 2*2 matrix
+matrix1 = [[1,2], [3,4]]
+matrix2 = [[5,6], [7,8]]
+result = [[0,0], [0,0]]
+for i in range(len(matrix1)):
+    for j in range(len(matrix1[0])):
+        result[i][j] = matrix1[i][j] + matrix2[i][j]    
+print(f"The result of matrix addition is: {result}")
+
+
+# armstrong numbers between 1 to 1000
+def armstrong_numbers(n):
+    armstrong_numbers = []
+    for num in range(1, n + 1):
+        sum_of_cubes = 0
+        temp = num
+        while temp > 0:
+            digit = temp % 10
+            sum_of_cubes += digit ** 3
+            temp //= 10
+        if sum_of_cubes == num:
+            armstrong_numbers.append(num)
+    print(f"The armstrong numbers between 1 to {n} are: {armstrong_numbers}")
+armstrong_numbers(1000)
