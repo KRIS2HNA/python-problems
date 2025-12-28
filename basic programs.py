@@ -2482,53 +2482,53 @@ Exit
 #         print("Invalid choice. Please try again.")
         
         
-#  calculator program
-while True:
-    print("\n Simple Calculator")
-    print("1. Addition")
-    print("2. Subtrraction")
-    print("3. Multiplication")
-    print("4. Division")
-    print("5. Exit")
+# #  calculator program
+# while True:
+#     print("\n Simple Calculator")
+#     print("1. Addition")
+#     print("2. Subtrraction")
+#     print("3. Multiplication")
+#     print("4. Division")
+#     print("5. Exit")
     
     
-    try:
-        choice = int(input("Enter your choice (1-5): "))
-    except ValueError:
-        print("Invalid input. Please enter a number between 1 and 5.")
-        continue
+#     try:
+#         choice = int(input("Enter your choice (1-5): "))
+#     except ValueError:
+#         print("Invalid input. Please enter a number between 1 and 5.")
+#         continue
     
-    if choice == 5:
-        print("Thank for using the calculator. GoodBye!")
-        break
+#     if choice == 5:
+#         print("Thank for using the calculator. GoodBye!")
+#         break
     
-    try:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-    except ValueError:
-        print("Invalid input. Please enter numeric values.")
-        continue
+#     try:
+#         num1 = float(input("Enter first number: "))
+#         num2 = float(input("Enter second number: "))
+#     except ValueError:
+#         print("Invalid input. Please enter numeric values.")
+#         continue
     
-    if choice == 1:
-        result = num1 + num2
-        print(f"The result of {num1} + {num2} = {result}")
+#     if choice == 1:
+#         result = num1 + num2
+#         print(f"The result of {num1} + {num2} = {result}")
         
-    elif choice == 2:
-        result = num1 - num2
-        print(f"The result of {num1} - {num2} = {result}")
+#     elif choice == 2:
+#         result = num1 - num2
+#         print(f"The result of {num1} - {num2} = {result}")
         
-    elif choice == 3:
-        result = num1 * num2
-        print(f"The result of {num1} * {num2} = {result}")
+#     elif choice == 3:
+#         result = num1 * num2
+#         print(f"The result of {num1} * {num2} = {result}")
     
-    elif choice == 4:
-        if num2 == 0:
-            print("Error: Division by zero is not allowed.")
-        else:
-            result = num1 / num2
-            print(f"The result of {num1} / {num2} = {result}")
+#     elif choice == 4:
+#         if num2 == 0:
+#             print("Error: Division by zero is not allowed.")
+#         else:
+#             result = num1 / num2
+#             print(f"The result of {num1} / {num2} = {result}")
             
-    else:
-        print("Invalid choice. Please try again.")
+#     else:
+#         print("Invalid choice. Please try again.")
         
         
