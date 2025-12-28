@@ -2441,16 +2441,16 @@ Exit
 # armstrong numbers between 1 to 1000
 
 
-for num in range(1, 1001):
-    order = len(str(num))
-    sum_of_digits = 0
-    temp = num
-    while temp > 0:
-        digit = temp % 10
-        sum_of_digits += digit ** order
-        temp //= 10
-    if sum_of_digits == num:
-        print(f"{num} is an armstrong number")
+# for num in range(1, 1001):
+#     order = len(str(num))
+#     sum_of_digits = 0
+#     temp = num
+#     while temp > 0:
+#         digit = temp % 10
+#         sum_of_digits += digit ** order
+#         temp //= 10
+#     if sum_of_digits == num:
+#         print(f"{num} is an armstrong number")
         
 # # simple banking system
 # balance = 0.0
@@ -2502,4 +2502,33 @@ while True:
         print("Thank for using the calculator. GoodBye!")
         break
     
-    num
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+    except ValueError:
+        print("Invalid input. Please enter numeric values.")
+        continue
+    
+    if choice == 1:
+        result = num1 + num2
+        print(f"The result of {num1} + {num2} = {result}")
+        
+    elif choice == 2:
+        result = num1 - num2
+        print(f"The result of {num1} - {num2} = {result}")
+        
+    elif choice == 3:
+        result = num1 * num2
+        print(f"The result of {num1} * {num2} = {result}")
+    
+    elif choice == 4:
+        if num2 == 0:
+            print("Error: Division by zero is not allowed.")
+        else:
+            result = num1 / num2
+            print(f"The result of {num1} / {num2} = {result}")
+            
+    else:
+        print("Invalid choice. Please try again.")
+        
+        
