@@ -2453,32 +2453,53 @@ for num in range(1, 1001):
         print(f"{num} is an armstrong number")
         
 # # simple banking system
-balance = 0.0
+# balance = 0.0
+# while True:
+#     print("\n Welcome to the Banking System")
+#     print("1. Check Balance")
+#     print("2. Deposite Money")
+#     print("3. Withdraw Money")
+#     print("4. Exit")
+    
+#     choice = int(input("Enter your choice (1-4): "))
+#     if choice == 1:
+#         print("Cureent Balance is: $", balance)
+#     elif choice == 2:
+#         amount = float(input("Enter the amount to deposite:"))
+#         balance += amount
+#         print(f"${amount} deposited sucessfully.")
+#     elif choice == 3:
+#         amount = float(input("Enter the amount to withdraw: "))
+#         if amount > balance:
+#             print("Insufficicent balance.")
+#         else:
+#             print(f"${amount} withdraw sucessfully.")
+#             balance -= amount
+#     elif choice == 4:
+#         print("Thank u for using the banking system. GoodBye!")
+#         break
+#     else:
+#         print("Invalid choice. Please try again.")
+        
+        
+#  calculator program
 while True:
-    print("\n Welcome to the Banking System")
-    print("1. Check Balance")
-    print("2. Deposite Money")
-    print("3. Withdraw Money")
-    print("4. Exit")
+    print("\n Simple Calculator")
+    print("1. Addition")
+    print("2. Subtrraction")
+    print("3. Multiplication")
+    print("4. Division")
+    print("5. Exit")
     
-    choice = int(input("Enter your choice (1-4): "))
-    if choice == 1:
-        print("Cureent Balance is: $", balance)
-    elif choice == 2:
-        amount = float(input("Enter the amount to deposite:"))
-        balance += amount
-        print(f"${amount} deposited sucessfully.")
-    elif choice == 3:
-        amount = float(input("Enter the amount to withdraw: "))
-        if amount > balance:
-            print("Insufficicent balance.")
-        else:
-            print(f"${amount} withdraw sucessfully.")
-            balance -= amount
-    elif choice == 4:
-        print("Thank u for using the banking system. GoodBye!")
+    
+    try:
+        choice = int(input("Enter your choice (1-5): "))
+    except ValueError:
+        print("Invalid input. Please enter a number between 1 and 5.")
+        continue
+    
+    if choice == 5:
+        print("Thank for using the calculator. GoodBye!")
         break
-    else:
-        print("Invalid choice. Please try again.")
-
     
+    num
