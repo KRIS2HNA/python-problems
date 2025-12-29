@@ -2543,19 +2543,20 @@ Exit
 # result = two_sum([2,3,4,5,67,7], 9)
 # print(result)
 
-# 
-
-# two sum
-class solution:
-    def two_sum(nums, target):
+class Solution:
+    def two_sum(self, nums, target):
         nums_map = {}
-        for num, i in enumerate(nums):
+        for i, num in enumerate(nums):
             complement = target - num
             if complement in nums_map:
                 return (nums_map[complement], i)
             nums_map[num] = i
         return None
-    result = two_sum([1,2,3,4,5,6,7])
-    print(result)
-        
-        
+
+
+# Create object
+sol = Solution()
+
+# Call method
+result = sol.two_sum([1, 2, 3, 4, 5, 6, 7], 9)
+print(result)
