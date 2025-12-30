@@ -2560,3 +2560,48 @@ Exit
 # # Call method
 # result = sol.two_sum([1, 2, 3, 4, 5, 6, 7], 9)
 # print(result)
+
+class Solution:
+    def numMagicSquaresInside(self, grid: List[List[int]]) -> int:
+        n, m = len(grid), len(grid[0])
+        res = 0
+
+        def valid(i, j):
+            nums = set()
+
+            # collect numbers in 3x3 grid
+            for r in range(i - 2, i + 1):
+                for c in range(j - 2, j + 1):
+                    if grid[r][c] < 1 or grid[r][c] > 9:
+                        return False
+                    nums.add(grid[r][c])
+
+            if nums != set(range(1, 10)):
+                return False
+
+            s = grid[i - 2][j - 2] + grid[i - 2][j - 1] + grid[i - 2][j]
+
+            # check rows
+            for r in range(i - 2, i + 1):
+                if grid[r][j - 2] + grid[r][j - 1] + grid[r][j] != s:
+                    return False
+
+            # check columns
+            for c in range(j - 2, j + 1):
+                if grid[i - 2][c] + grid[i - 1][c] + grid[i][c] != s:
+                    return False
+
+            # check diagonals
+            if grid[i - 2][j - 2] + grid[i - 1][j - 1] + grid[i][j] != s:
+                return False
+            if grid[i - 2][j] + grid[i - 1][j - 1] + grid[i][j - 2] != s:
+                return False
+
+            return True
+
+        for i in range(2, n):
+            for j in range(2, m):
+                if valid(i, j):
+                    res += 1
+
+        return res
