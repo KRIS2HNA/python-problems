@@ -200,3 +200,14 @@ modify_List(my_list)
 
 print(my_list)  # Output: [1, 2, 3, 4]  
     
+'''
+11. list
+def modify_List(lst):
+    lst.append(4)
+my_list = [1, 2, 3]
+modify_List(my_list)
+
+print(my_list)  # Output: [1, 2, 3, 4]  
+    
+
+'''
