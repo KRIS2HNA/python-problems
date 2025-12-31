@@ -2642,3 +2642,8 @@ Exit
 #             else: h = mid - 1
 
 #         return l 
+
+# leetcode 1
+
+def two_sum(nums, target):
+    
