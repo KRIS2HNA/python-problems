@@ -2647,3 +2647,11 @@ Exit
 list_1 = [1,2,3,4,5,6,7,8]
 list_2 = [1,2,3,4,5,6,7,8]
 print(list_1 + list_2)
+
+#index of i list_! + index of i list_2
+
+result = []
+for i in range(len(list_1)):
+    result.append(list_1[i] + list_2[i])
+print(result)
+
