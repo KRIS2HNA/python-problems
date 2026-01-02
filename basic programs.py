@@ -2650,14 +2650,14 @@ Exit
 
 #index of i list_! + index of i list_2
 
-result = []
-for i in range(len(list_1)):
-    result.append(list_1[i] + list_2[i])
-print(result)
+# result = []
+# for i in range(len(list_1)):
+#     result.append(list_1[i] + list_2[i])
+# print(result)
 
-result_1 = []
-for i in range(len(list_1)):
-    result_1.append(list_1[i] * list_2[i])
-print(result_1)
+# result_1 = []
+# for i in range(len(list_1)):
+#     result_1.append(list_1[i] * list_2[i])
+# print(result_1)
     
 
