@@ -2643,10 +2643,10 @@ Exit
 
 #         return l 
 
-# list combains 
-list_1 = [1,2,3,4,5,6,7,8]
-list_2 = [1,2,3,4,5,6,7,8]
-print(list_1 + list_2)
+# # list combains 
+# list_1 = [1,2,3,4,5,6,7,8]
+# list_2 = [1,2,3,4,5,6,7,8]
+# print(list_1 + list_2)
 
 #index of i list_! + index of i list_2
 
