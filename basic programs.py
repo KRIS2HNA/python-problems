@@ -2671,19 +2671,19 @@ Exit
 #     print("*")
 
 
-class Solution:
-    def sumFourDivisors(self, nums: List[int]) -> int:
-        res = 0
+# class Solution:
+#     def sumFourDivisors(self, nums: List[int]) -> int:
+#         res = 0
 
-        for x in nums:
-            div = set()
-            for d in range(1, floor(sqrt(x)) + 1):
-                if x % d == 0:
-                    div.add(x // d)
-                    div.add(d)
-                    if len(div) > 4: break
+#         for x in nums:
+#             div = set()
+#             for d in range(1, floor(sqrt(x)) + 1):
+#                 if x % d == 0:
+#                     div.add(x // d)
+#                     div.add(d)
+#                     if len(div) > 4: break
 
-            if len(div) == 4: res += sum(div)
+#             if len(div) == 4: res += sum(div)
 
     
-        return res   
+#         return res   
