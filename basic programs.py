@@ -2670,7 +2670,20 @@ Exit
 # for i in range(1,5):
 #     print("*")
 
-def pattern(n):
-    for i in range(n):
-        for j in range(n-1):
-            
+
+class Solution:
+    def sumFourDivisors(self, nums: List[int]) -> int:
+        res = 0
+
+        for x in nums:
+            div = set()
+            for d in range(1, floor(sqrt(x)) + 1):
+                if x % d == 0:
+                    div.add(x // d)
+                    div.add(d)
+                    if len(div) > 4: break
+
+            if len(div) == 4: res += sum(div)
+
+    
+        return res   
