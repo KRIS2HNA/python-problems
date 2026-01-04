@@ -2667,5 +2667,10 @@ Exit
 #     print("*" * j)
 
 
-for i in range(1,5):
-    print("*")
+# for i in range(1,5):
+#     print("*")
+
+def pattern(n):
+    for i in range(n):
+        for j in range(n-1):
+            
