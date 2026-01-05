@@ -1,10 +1,10 @@
-# Modified version with preset test values
-print("Part A: Loop Statements\n")
+# # Modified version with preset test values
+# print("Part A: Loop Statements\n")
 
-# 1
-print("1. Sum of even numbers from 2 to 100:")
-print(sum(range(2, 101, 2)))
-print()
+# # 1
+# print("1. Sum of even numbers from 2 to 100:")
+# print(sum(range(2, 101, 2)))
+# print()
 
 # 2
 print("2. Numbers between 100-200 divisible by 7 but not by 5:")
