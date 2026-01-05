@@ -6,12 +6,12 @@
 # print(sum(range(2, 101, 2)))
 # print()
 
-# 2
-print("2. Numbers between 100-200 divisible by 7 but not by 5:")
-for i in range(100, 201):
-    if i % 7 == 0 and i % 5 != 0:
-        print(i)
-print()
+# # 2
+# print("2. Numbers between 100-200 divisible by 7 but not by 5:")
+# for i in range(100, 201):
+#     if i % 7 == 0 and i % 5 != 0:
+#         print(i)
+# print()
 
 # 3
 print("3. Factorial calculation:")
