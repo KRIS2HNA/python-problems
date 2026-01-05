@@ -14,13 +14,13 @@
 # print()
 
 # 3
-print("3. Factorial calculation:")
-num = 5  # Test value
-fact = 1
-for i in range(1, num + 1):
-    fact *= i
-print(f"Factorial of {num} is {fact}")
-print()
+# print("3. Factorial calculation:")
+# num = 5  # Test value
+# fact = 1
+# for i in range(1, num + 1):
+#     fact *= i
+# print(f"Factorial of {num} is {fact}")
+# print()
 
 # 4
 print("4. Fibonacci sequence:")
