@@ -2689,21 +2689,21 @@ Exit
 #         return res   
 
 
-def fibinocies_series(n):
-    a , b = 0, 1
-    series = []
-    for _ in range(n):
-        a, b = b, b+a, 
-        series.append(a)
+# def fibinocies_series(n):
+#     a , b = 0, 1
+#     series = []
+#     for _ in range(n):
+#         a, b = b, b+a, 
+#         series.append(a)
         
-    print(f"the fibnociess is of {n} is {series}")
-fibinocies_series(12)
+#     print(f"the fibnociess is of {n} is {series}")
+# fibinocies_series(12)
 
-def feb(n):
-    a,b = 0,1
-    series = []
-    for _ in range(n):
-        a, b = b , a+b
-        series.append(a)
-    print("The fibonacci series is:", series)
-feb(10)
+# def feb(n):
+#     a,b = 0,1
+#     series = []
+#     for _ in range(n):
+#         a, b = b , a+b
+#         series.append(a)
+#     print("The fibonacci series is:", series)
+# feb(10)
