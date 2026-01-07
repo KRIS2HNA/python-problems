@@ -2736,13 +2736,13 @@ Exit
 
 #         return res
 
-def pattern(n):
-    for i in range(n):
-        for j in range(n):
-            if i==0 or j==0 or i==n or i==n//2:
-                print("*", end = ' ')
-            else:
-                print(" ", end = " ")
+# def pattern(n):
+#     for i in range(n):
+#         for j in range(n):
+#             if i==0 or j==0 or i==n or i==n//2:
+#                 print("*", end = ' ')
+#             else:
+#                 print(" ", end = " ")
                 
-        print()
-pattern(7)
+#         print()
+# pattern(7)
