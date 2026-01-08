@@ -2756,3 +2756,7 @@ Exit
 #     for _ in range(i):
 #         results.append([i])
 # print(results)
+
+l = [1,2,3,4,5,6,True]
+m = l.pop(True)
+print(m)
