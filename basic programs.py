@@ -2746,13 +2746,13 @@ Exit
                 
 #         print()
 # pattern(7)
-outer = [[]] * 3
-outer[0].append(1)
-print(outer)
+# outer = [[]] * 3
+# outer[0].append(1)
+# print(outer)
 
-n= 4
-results = []
-for i in range(1, n+1):
-    for _ in range(i):
-        results.append([i])
-print(results)
+# n= 4
+# results = []
+# for i in range(1, n+1):
+#     for _ in range(i):
+#         results.append([i])
+# print(results)
