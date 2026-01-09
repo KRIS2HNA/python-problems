@@ -2761,8 +2761,8 @@ Exit
 # m = l.pop(True)
 # print(m)
 
-l = [1,2,3,4,5,6,True,False]
-m = l.pop(True)
-print(m)
-m_1 = l.remove(True)
-print(m_1)
+# l = [1,2,3,4,5,6,True,False]
+# m = l.pop(True)
+# print(m)
+# m_1 = l.remove(True)
+# print(m_1)
