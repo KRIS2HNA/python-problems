@@ -2874,44 +2874,44 @@ n = 4
 # for i in range(n - 1, 0, -1):
 #     print(" " * (n - i) + "* " * i)
 
-class Solution:
-    def separateSquares(self, squares: List[List[int]]) -> float:
-        xs = set()
-        events = []
+# class Solution:
+#     def separateSquares(self, squares: List[List[int]]) -> float:
+#         xs = set()
+#         events = []
 
-        for x, y, size in squares:
-            xs.add(x)
-            xs.add(x + size)
-            events.append((y, x, x + size, 1))
-            events.append((y + size, x, x + size, -1))
+#         for x, y, size in squares:
+#             xs.add(x)
+#             xs.add(x + size)
+#             events.append((y, x, x + size, 1))
+#             events.append((y + size, x, x + size, -1))
 
-        xs = sorted(xs)
-        events.sort()
-        st = SegmentTree(xs)
+#         xs = sorted(xs)
+#         events.sort()
+#         st = SegmentTree(xs)
 
-        # 1️⃣ Compute total area
-        total_area = 0
-        prev_y = events[0][0]
+#         # 1️⃣ Compute total area
+#         total_area = 0
+#         prev_y = events[0][0]
 
-        for y, xl, xr, op in events:
-            total_area += st.query() * (y - prev_y)
-            st.update(xl, xr, 0, st.n - 1, op, 0)
-            prev_y = y
+#         for y, xl, xr, op in events:
+#             total_area += st.query() * (y - prev_y)
+#             st.update(xl, xr, 0, st.n - 1, op, 0)
+#             prev_y = y
 
-        # Reset segment tree
-        st = SegmentTree(xs)
+#         # Reset segment tree
+#         st = SegmentTree(xs)
 
-        # 2️⃣ Find split y
-        acc = 0
-        prev_y = events[0][0]
+#         # 2️⃣ Find split y
+#         acc = 0
+#         prev_y = events[0][0]
 
-        for y, xl, xr, op in events:
-            width = st.query()
-            area = width * (y - prev_y)
+#         for y, xl, xr, op in events:
+#             width = st.query()
+#             area = width * (y - prev_y)
 
-            if acc + area >= total_area / 2:
-                return prev_y + (total_area / 2 - acc) / width
+#             if acc + area >= total_area / 2:
+#                 return prev_y + (total_area / 2 - acc) / width
 
-            acc += area
-            st.update(xl, xr, 0, st.n - 1, op, 0)
-            prev_y = y
+#             acc += area
+#             st.update(xl, xr, 0, st.n - 1, op, 0)
+#             prev_y = y
