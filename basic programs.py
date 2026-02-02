@@ -3025,12 +3025,16 @@ n = 4
 # pattern(5)
         
         
-def pattern(n):
-    for i in range(n):
-        for j in range(n+1):
-            if i == n // 2 and (j == n // 2):
-                print(" ", end = " ")
-            else:
-                print("*", end = " ")
-        print()
-pattern(8)
+# def pattern(n):
+#     for i in range(n):
+#         for j in range(n+1):
+#             if i == n // 2 and (j == n // 2):
+#                 print(" ", end = " ")
+#             else:
+#                 print("*", end = " ")
+#         print()
+# pattern(8)
+
+
+
+
