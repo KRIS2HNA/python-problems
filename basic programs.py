@@ -2996,41 +2996,41 @@ n = 4
 #         return ans
 
 
-def palindrome(s):
-    return s == s[::-1]
-print(palindrome("madam"))
+# def palindrome(s):
+#     return s == s[::-1]
+# print(palindrome("madam"))
 
 
 
-def pattern(n):
-    for i in range(n):
-        for j in range(n+1):
-            if j == 0 or i == 0 or j == n or i == n - 1:
-                print("*", end = " ")
-            else:
-                print(" ", end = " ")
-        print()
-pattern(5)
+# def pattern(n):
+#     for i in range(n):
+#         for j in range(n+1):
+#             if j == 0 or i == 0 or j == n or i == n - 1:
+#                 print("*", end = " ")
+#             else:
+#                 print(" ", end = " ")
+#         print()
+# pattern(5)
 
-def pattern(n):
-    for i in range(n):
-        print("*" * ( i + 1))
-pattern(5)
+# def pattern(n):
+#     for i in range(n):
+#         print("*" * ( i + 1))
+# pattern(5)
 
-def pattern(n):
-    for i in range(n):
-        for j in range(n):
-            print("*", end = " ")
-        print()
-pattern(5)
+# def pattern(n):
+#     for i in range(n):
+#         for j in range(n):
+#             print("*", end = " ")
+#         print()
+# pattern(5)
         
         
 def pattern(n):
     for i in range(n):
         for j in range(n+1):
-            if i == n // 2 and (j == 2):
+            if i == n // 2 and (j == n // 2):
                 print(" ", end = " ")
             else:
                 print("*", end = " ")
         print()
-pattern(5)
+pattern(8)
