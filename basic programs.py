@@ -3058,6 +3058,14 @@ n = 4
 # print("Fibonacci at index", n, "is", fibonacci(n))
 
 
-
-
-
+def prime_factors(n):
+    factors = []
+    for i in range(2, n +1):
+        if n % i == 0:
+            for j in range(2, int(i ** 0.5) + 1):
+                if i % j == 0:
+                    break
+            else:
+                factors.append(i)
+    print(f"The prime factors of {n} are: {factors}")
+prime_factors(28)
