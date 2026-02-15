@@ -3044,18 +3044,19 @@ n = 4
 
 
 # Find the nth number of fibonacci number
-def fibonacci(n):
-    if n <= 1:
-        return n 
+# def fibonacci(n):
+#     if n <= 1:
+#         return n 
     
-    prev, curr = 0, 1
-    for _ in range(2, n + 1):
-        prev, curr = curr, prev + curr
+#     prev, curr = 0, 1
+#     for _ in range(2, n + 1):
+#         prev, curr = curr, prev + curr
         
-    return curr
+#     return curr
 
-n = int(input("Enter n :"))
-print("Fibonacci at index", n, "is", fibonacci(n))
+# n = int(input("Enter n :"))
+# print("Fibonacci at index", n, "is", fibonacci(n))
+
 
 
 
