@@ -3075,6 +3075,17 @@ def binary_count(arr):
 # binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,])
 print(binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,]))
 
+# minimum number of coins to make a given amount
+def min_coins(coins, amount):
+    dp = [float('inf')] * (amount + 1)
+    dp[0] = 0
 
+    for coin in coins:
+        for x in range(coin, amount + 1):
+            dp[x] = min(dp[x], dp[x - coin] + 1)
+
+    return dp[amount] if dp[amount] != float('inf') else -1
+
+print(min_coins([1, 2, 5], 11))
 
 
