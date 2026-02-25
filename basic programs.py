@@ -3069,3 +3069,12 @@ def prime_factors(n):
                 factors.append(i)
     print(f"The prime factors of {n} are: {factors}")
 prime_factors(28)
+
+def binary_count(arr):
+    return sorted(arr, key=lambda num: (bin(num).count('1'), num))
+# binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,])
+print(binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,]))
+
+
+
+
