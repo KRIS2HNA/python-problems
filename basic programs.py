@@ -1481,21 +1481,21 @@ Exit
 #     print(f"{n} is not an Armstrong number")
       
       
-# # 26
-# armstorng_numbers = []
-# for num in range(1, 1001):
-#     sum = 0
-#     order = len(str(num))
-#     temp = num
+# 26
+armstorng_numbers = []
+for num in range(1, 1001):
+    sum = 0
+    order = len(str(num))
+    temp = num
     
-#     while temp > 0:
-#         digit = temp % 10
-#         sum += digit ** order
-#         temp //= 10
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** order
+        temp //= 10
         
-# if sum == num:
-#     armstorng_numbers.append(num)
-# print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
+if sum == num:
+    armstorng_numbers.append(num)
+print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
 
 # # 27
 # sentence = input("Enter the sentence: ")
@@ -3058,34 +3058,48 @@ n = 4
 # print("Fibonacci at index", n, "is", fibonacci(n))
 
 
-def prime_factors(n):
-    factors = []
-    for i in range(2, n +1):
-        if n % i == 0:
-            for j in range(2, int(i ** 0.5) + 1):
-                if i % j == 0:
-                    break
-            else:
-                factors.append(i)
-    print(f"The prime factors of {n} are: {factors}")
-prime_factors(28)
+# def prime_factors(n):
+#     factors = []
+#     for i in range(2, n +1):
+#         if n % i == 0:
+#             for j in range(2, int(i ** 0.5) + 1):
+#                 if i % j == 0:
+#                     break
+#             else:
+#                 factors.append(i)
+#     print(f"The prime factors of {n} are: {factors}")
+# prime_factors(28)
 
-def binary_count(arr):
-    return sorted(arr, key=lambda num: (bin(num).count('1'), num))
-# binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,])
-print(binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,]))
+# def binary_count(arr):
+#     return sorted(arr, key=lambda num: (bin(num).count('1'), num))
+# # binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,])
+# print(binary_count([0,1,3,4,5,6,7,7,8,9,9,0,0,0,]))
 
-# minimum number of coins to make a given amount
-def min_coins(coins, amount):
-    dp = [float('inf')] * (amount + 1)
-    dp[0] = 0
+# # minimum number of coins to make a given amount
+# def min_coins(coins, amount):
+#     dp = [float('inf')] * (amount + 1)
+#     dp[0] = 0
 
-    for coin in coins:
-        for x in range(coin, amount + 1):
-            dp[x] = min(dp[x], dp[x - coin] + 1)
+#     for coin in coins:
+#         for x in range(coin, amount + 1):
+#             dp[x] = min(dp[x], dp[x - coin] + 1)
 
-    return dp[amount] if dp[amount] != float('inf') else -1
+#     return dp[amount] if dp[amount] != float('inf') else -1
 
-print(min_coins([1, 2, 5], 11))
+# print(min_coins([1, 2, 5], 11))
+
+
+# def find_vehicles(total_vehicles, total_wheels):
+#     if total_wheels % 2 != 0:
+#         return "Invalid input:"
+#     if total_wheels < 2 * total_vehicles or total_wheels > 4 * total_vehicles:
+#         return "Invalid input:"
+    
+#     four_wheelers = (total_wheels - 2 * total_vehicles) // 2
+#     two_wheelers = total_vehicles - four_wheelers
+    
+#     return two_wheelers, four_wheelers
+
+# print(find_vehicles(10, 28))
 
 

@@ -211,3 +211,69 @@ print(my_list)  # Output: [1, 2, 3, 4]
     
 
 '''
+
+
+def even_or_odd(num):
+    if num % 2 == 0:
+        return "Even"
+    else:
+        return "odd"
+print(even_or_odd(5))
+
+def prime_numbers(num):
+    if num < 2:
+        return "Not prime"
+    for i in range(2, int(num ** 0.5) + 1):
+        if num % i == 0:
+            return "not prime"
+    return "prime"
+print(prime_numbers(17))
+
+#Factorial of a number
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    else:
+        return n * factorial(n-1)
+print(factorial(5))
+
+# Fibonacci sequence
+def fibonacci(n):
+    sequence = []
+    a, b = 0, 1
+    for _ in range(n):
+        sequence.append(a)
+        a, b = b, a + b
+    return sequence
+print(fibonacci(10))
+
+
+#  reversa a number
+def reverse_number(num):
+    sign = -1 if num < 0 else 1
+    num = abs(num)
+    
+    reversed_num = 0
+    while num > 0:
+        digit = num % 10
+        reversed_num = reversed_num * 10 + digit
+        num //= 10
+    return reversed_num * sign
+print(reverse_number(-12345))
+
+# palindrome number
+def is_palindrome(num):
+    is_palinrome = True
+    num_str = str(num)
+    left, right = 0, len(num_str) - 1
+    while left < right:
+        if num_str[left] != num_str[right]:
+            is_palinrome = False
+            break
+        left += 1
+        right -= 1
+    return is_palinrome
+print(is_palindrome(12321))  # Output: True
+
+print(bool(" 0"))  # Output: True
+
