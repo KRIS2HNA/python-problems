@@ -23,27 +23,29 @@
 # print()
 
 # 4
-print("4. Fibonacci sequence:")
-n = 8  # Test value
-print(f"First {n} terms of Fibonacci sequence:")
-a, b = 0, 1
-for _ in range(n):
-    print(a, end=" ")
-    a, b = b, a + b
-print("\n")
+# print("4. Fibonacci sequence:")
+# n = 8  # Test value
+# print(f"First {n} terms of Fibonacci sequence:")
+# a, b = 0, 1
+# for _ in range(n):
+#     print(a, end=" ")
+#     a, b = b, a + b
+# print("\n")
 
-# 5
-print("5. Count digits:")
-num = 12345  # Test value
-count = 0
-n = abs(num)
-if n == 0:
-    count = 1
-else:
-    while n > 0:
-        n //= 10
-        count += 1
-print(f"Number of digits in {num}: {count}")
-print()
+# # 5
+# print("5. Count digits:")
+# num = 12345  # Test value
+# count = 0
+# n = abs(num)
+# if n == 0:
+#     count = 1
+# else:
+#     while n > 0:
+#         n //= 10
+#         count += 1
+# print(f"Number of digits in {num}: {count}")
+# print()
 
-print("Program completed with test values:")
+# print("Program completed with test values:")
+
+
