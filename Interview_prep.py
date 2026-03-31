@@ -277,3 +277,16 @@ print(is_palindrome(12321))  # Output: True
 
 print(bool(" 0"))  # Output: True
 
+n = int(input())
+arr = list(map(int, input().split()))
+
+count = 0
+total = 0
+for num in arr:
+    if num % 2 == 0:
+        count += 1
+        total += num
+
+avg = total / count if count else 0
+
+print((count, total, avg))
