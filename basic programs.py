@@ -1482,20 +1482,20 @@ Exit
       
       
 # 26
-armstorng_numbers = []
-for num in range(1, 1001):
-    sum = 0
-    order = len(str(num))
-    temp = num
+# armstorng_numbers = []
+# for num in range(1, 1001):
+#     sum = 0
+#     order = len(str(num))
+#     temp = num
     
-    while temp > 0:
-        digit = temp % 10
-        sum += digit ** order
-        temp //= 10
+#     while temp > 0:
+#         digit = temp % 10
+#         sum += digit ** order
+#         temp //= 10
         
-if sum == num:
-    armstorng_numbers.append(num)
-print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
+# if sum == num:
+#     armstorng_numbers.append(num)
+# print(f"armstorng numbers between 1 to 1000 are: {armstorng_numbers}")
 
 # # 27
 # sentence = input("Enter the sentence: ")
@@ -3100,6 +3100,145 @@ n = 4
     
 #     return two_wheelers, four_wheelers
 
-# print(find_vehicles(10, 28))
+# # print(find_vehicles(10, 28))
+
+
+# def largestElement_in_array(nums):
+#     if not nums:
+#         return None
+#     Largest = nums[0]
+#     for num in nums:
+#         if num > Largest:
+#             Largest = num
+#     return Largest
+# print(largestElement_in_array([1,2,3,4,5,6,7,8,9])) 
+
+# def largestElement_in_array(nums):
+#     return max(nums) if nums else None
+# print(largestElement_in_array([1,2,3,4,5,6,7,8,9]))
+
+
+# def second_largest(nums):
+#     if len(nums) < 2:
+#         return None
+    
+#     first = second = float('-inf')
+#     for num in nums:
+#         if num > first:
+#             second = first
+#             first = num
+#         elif num > second and num != first:
+#             second = num
+#         return second if second != float('-inf') else None
+# print(second_largest([1,2,3,4,5,6,7,    8,9]))
+
+
+# def fibonacci(n):
+#     if n <= 1:
+#         return n
+#     return fibonacci(n-1) + fibonacci(n-2)
+
+# print(fibonacci(10))
+
+# def fibonacci(n):
+#     if n <= 1:
+#         return n
+#     prev, curr = 0, 1
+#     list = []
+#     for _ in range(2, n + 1):
+#         prev, curr = curr, prev + curr
+#         list.append(curr)
+#     return list
+# print(fibonacci(1))
+
+# def feb(n):
+#     a,b = 0,1
+#     series = []
+#     for _ in range(n):
+#         a, b = b , a+b
+#         series.append(a)
+#     print("The fibonacci series is:", series)
+# feb(10)
+
+
+# # example of tree algrothim program explaintion
+
+
+# def letterCombinations(digits):
+#     if not digits:
+#         return []
+    
+#     phone = {
+#         "2": "abc", "3": "def", "4": "ghi",
+#         "5": "jkl", "6": "mno",
+#         "7": "pqrs", "8": "tuv", "9": "wxyz"
+#     }
+    
+#     result = []
+
+#     def backtrack(index, path):
+#         # Base case
+#         if len(path) == len(digits):
+#             result.append(path)
+#             return
+        
+#         # Get letters for current digit
+#         letters = phone[digits[index]]
+        
+#         for letter in letters:
+#             backtrack(index + 1, path + letter)
+
+# #     backtrack(0, "")
+# #     return len(result)
+
+
+# # # Example
+# # print(letterCombinations("299"))
+
+# # TWO SUM pattern hashmap
+# def two_sum(nums, target):
+#     nums_map = {}
+#     for i, num in enumerate(nums):
+#         complement = target - num
+#         if complement in nums_map:
+#             return (nums_map[complement], i)
+#         nums_map[num] = i   
+        
+# result = two_sum([2,3,4,5,67,7], 9) 
+# print(result)
+
+# # two sum pattern two variable
+# def two_sum(nums, target):
+#     nums.sort()
+#     l, r = 0, len(nums) - 1
+#     while l < r:
+#         current_sum = nums[l] + nums[r]
+#         if current_sum == target:
+#             return(l, r)
+#         elif current_sum < target:
+#             l += 1
+#         else:
+#             r -= 1
+#     return None
+# result = two_sum([1,2,3,4,7,75,96,31,1,2,4], 3)
+
+# print(result)   
+
+# # three sum
+# def three_sum(nums, target):
+#     # nums.sort()
+#     for i in range(len(nums) - 2):
+#         l , r = i + 1, len(nums) - 1
+#         while l < r :
+#             complement = nums[i] + nums[l] + nums[r]
+#             if complement == target:
+#                 return (i, l , r)
+#             elif complement < target:
+#                 l += 1
+#             else:
+#                 r -= 1
+#     return None
+# result = three_sum([1,2,3,4,7,75,96,31,1,2,4], 6)
+# print(result)   
 
 
