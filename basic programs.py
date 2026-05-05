@@ -911,17 +911,17 @@
 #
 #
 
-# for i in range(1, 5):
-#     for j in range(1, i + 1):
-#         print(j , end = '')
-#     print()
+for i in range(1, 5):
+    for j in range(1, i + 1):
+        print(j , end = '')
+    print()
 
 # # square pattern
-# n = 9
-# for i in range(n):
-#     for j in range(n):
-#         print("*", end = ' ') 
-#     print()
+n = 9
+for i in range(n):
+    for j in range(n):
+        print("*", end = ' ') 
+    print()
     
 # # left triangle pattern
 
@@ -931,8 +931,8 @@
 #         print("*", * i)
 #     print()
     
-# for i in range(1, 6):
-#     print("*" * (6 - i))
+for i in range(1, 6):
+    print("*" * (6 - i))
   
   
 # n = 5 
@@ -3241,4 +3241,158 @@ n = 4
 # result = three_sum([1,2,3,4,7,75,96,31,1,2,4], 6)
 # print(result)   
 
+
+# def prime_numbers(n):
+#     prime = []
+#     for i in range(1, n+1):
+#         is_prime = True
+#         for j in range(2, int(i ** 0.5) + 1):
+#             if i % j == 0:
+#                 is_prime = False
+#                 break
+#         if is_prime:
+#             prime.append(i)
+#     return prime
+# print(prime_numbers(100))
+
+
+# def prime_number(n):
+#     if n <= 1:
+#         return False
+#     for i in range(2, int(n ** 0.5) + 1):
+#         if n % i == 0:
+#             return False
+#         else:
+#             return True
+# print(prime_number(11))
+
+# # /Time complexity of above code is O(N * SQRT(N)) ans space complexity is O(N) because we are storing the prime numbers in a list.
+
+
+# def fabanacci(n):
+#     a, b = 0, 1
+#     series = []
+#     for _ in range(n):
+#         a, b = b , b + a
+#         series.append(a)
+#     return series
+# print(fabanacci(10))
+
+# # Time complexity of above code is O(N) and space complexity is O(N) because we are storing the series in a list.
+
+# def armstrong(n):
+#     power = len(str(n))
+#     total = sum(int(a) ** power for a in str(n))
+#     return total == n
+# print(armstrong(234))
+
+# # Time complexity of above code is O(D) where D is the number of digits in the number and space complexity is O(1) because we are not using any extra space.
+
+# def palindrome(s):
+#     return s == s[::-1]
+# print(palindrome("madam"))
+
+# # Time complexity of above code is O(N) where N is the length of the string and space complexity is O(1) because we are not using any extra space.
+
+# def palindrome(s):
+#     Left, Right = 0, len(s) - 1
+#     while Left < Right:
+#         if s[Left] != s[Right]:
+#             return False
+#         Left += 1
+#         Right -= 1
+#     return True
+# print(palindrome("mada"))
+
+# #  time complexity of above code is O(N) where N is the length of the string and space complexity is O(1) because we are not using any extra space.
+
+# def even_or_odd(n):
+#     return "Even" if n % 2 == 0 else "Odd"
+# print(even_or_odd(10))
+
+# # Time complexity of above code is O(1) and space complexity is O(1) because we are not using any extra space.
+
+# for i in range(1, 11):
+#     print(i, end = " ")
+    
+# for i in range(0, 8):
+#     print("*" * i)
+    
+# for i in range(1, 8):
+#     print("*" * (8 - i))
+    
+# for i in range(1, 8):
+#     print(" " * (8 - i) + "* " * i)
+
+# n = 10
+# for i in range(n):
+#     for j in range(n):
+#         print("*", end = " ")
+#     print()
+
+# for i in range(n):
+#     for j in range(n):
+#         if i == j or j == n - i - 1:
+#             print("*", end = "")
+#         else:  
+#             print(" ", end = "")
+#     print() 
+
+
+# 01 square pattern
+for i in range(n):
+    for j in range(n):
+        print( "*", end = " ")
+    print()
+
+# 02 Right triange
+
+for i in range(n):
+    print("*" * (i + 1))
+    
+# 03 Inverted right triangle
+for i in range(n):
+    print("*" * (n - i))
+    
+# 04 number triange
+
+for i in range(6):
+    for j in range(i  + 1):
+        print(j + 1, end = " ")
+    print()
+
+# 05 number triangle
+
+for i in range(8):
+    for j in range(i + 1):
+        print(i + 1, end = "")
+    print()
+    
+    
+# 06 pyramid pattern
+n = 8
+for i in range(n):
+    print(" " * (n - i - 1) + "* " * (i + 1))   
+      
+# 07 inverted pyramid pattern
+n = 9
+for i in range(n):
+    print(" " * i + " * " * ( n - i))
+    
+# 08 diamond pattern
+n = 8
+for i in range(n):
+    print(" " * (n - i - 1) + "*" * (i + 1))
+for j in range(n):
+    print(" " * j + "*" * (n - j))
+
+
+# diamond pattern
+#    *
+#   ***
+#  *****
+# *******
+#  *****
+#   ***
+#    *
 
