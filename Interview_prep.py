@@ -290,3 +290,50 @@ for num in arr:
 avg = total / count if count else 0
 
 print((count, total, avg))
+
+# two sum problem using two pointer approach
+def two_sum(nums, target):
+    nums.sort()  # Sort the array
+    left, right = 0, len(nums) - 1
+    
+    while left < right:
+        current_sum = nums[left] + nums[right]
+        
+        if current_sum == target:
+            return (nums[left], nums[right])  # Return the pair
+        elif current_sum < target:
+            left += 1  # Move left pointer to the right
+        else:
+            right -= 1  # Move right pointer to the left
+            
+    return None  # Return None if no pair is found
+
+#  remove duplicates from a list using two pointer approach
+def remove_duplicates(arr):
+    if not arr:
+        return None
+    
+    unique_index = 0
+    
+    for i in range(1, len(arr)):
+        if arr[i] != arr[unique_index]:
+            unique_index += 1
+            arr[unique_index] = arr[i]
+        
+        return arr[:unique_index + 1]  # Return the list of unique elements
+
+# continer with most water problem using two pointer approach
+def max_area(height):   
+    left, right = 0, len(height) - 1
+    max_area = 0
+    
+    while left < right:
+        current_area = min(height[left], height[right]) * (right - left)
+        max_area = max(max_area, current_area)
+        
+        if height[left] < height[right]:
+            left += 1  # Move left pointer to the right
+        else:
+            right -= 1  # Move right pointer to the left
+            
+    return max_area
