@@ -911,17 +911,17 @@
 #
 #
 
-for i in range(1, 5):
-    for j in range(1, i + 1):
-        print(j , end = '')
-    print()
+# for i in range(1, 5):
+#     for j in range(1, i + 1):
+#         print(j , end = '')
+#     print()
 
-# # square pattern
-n = 9
-for i in range(n):
-    for j in range(n):
-        print("*", end = ' ') 
-    print()
+# # # square pattern
+# n = 9
+# for i in range(n):
+#     for j in range(n):
+#         print("*", end = ' ') 
+#     print()
     
 # # left triangle pattern
 
@@ -931,8 +931,8 @@ for i in range(n):
 #         print("*", * i)
 #     print()
     
-for i in range(1, 6):
-    print("*" * (6 - i))
+# for i in range(1, 6):
+#     print("*" * (6 - i))
   
   
 # n = 5 
@@ -2866,7 +2866,10 @@ Exit
 # for i in range(1, n + 1):
 #     print(" " * (n - i) + "* " * i)
 
-n = 4
+# from itertools import count
+
+
+# n = 4
 
 # for i in range(1, n + 1):
 #     print(" " * (n - i) + "* " * i)
@@ -3340,69 +3343,555 @@ n = 4
 
 
 # 01 square pattern
-for i in range(n):
-    for j in range(n):
-        print( "*", end = " ")
-    print()
+# for i in range(n):
+#     for j in range(n):
+#         print( "*", end = " ")
+#     print()
 
-# 02 Right triange
+# # 02 Right triange
 
-for i in range(n):
-    print("*" * (i + 1))
+# for i in range(n):
+#     print("*" * (i + 1))
     
-# 03 Inverted right triangle
-for i in range(n):
-    print("*" * (n - i))
+# # 03 Inverted right triangle
+# for i in range(n):
+#     print("*" * (n - i))
     
-# 04 number triange
+# # 04 number triange
 
-for i in range(6):
-    for j in range(i  + 1):
-        print(j + 1, end = " ")
-    print()
+# for i in range(6):
+#     for j in range(i  + 1):
+#         print(j + 1, end = " ")
+#     print()
 
-# 05 number triangle
+# # 05 number triangle
 
-for i in range(8):
-    for j in range(i + 1):
-        print(i + 1, end = "")
-    print()
+# for i in range(8):
+#     for j in range(i + 1):
+#         print(i + 1, end = "")
+#     print()
     
     
-# 06 pyramid pattern
-n = 8
-for i in range(n):
-    print(" " * (n - i - 1) + "* " * (i + 1))   
+# # 06 pyramid pattern
+# n = 8
+# for i in range(n):
+#     print(" " * (n - i - 1) + "* " * (i + 1))   
       
-# 07 inverted pyramid pattern
-n = 9
-for i in range(n):
-    print(" " * i + " * " * ( n - i))
+# # 07 inverted pyramid pattern
+# n = 9
+# for i in range(n):
+#     print(" " * i + " * " * ( n - i))
     
-# 08 diamond pattern
-n = 8
-for i in range(n):
-    print(" " * (n - i - 1) + "*" * (i + 1))
-for j in range(n):
-    print(" " * j + "*" * (n - j))
+# # 08 diamond pattern
+# n = 8
+# for i in range(n):
+#     print(" " * (n - i - 1) + "*" * (i + 1))
+# for j in range(n):
+#     print(" " * j + "*" * (n - j))
 
 
-# diamond pattern
-#    *
-#   ***
-#  *****
-# *******
-#  *****
-#   ***
-#    *
+# # diamond pattern
+# #    *
+# #   ***
+# #  *****
+# # *******
+# #  *****
+# #   ***
+# #    *
 
-# floyd's triangle
-n = 10
-num = 1
-for i in range(1, n + 1):
-    for j in range(i):
-        print(num, end = " ")
-        num += 1
-    print()
+# # floyd's triangle
+# n = 10
+# num = 1
+# for i in range(1, n + 1):
+#     for j in range(i):
+#         print(num, end = " ")
+#         num += 1
+#     print()
 
+# 10 pascal triangle
+# n = 5
+# for i in range(n):
+
+# trees_example_explanation
+
+
+
+# array = [65,25,12,22,11]
+
+# for i in range(len(array)):
+#     min_index = i
+#     for j in range(i + 1, len(array)):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     array[i], array[min_index] = array[min_index], array[i]
+# print(array)
+
+# array = [3,2,1,5]
+
+# for i in range(len(array)):
+#     min_index = i
+#     for j in range(i + 1, len(array)):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     array[i], array[min_index] = array[min_index], array[i]
+# print(array[::-1])
+
+
+# # count total swaps in selection sort
+# array = [3,2,1,5]
+# count = 0
+# n = len(array)
+# for i in range(n):
+#     min_index = i
+#     for j in range(i + 1, n):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     if min_index != i:
+#         array[i], array[min_index] = array[min_index], array[i]
+#         count += 1
+# print("Total swaps:", count)
+
+# #  Find the mininum element in the each pass
+# count = 0
+# array = [6,4,7,3,8,2,8,1]
+# for i in range(len(array)):
+#     min_index = i
+#     for j in range(i+1, len(array)):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     print(f"pass {i + 1}: minimum element is {array[min_index]}")          
+#     if min_index != i:
+#         array[i], array[min_index] = array[min_index], array[i]    
+#         count += 1
+
+# print("total_swaps:", count)
+
+# # selection sort without using python swap
+
+# array = [6,4,7,3,8,2,8,1]
+# n = len(array)
+# for i in range(n):
+#     min_index = i
+#     for j in range(i + 1, n):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     if min_index != i:
+#         temp = array[i]
+#         array[i] = array[min_index]
+#         array[min_index] = temp
+# print(array)
+
+# # Sort Strings Using Selection Sort
+# array = ["banana", "apple", "grape", "orange", "kiwi"]
+
+# n= len(array)
+# for i in range(n):
+#     min_index = i
+#     for j in range(i + 1, n):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     if min_index != i:
+#         array[i], array[min_index] = array[min_index], array[i]
         
+# print(array)
+
+
+# # kth smallest number
+
+# array = [7, 10, 4, 3, 20, 15]
+
+# k = 1
+# for i in range(len(array)):
+#     min_index = i
+#     for j in range(i + 1, len(array)):
+#         if array[j] < array[min_index]:
+#             min_index = j
+#     if min_index != i:
+#         array[i], array[min_index] = array[min_index], array[i]
+#     if i == k - 1:
+#         print(f"The {k}th smallest number is: {array[i]}")
+#         break
+
+
+# # print the every pass of selection sort
+# def selection_sort(arr,k):
+#     n = len(arr)
+#     count = 0
+    
+#     for i in range(n):
+#         min_index = i
+#         for j in range(i+1, n):
+#             if arr[j] < arr[min_index]:
+#                 min_index = j
+#         if min_index != i:
+#             arr[i], arr[min_index] = arr[min_index], arr[i]
+#             count += 1
+#         print(f"pass {i + 1}: {arr}")
+#         if i == k -1:
+#             print(f"the {k}th smallest number is: {arr[i]}")
+# selection_sort([7, 10, 4, 3, 20, 15], 7)
+# print("total swaps:", count)
+
+# # bobble sort
+# array = [64, 34, 25, 12, 22, 11, 90]
+# n = len(array)
+# for i in range(n):
+#     for j in range((n - i - 1)):
+#         if array[j] > array[j + 1]:
+#             array[j], array[j + 1] = array[j + 1], array[j]
+# print("Sorted array is:", array)
+# print(n)
+# # ascending order
+# def bobble_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         for j in range(0, n-i-1):
+#             if arr[j]> arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#     return arr
+# print(bobble_sort([64, 34, 25, 12, 22, 11, 90]))
+
+# #  desending order
+# def bobble_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         for j in range(0, n-i-1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#     return arr
+# print(bobble_sort([64, 34, 25, 12, 22, 11, 90])[::-1])
+
+# #  count
+# def bobble_sort_count(arr):
+#     n = len(arr)
+#     count = 0
+#     for i in range(n):
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j + 1]:
+#                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
+#                 count += 1
+#     return arr, count
+# sorted_array, total_swaps = bobble_sort_count([64, 34, 25, 12, 22, 11, 90])
+# print("Sorted array is:", sorted_array)
+# print("Total swaps:", total_swaps)
+
+# # print the each case pass
+# def bubble_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         # swapped = False
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j+ 1]:
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+#                 # swapped = True
+#         print(f"pass {i + 1}: {arr}")
+#     return arr
+# print(bubble_sort([64, 34, 25, 12, 22, 11, 90]))
+
+
+# # 
+# def bubble_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         swapped = False
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j+1]:
+#                 arr[j], arr[j+1]= arr[j+1], arr[j]
+#                 swapped = True
+#         if not swapped:
+#             print(f"array is already sorted at pass {i + 1}")
+#             break
+#         return arr
+# print(bubble_sort([1,2,3,4,5]))
+
+# def bubble_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         swapped = False
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j+1]:
+#                 # arr[j], arr[j+1] = arr[j+1], arr[j]
+#                 temp = arr[j]
+#                 arr[j] = arr[j+1]
+#                 arr[j+1] = temp
+#                 swapped = True
+#         if not swapped:
+#             print(f"array is already sorted at pass {i + 1}")
+#             break
+#     return arr
+# print(bubble_sort([1,2,3,4,5]))
+
+# def bubble_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         swapped = False
+#         for j in range(0, n-i-1):
+#             if arr[j] > arr[j+1]:
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+#                 swapped = True  
+#         if not swapped:   
+#             print(f"array is already sorted at pass {i + 1}")
+#             break  
+#     return arr
+# print(bubble_sort(["apple", "banana", "grape", "orange", "kiwi"]))
+
+
+# array = [64, 34, 25, 12, 22, 11, 90]
+# n = len(array)
+# for i in range(n):
+#     insert_index = i
+#     current_value = array[i]
+#     for j in range(i-1, -1, -1):
+#         if array[j] > current_value:
+#             array[j+1] = array[j]
+#             insert_index= j
+#         else:
+#             break
+#         array[insert_index] = current_value
+# print("Sorted array is:", array)
+    
+    
+    
+
+#  Quicksort
+# Quicksort is a divide-and-conquer algorithm that works by selecting a 'pivot' element from the array and partitioning the other elements into two sub-arrays, according to whether they are less than or greater than the pivot. The sub-arrays are then sorted recursively. This process continues until the base case of an empty array or an array with a single element is reached, which is inherently sorted.
+#  Descending order
+# def partition(arr, low, high):
+#     pivot= arr[low]
+#     i, j = low-1, high + 1
+    
+#     while True:
+        
+#         i += 1
+#         while arr[i] < pivot:
+#             i += 1
+            
+#         j -= 1
+#         while arr[j] > pivot:
+#             j -= 1
+            
+#         if i >= j:
+#             return j
+        
+#         arr[i], arr[j] = arr[j], arr[i]
+        
+# def quicksort(arr, low, high):
+#     if low < high:
+#         p = partition(arr, low, high)
+        
+#         quicksort(arr, low, p)
+#         quicksort(arr, p + 1, high)
+        
+# if __name__ == "__main__":
+#     arr = [10, 7, 8, 9, 1, 5]
+#     n = len(arr)
+#     quicksort(arr, 0, n - 1)
+#     print("Sorted array is:", arr[::-1])  
+        
+#Count Number of Swaps
+# count= 0
+# def partition(arr, low, high):
+#     global count
+#     pivot = arr[low]
+#     i, j = low- 1, high + 1
+    
+#     while True:
+#         i += 1
+#         while arr[i] < pivot:
+#             i += 1
+        
+#         j -= 1
+#         while arr[j] > pivot:
+#             j -= 1
+            
+#         if i >= j:
+#             return j 
+         
+         
+#         arr[i], arr[j] = arr[j], arr[i]
+#         count += 1
+        
+# def quicksort(arr, low, high):
+#     if low < high:
+#         p = partition(arr, low, high)
+        
+#         quicksort(arr, low, p)
+#         quicksort(arr, p+1, high)
+        
+# if __name__ == "__main__":
+#     arr = [10, 7, 8, 9, 1, 5]
+#     n = len(arr)
+#     quicksort(arr, 0, n - 1)
+#     print("Sorted array is:", arr)
+#     print("Total swaps:", count)
+    
+    
+# # kth smallest element in an array using quicksort
+# def partition(arr, low, high):
+#     pivot = arr[low]
+#     i, j = low - 1, high + 1
+    
+#     while True:
+#         i += 1
+#         while arr[i] < pivot:
+#             i += 1
+            
+#         j -= 1
+#         while arr[j] > pivot:
+#             j -= 1
+        
+#         if i >= j:
+#             return j
+        
+#         arr[i], arr[j] = arr[j], arr[i]
+        
+# def quicksort(arr, low, high):
+#     if low < high:
+#         p = partition(arr, low, high)
+        
+#         quicksort(arr, low, p)
+#         quicksort(arr, p +1, high)
+        
+# if __name__ == "__main__":
+#     arr = [10, 7, 8, 9, 1, 5]
+#     n = len(arr)
+#     k = 3
+#     quicksort(arr, 0, n - 1)
+#     print(f"The {k}rd smallest element is: {arr[k - 1]}")
+    
+# # counting algrothim
+
+# def counting_sort(arr):
+#     max_element = max(arr)
+#     count = [0] * (max_element + 1)
+    
+#     for num in arr:
+#         count[num] += 1
+        
+#     result = []
+#     for i in range(len(count)):
+#         while count[i] > 0:
+#             result.append(i)
+#             count[i] -= 1
+#     return result
+
+
+# arr = [4, 2, 2, 8, 3, 3, 1]
+# sorted_arr = counting_sort(arr)
+# print("Sorted array is:", sorted_arr)   
+
+# arr = [4, 2, 2, 8, 3, 3, 1]
+# max_element = max(arr) #find the maximum elememt
+# count = [0] * (max_element + 1) # create a count array
+
+# for num in arr:
+#     count[num] += 1 # count the frequency of each element
+    
+# result = []
+    
+# for i in range(len(count)):
+#     while count[i] > 0:
+#         result.append(i) #append the element to the result array
+#         count[i] -= 1 # decrease the count of the element
+# print("Sorted array is:", result)   
+
+# def sort_student_marks(marks):
+#     max_mark = max(marks)
+#     count = [0] * (max_mark + 1)
+#     result = []
+    
+#     for mark in marks:
+#         count[mark] += 1
+        
+#     for i in range(len(count)):
+#         while count[i] > 0:
+#             result.append(i)
+#             count[i] -= 1
+#     return result
+
+# marks = [85, 92, 78, 90, 88, 95, 80]
+# sorted_marks = sort_student_marks(marks)
+# print("Sorted marks:", sorted_marks)
+
+# # count the frequency of elements
+# def count_frequency(arr):
+#     max_element = max(arr)
+#     count = [0] * (max_element + 1)
+#     for num in arr:
+#         count[num]  += 1
+    
+#     for i in range(len(count)):
+#         if count[i] > 0:
+#             print(i, "->", count[i])
+            
+# arr = [4, 2, 2, 8, 3, 3, 1]
+# count_frequency(arr)
+
+
+# # duplicate elements in an array
+# def find_duplicates(arr):
+#     max_element = max(arr)
+#     count = [0] * (max_element + 1)
+#     duplicates = []
+    
+#     for num in arr:
+#         count[num] += 1
+        
+#     for i in range(len(count)):
+#         if count[i] > 1:
+#             duplicates.append(i)
+            
+#     return duplicates
+
+# arr = [4, 2, 2, 8, 3, 3, 1]
+# duplicates =   find_duplicates(arr)
+# print("Duplicate elements are:", duplicates)
+
+# #  time complexity of above code is O(N + K) where N is the number of elements in the input array and K is the range of the input values. The space complexity is O(K) because we are using a count array to store the frequency of each element.
+
+# # sort characters in a string
+# def sort_characters(s):
+#     max_char = max(s)
+#     count = [0] * (ord(max_char) + 1)
+#     result = []
+    
+#     for char in s:
+#         count[ord(char)] += 1
+        
+#     for i in range(len(count)):
+#         while count[i] > 0:
+#             result.append(chr(i))
+#             count[i] -= 1
+#     return ' '.join(result)
+# s = "banana"
+# sorted_string = sort_characters(s)
+# print("Sorted characters:", sorted_string)
+
+# # relative sorting
+# def relative_sort(arr1, arr2):
+#     max_element = max(arr1)
+#     count = [0] * (max_element + 1)
+#     result = []
+    
+#     for num in arr1:
+#         count[num] += 1
+        
+#     for num in arr2:
+#         while count[num] > 0:
+#             result.append(num)
+#             count[num] -= 1 
+
+#     for i in range(len(count)):
+#         while count[i] > 0:
+#             result.append(i)
+#             count[i] -= 1
+    
+#     return result  
+
+# arr1 = [2, 1, 2, 5, 7, 1, 9, 3, 6, 8, 8]
+# arr2 = [2, 1, 8, 3]
+# sorted_arr = relative_sort(arr1, arr2)
+# print("Relative sorted array:", sorted_arr)
+
+
+# radix sort
