@@ -3932,39 +3932,39 @@ Exit
 # print("Sorted array is:", arr)
 
 # selection sort
-def sort(arr):
-    n = len(arr)
+# def sort(arr):
+#     n = len(arr)
     
-    for i in range(n):
-        min_index = i
-        for j in range(i + 1, n):
-            if arr[j] < arr[min_index]:
-                min_index = j
-        arr[i], arr[min_index] = arr[min_index], arr[i]
+#     for i in range(n):
+#         min_index = i
+#         for j in range(i + 1, n):
+#             if arr[j] < arr[min_index]:
+#                 min_index = j
+#         arr[i], arr[min_index] = arr[min_index], arr[i]
         
-arr = [64, 25, 12, 22, 11]
-sort(arr)
-print("Sorted array is:", arr)
+# arr = [64, 25, 12, 22, 11]
+# sort(arr)
+# print("Sorted array is:", arr)
 
 
-# Bubble Sort
-count = 0
-def sort_1(arr):
-    global count
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-                count += 1
-        if not count:
-            print(f"array is already sorted at pass {i + 1}")
-            break
+# # Bubble Sort
+# count = 0
+# def sort_1(arr):
+#     global count
+#     n = len(arr)
+#     for i in range(n):
+#         for j in range(0, n - i - 1):
+#             if arr[j] > arr[j+1]:
+#                 arr[j], arr[j+1] = arr[j+1], arr[j]
+#                 count += 1
+#         if not count:
+#             print(f"array is already sorted at pass {i + 1}")
+#             break
                 
-arr = [64, 34, 25, 12, 22, 11, 90]
-sort_1(arr)
-print("Sorted array is:", arr)
-print("Total swaps:", count)
+# arr = [64, 34, 25, 12, 22, 11, 90]
+# sort_1(arr)
+# print("Sorted array is:", arr)
+# print("Total swaps:", count)
 
 
 def sorting(arr):
