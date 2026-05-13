@@ -3973,7 +3973,7 @@ def sorting(arr):
         insert_index = i
         current_index = arr[i]
         for j in range(i - 1, -1, -1):
-            if arr[j+1] > current_index:
+            if arr[j] > current_index:
                 arr[j+1] = arr[j]
                 insert_index = j
             else:
@@ -3982,8 +3982,8 @@ def sorting(arr):
         arr[insert_index] = current_index
 
                 
-arr = [6, 4, 7, 3, 8, 2, 8, 1]
 k = 0
+arr = [6, 4, 7, 3, 8, 2, 8, 1]
 sorting(arr)
 print("Sorted array is:", arr)
-print(f"the kth smallest number is: {arr[k - 1]}")
+print(f"the kth smallest number is: {arr[k]}")
