@@ -3967,23 +3967,62 @@ Exit
 # print("Total swaps:", count)
 
 
-def sorting(arr):
-    n= len(arr)
-    for i in range(n):
-        insert_index = i
-        current_index = arr[i]
-        for j in range(i - 1, -1, -1):
-            if arr[j] > current_index:
-                arr[j+1] = arr[j]
-                insert_index = j
-            else:
+# def sorting(arr):
+#     n= len(arr)
+#     for i in range(n):
+#         insert_index = i
+#         current_index = arr[i]
+#         for j in range(i - 1, -1, -1):
+#             if arr[j] > current_index:
+#                 arr[j+1] = arr[j]
+#                 insert_index = j
+#             else:
                 
-                break
-        arr[insert_index] = current_index
+#                 break
+#         arr[insert_index] = current_index
 
                 
-k = 0
-arr = [6, 4, 7, 3, 8, 2, 8, 1]
-sorting(arr)
-print("Sorted array is:", arr)
-print(f"the kth smallest number is: {arr[k]}")
+# k = 0
+# arr = [6, 4, 7, 3, 8, 2, 8, 1]
+# sorting(arr)
+# print("Sorted array is:", arr)
+# print(f"the kth smallest number is: {arr[k]}")
+
+# merge sort
+def merge_sort(arr):
+    if len(arr) <= 1:
+        return arr
+    
+    mid = len(arr) // 2
+    leftHalf = arr[:mid]
+    rightHalf = arr[mid:]
+    
+    sortedleft = merge_sort(leftHalf)
+    sortedright = merge_sort(rightHalf)
+    
+    return merge(sortedleft, sortedright)
+
+def merge(left, right):
+    result = []
+    i = j = 0
+    
+    while i < len(left) and j < len(right):
+        if left[i] < right[j]:
+            result.append(left[i])
+            i += 1
+        else:
+            result.append(right[j])
+            j += 1
+            
+    result.extend(left[i:])
+    result.extend(right[j:])
+    
+    return result
+
+
+
+arr = [38, 27, 43, 3, 9, 82, 10]
+sorted_arr = merge_sort(arr)
+print("Sorted array is:", sorted_arr)
+
+
