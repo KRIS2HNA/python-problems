@@ -3989,26 +3989,68 @@ Exit
 # print(f"the kth smallest number is: {arr[k]}")
 
 # merge sort
+# def merge_sort(arr):
+#     if len(arr) <= 1:
+#         return arr
+    
+#     mid = len(arr) // 2
+#     leftHalf = arr[:mid]
+#     rightHalf = arr[mid:]
+    
+#     sortedleft = merge_sort(leftHalf)
+#     sortedright = merge_sort(rightHalf)
+    
+#     return merge(sortedleft, sortedright)
+
+# def merge(left, right):
+#     result = []
+#     i = j = 0
+    
+#     while i < len(left) and j < len(right):
+#         if left[i] < right[j]:
+#             result.append(left[i])
+#             i += 1
+#         else:
+#             result.append(right[j])
+#             j += 1
+            
+#     result.extend(left[i:])
+#     result.extend(right[j:])
+    
+#     return result
+
+
+
+# arr = [38, 27, 43, 3, 9, 82, 10]
+# sorted_arr = merge_sort(arr)
+# print("Sorted array is:", sorted_arr)
+
+
+from typing import List
+
+
 def merge_sort(arr):
     if len(arr) <= 1:
         return arr
     
     mid = len(arr) // 2
-    leftHalf = arr[:mid]
-    rightHalf = arr[mid:]
+    lefthalf = arr[:mid]
+    righthalf = arr[mid:]
     
-    sortedleft = merge_sort(leftHalf)
-    sortedright = merge_sort(rightHalf)
+    sortedleft = merge_sort(lefthalf)
+    sortedright = merge_sort(righthalf)
     
     return merge(sortedleft, sortedright)
 
 def merge(left, right):
-    result = []
+    result =[]
+    
     i = j = 0
     
     while i < len(left) and j < len(right):
         if left[i] < right[j]:
             result.append(left[i])
+            
             i += 1
         else:
             result.append(right[j])
@@ -4019,10 +4061,52 @@ def merge(left, right):
     
     return result
 
-
-
 arr = [38, 27, 43, 3, 9, 82, 10]
+    
 sorted_arr = merge_sort(arr)
-print("Sorted array is:", sorted_arr)
+print("Sorted array is:", sorted_arr)   
 
+#  merge two sorted arrays
+class solution:
+    def merge_sorted_arrays(self, nums1, m, nums2, n):
+        i = m -1
+        j = n- 1
+        k = m + n - 1
+        
+        while i >= 0 and j >= 0:
+            if nums1[i] > nums2[j]:
+                nums1[k] = nums1[i]
+                i -= 1
+            else:
+                nums1[k] = nums2[j]
+                j -= 1
+                
+            k -= 1
+        while j >= 0:
+            nums1[k] = nums2[j]
+            j -= 1
+            k -= 1
+nums1 = [1, 2, 3, 0, 0, 0]
+m = 3   
+nums2 = [2, 5, 6]
+n = 3
+solution().merge_sorted_arrays(nums1, m, nums2, n)
+print("Merged array is:", nums1)
 
+# merge k sorted lists
+#  check if array is good or not
+
+# class solution:
+#     def isGood(self, nums: List[int]) -> bool:
+#         nums.sort()
+#         n = len(nums)
+        
+#         for i in range(n - 1):
+#             if nums[i] != i + 1:
+#                 return False
+#         return nums[-1] == nums[n- 2]
+    
+# nums = [1,2,3,4]
+# print("Is the array good?", solution().isGood(nums))
+
+        
