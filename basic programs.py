@@ -4026,72 +4026,72 @@ Exit
 # print("Sorted array is:", sorted_arr)
 
 
-from typing import List
+# from typing import List
 
 
-def merge_sort(arr):
-    if len(arr) <= 1:
-        return arr
+# def merge_sort(arr):
+#     if len(arr) <= 1:
+#         return arr
     
-    mid = len(arr) // 2
-    lefthalf = arr[:mid]
-    righthalf = arr[mid:]
+#     mid = len(arr) // 2
+#     lefthalf = arr[:mid]
+#     righthalf = arr[mid:]
     
-    sortedleft = merge_sort(lefthalf)
-    sortedright = merge_sort(righthalf)
+#     sortedleft = merge_sort(lefthalf)
+#     sortedright = merge_sort(righthalf)
     
-    return merge(sortedleft, sortedright)
+#     return merge(sortedleft, sortedright)
 
-def merge(left, right):
-    result =[]
+# def merge(left, right):
+#     result =[]
     
-    i = j = 0
+#     i = j = 0
     
-    while i < len(left) and j < len(right):
-        if left[i] < right[j]:
-            result.append(left[i])
+#     while i < len(left) and j < len(right):
+#         if left[i] < right[j]:
+#             result.append(left[i])
             
-            i += 1
-        else:
-            result.append(right[j])
-            j += 1
+#             i += 1
+#         else:
+#             result.append(right[j])
+#             j += 1
             
-    result.extend(left[i:])
-    result.extend(right[j:])
+#     result.extend(left[i:])
+#     result.extend(right[j:])
     
-    return result
+#     return result
 
-arr = [38, 27, 43, 3, 9, 82, 10]
+# arr = [38, 27, 43, 3, 9, 82, 10]
     
-sorted_arr = merge_sort(arr)
-print("Sorted array is:", sorted_arr)   
+# sorted_arr = merge_sort(arr)
+# print("Sorted array is:", sorted_arr)   
 
-#  merge two sorted arrays
-class solution:
-    def merge_sorted_arrays(self, nums1, m, nums2, n):
-        i = m -1
-        j = n- 1
-        k = m + n - 1
+# #  merge two sorted arrays
+# class solution:
+#     def merge_sorted_arrays(self, nums1, m, nums2, n):
+#         i = m -1
+#         j = n- 1
+#         k = m + n - 1
         
-        while i >= 0 and j >= 0:
-            if nums1[i] > nums2[j]:
-                nums1[k] = nums1[i]
-                i -= 1
-            else:
-                nums1[k] = nums2[j]
-                j -= 1
+#         while i >= 0 and j >= 0:
+#             if nums1[i] > nums2[j]:
+#                 nums1[k] = nums1[i]
+#                 i -= 1
+#             else:
+#                 nums1[k] = nums2[j]
+#                 j -= 1
                 
-            k -= 1
-        while j >= 0:
-            nums1[k] = nums2[j]
-            j -= 1
-            k -= 1
-nums1 = [1, 2, 3, 0, 0, 0]
-m = 3   
-nums2 = [2, 5, 6]
-n = 3
-solution().merge_sorted_arrays(nums1, m, nums2, n)
-print("Merged array is:", nums1)
+#             k -= 1
+#         while j >= 0:
+#             nums1[k] = nums2[j]
+#             j -= 1
+#             k -= 1
+# nums1 = [1, 2, 3, 0, 0, 0]
+# m = 3   
+# nums2 = [2, 5, 6]
+# n = 3
+# solution().merge_sorted_arrays(nums1, m, nums2, n)
+# print("Merged array is:", nums1)
 
 # merge k sorted lists
 #  check if array is good or not
@@ -4109,4 +4109,204 @@ print("Merged array is:", nums1)
 # nums = [1,2,3,4]
 # print("Is the array good?", solution().isGood(nums))
 
+# # Arrays
+# # 01 Find the largest sum contiguous subarray
+
+# def longestsubarray(arr):
+#     max_sum = arr[0]
+#     current_sum = arr[0]
+    
+#     for i in range(1, len(arr)):
+#         current_sum = max(arr[i], current_sum + arr[i])
+#         max_sum = max(max_sum, current_sum)
         
+#     return max_sum
+
+# arr = [-2,1,-3,4,-1,2,1,-5,4]
+# sum = longestsubarray(arr)
+# print("largest subarray", sum)
+    
+
+# #  rotate an array keep k steps
+# def rotate(arr, k):
+#     n = len(arr)
+#     for _ in range(k):
+#         last = arr[-1]
+        
+#         for i in range(n-1, 0, -1):
+#             arr[i] = arr[i -1]
+            
+#         arr[0] = last
+        
+#     return arr
+
+# arr = [1,2,3,4,5,6,7,7,8]
+# print(rotate(arr, 6))
+
+# class solution:
+#     def __init__(self, data):
+#         self.data = data
+#         self.next = None
+        
+# c = solution("krishna")
+# print(c.data)
+
+# 153.mimimum number in rotated sorted array
+# class solution:
+#     def findmin(self, nums):
+#         nums.sort()
+#         k = len(nums)
+#         w = 2
+#         for i in range(k - 1):
+#             if nums[i] > nums[i + 1]:
+#                 w = i + 1
+#                 break
+#         return nums[w]
+# nums = [3,4,5,1,2]
+# print("Minimum number in the rotated sorted array is:", solution().findmin(nums))   
+
+# # selection sort algorithm finds the lowest value in the array and places it at the beginning of the array.
+
+# def selection_sort(arr):
+#     n = len(arr)
+#     for i in range(n):
+#         min_index = i
+#         for j in range(i + 1, n):
+#             if arr[j] < arr[min_index]:
+#                 min_index = j
+#         arr[i], arr[min_index] = arr[min_index], arr[i]
+#     return arr
+
+# arr = [64, 25, 12, 22, 11]
+# sorted_arr = selection_sort(arr)    
+# print("Sorted array is:", sorted_arr)
+
+
+# bobble sort algorithm repeatedly steps through the list, compares  the adjacent elements and swaps them if they in wrong order. until the list is sorted.
+# class Solution:
+#     def bobble_sort(self, arr):
+#         n = len(arr)
+#         for i in range(n):
+#             for j in range(0, n -i -1):
+#                 if arr[j] > arr[j+1]:
+#                     arr[j], arr[j+1] = arr[j+1], arr[j]
+#         return arr
+# arr = [64, 34, 25, 12, 22, 11, 90]
+# print("Sorted array is:", Solution().bobble_sort(arr))
+
+
+# # INSERTION SORT
+# class Solution:
+#     def insertion_sort(self, arr):
+#         n = len(arr)
+#         for i in range(1, n):
+#             insert_index = i
+#             current_index = arr[i]
+#             for j in range(i - 1, -1, -1):
+#                 if arr[j] > arr[j+1]:
+#                     arr[j+1] = arr[j]
+#                     insert_index = j
+#                 else:
+#                     break
+#             arr[insert_index] = current_index
+#         return arr
+
+# # Dynamic Programming  
+
+# def min_coins(coins, amount):
+#     """Minimum number of coins needed to make amount."""
+#     dp = [float('inf')] * (amount + 1)
+#     dp[0] = 0
+
+#     for coin in coins:
+#         for x in range(coin, amount + 1):
+#             dp[x] = min(dp[x], dp[x - coin] + 1)
+
+#     return dp[amount] if dp[amount] != float('inf') else -1
+
+
+# def minimum_delete_sum(s1, s2):
+#     """Minimum ASCII delete sum to make two strings equal."""
+#     n, m = len(s1), len(s2)
+#     dp = [[0] * (m + 1) for _ in range(n + 1)]
+
+#     for i in range(1, n + 1):
+#         dp[i][0] = dp[i - 1][0] + ord(s1[i - 1])
+
+#     for j in range(1, m + 1):
+#         dp[0][j] = dp[0][j - 1] + ord(s2[j - 1])
+
+#     for i in range(1, n + 1):
+#         for j in range(1, m + 1):
+#             if s1[i - 1] == s2[j - 1]:
+#                 dp[i][j] = dp[i - 1][j - 1]
+#             else:
+#                 dp[i][j] = min(
+#                     dp[i - 1][j] + ord(s1[i - 1]),
+#                     dp[i][j - 1] + ord(s2[j - 1])
+#                 )
+
+#     return dp[n][m]
+
+
+# def length_of_lis(nums):
+#     """Length of longest increasing subsequence."""
+#     if not nums:
+#         return 0
+
+#     dp = [1] * len(nums)
+#     for i in range(1, len(nums)):
+#         for j in range(i):
+#             if nums[j] < nums[i]:
+#                 dp[i] = max(dp[i], dp[j] + 1)
+
+#     return max(dp)
+
+
+# print("min_coins([1, 2, 5], 11) =", min_coins([1, 2, 5], 11))
+# print('minimum_delete_sum("sea", "eat") =', minimum_delete_sum("sea", "eat"))
+# print("length_of_lis([10, 9, 2, 5, 3, 7, 101, 18]) =", length_of_lis([10, 9, 2, 5, 3, 7, 101, 18]))
+
+
+
+# # Recursion is a programming technique where a function calls itself in order to solve a problem. It typically involves a base case that stops the recursion and a recursive case that breaks the problem into smaller subproblems. Recursion can simplify code and make it easier to read, but it can also lead to performance issues if not used carefully, such as stack overflow or excessive memory usage.
+# # Add Two Numbers
+# class ListNode:
+#     def __init__(self, val = 0, next = None):
+#         self.val = val
+#         self.next = next
+        
+#     def add_two_numbers(self, l1, l2):
+#         dummy_head = ListNode(0)
+#         current = dummy_head
+#         carry = 0
+        
+#         while l1 or l2 or carry:
+#             val1 = l1.val if l1 else 0
+#             val2 = l2.val if l2 else 0
+#             total = val1 + val2 + carry
+#             carry = total // 10
+#             current.next = ListNode(total % 10)
+#             current = current.next
+#             if l1:
+#                 l1 = l1.next
+#             if l2:
+#                 l2 = l2.next    
+#         return dummy_head.next
+# l1 = ListNode(2, ListNode(4, ListNode(3)))
+# l2 = ListNode(5, ListNode(6, ListNode(4)))
+# result = ListNode().add_two_numbers(l1, l2)
+# print("Result of adding two numbers:", end=" ")
+# while result:
+#     print(result.val, end=" ")
+#     result = result.next
+        
+# def fibnocci(n):
+#     num = []
+#     a, b  = 0, 1
+#     while a <= n:
+#         num.append(a)
+#         a, b = b, a + b
+#     return num
+
+# print(fibnocci(8))
