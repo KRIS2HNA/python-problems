@@ -4352,32 +4352,32 @@ if __name__ == "main__":
         
         
 # 
-def solve(N: int, C1: int, C2: int, penalties: list):
-    INF = float('inf')
-    dp = [INF] * (N + 1)
-    dp[0] = 0
+# def solve(N: int, C1: int, C2: int, penalties: list):
+#     INF = float('inf')
+#     dp = [INF] * (N + 1)
+#     dp[0] = 0
     
-    for i in range(N):
-        if dp[i] == INF:
-            continue
-        base = dp[i] + penalties[i]
+#     for i in range(N):
+#         if dp[i] == INF:
+#             continue
+#         base = dp[i] + penalties[i]
     
-        if i + 1 <= N:
-            dp[i + 1] = min(dp[i + 1], base + C1)
-        if i + 2 <= N:
-            dp[i + 2] = min(dp[i + 2], base + C2)
-        if i + 3 <= N:
-            dp[i + 3] = min(dp[i + 2], base + C3)
-    return dp[N]
+#         if i + 1 <= N:
+#             dp[i + 1] = min(dp[i + 1], base + C1)
+#         if i + 2 <= N:
+#             dp[i + 2] = min(dp[i + 2], base + C2)
+#         if i + 3 <= N:
+#             dp[i + 3] = min(dp[i + 2], base + C3)
+#     return dp[N]
 
-if __name__ == "__main__":
-    try:
-        N = int(input())
-        C1, C2, C3 = map(int, input().split())
-        penalties = list(map(int, input().split()))
-        result = solve(N, C1, C2, C3, penalties)
-        print(result)
-    except (EOFError, ValueError):
-        pass
+# if __name__ == "__main__":
+#     try:
+#         N = int(input())
+#         C1, C2, C3 = map(int, input().split())
+#         penalties = list(map(int, input().split()))
+#         result = solve(N, C1, C2, C3, penalties)
+#         print(result)
+#     except (EOFError, ValueError):
+#         pass
         
         
