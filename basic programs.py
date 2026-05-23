@@ -4314,41 +4314,41 @@ Exit
 
 # VIP Customer Queue Problem
 
-def solve(N: int, customers: list):
-    vip = []
-    regular = []
+# def solve(N: int, customers: list):
+#     vip = []
+#     regular = []
     
-    for t, v in customers:
-        if v == 1:
-            vip.append(t)
-        else:
-            regular.append(t)
-            # Shortest job First with each group
-    vip.sort()
-    regular.sort()
+#     for t, v in customers:
+#         if v == 1:
+#             vip.append(t)
+#         else:
+#             regular.append(t)
+#             # Shortest job First with each group
+#     vip.sort()
+#     regular.sort()
     
-    total_wait = 0
-    current_time = 0
+#     total_wait = 0
+#     current_time = 0
     
-    for t in vip:
-        total_wait += current_time
-        current_time += t
-    for t in regular:
-        total_wait += current_time
-        current_time += t
-    return total_wait
+#     for t in vip:
+#         total_wait += current_time
+#         current_time += t
+#     for t in regular:
+#         total_wait += current_time
+#         current_time += t
+#     return total_wait
 
-if __name__ == "main__":
-    try:
-        N = int(input())
-        customers = []
-        for _ in range(N):
-            line = input().split()
-            customers.append([int(x) for x in line[:2]])
-        result = solve(N, customers)
-        print(result)
-    except (EOFError, ValueError):
-        pass
+# if __name__ == "main__":
+#     try:
+#         N = int(input())
+#         customers = []
+#         for _ in range(N):
+#             line = input().split()
+#             customers.append([int(x) for x in line[:2]])
+#         result = solve(N, customers)
+#         print(result)
+#     except (EOFError, ValueError):
+#         pass
         
         
 # 
