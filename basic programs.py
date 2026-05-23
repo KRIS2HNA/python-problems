@@ -4310,3 +4310,74 @@ Exit
 #     return num
 
 # print(fibnocci(8))
+
+
+# VIP Customer Queue Problem
+
+def solve(N: int, customers: list):
+    vip = []
+    regular = []
+    
+    for t, v in customers:
+        if v == 1:
+            vip.append(t)
+        else:
+            regular.append(t)
+            # Shortest job First with each group
+    vip.sort()
+    regular.sort()
+    
+    total_wait = 0
+    current_time = 0
+    
+    for t in vip:
+        total_wait += current_time
+        current_time += t
+    for t in regular:
+        total_wait += current_time
+        current_time += t
+    return total_wait
+
+if __name__ == "main__":
+    try:
+        N = int(input())
+        customers = []
+        for _ in range(N):
+            line = input().split()
+            customers.append([int(x) for x in line[:2]])
+        result = solve(N, customers)
+        print(result)
+    except (EOFError, ValueError):
+        pass
+        
+        
+# 
+def solve(N: int, C1: int, C2: int, penalties: list):
+    INF = float('inf')
+    dp = [INF] * (N + 1)
+    dp[0] = 0
+    
+    for i in range(N):
+        if dp[i] == INF:
+            continue
+        base = dp[i] + penalties[i]
+    
+        if i + 1 <= N:
+            dp[i + 1] = min(dp[i + 1], base + C1)
+        if i + 2 <= N:
+            dp[i + 2] = min(dp[i + 2], base + C2)
+        if i + 3 <= N:
+            dp[i + 3] = min(dp[i + 2], base + C3)
+    return dp[N]
+
+if __name__ == "__main__":
+    try:
+        N = int(input())
+        C1, C2, C3 = map(int, input().split())
+        penalties = list(map(int, input().split()))
+        result = solve(N, C1, C2, C3, penalties)
+        print(result)
+    except (EOFError, ValueError):
+        pass
+        
+        
