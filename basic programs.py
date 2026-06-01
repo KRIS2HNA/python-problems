@@ -4419,16 +4419,16 @@ print("Sorted array is:", arr)
 # 
 # 1D array
 
-        n = len(cost)
-        cost.sort()
-        res = 0
+        # n = len(cost)
+        # cost.sort()
+        # res = 0
 
-        count = 1
-        for i in range(n-1, -1, -1):
-            if count != 3:
-                res += cost[i]
-                count += 1
-            else:
-                count = 1
+        # count = 1
+        # for i in range(n-1, -1, -1):
+        #     if count != 3:
+        #         res += cost[i]
+        #         count += 1
+        #     else:
+        #         count = 1
 
-        return res
+        # return res
