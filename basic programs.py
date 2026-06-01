@@ -4432,3 +4432,7 @@ print("Sorted array is:", arr)
         #         count = 1
 
         # return res
+
+# 2D array
+def array2d(arr):
+    
